@@ -25,7 +25,65 @@ En réalité c'est simplement que Windows 10 n'embarque pas la nouvelle version 
 
 1. [Ce lien vers la documentation Microsoft](https://learn.microsoft.com/fr-fr/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.3) nous explique comment migrer de la version Windows Powershell 5.1 vers la 7.x. Nous y trouvons une information **importante** : ``PowerShell 7 fonctionne côte à côte avec Windows PowerShell``. En d'autres termes le terminal présent sur votre machine Windows 10 gardera de toute façon la version 5.1 du PowerShell et la nouvelle version aussi.
 
-2. Via [ce lien d'installation](https://learn.microsoft.com/fr-fr/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#winget)
-3. https://learn.microsoft.com/fr-fr/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#winget
-4. https://lecrabeinfo.net/ouvrir-et-utiliser-le-terminal-windows-sur-windows-11-10.html
+2. [Ce lien d'installation](https://learn.microsoft.com/fr-fr/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#winget) nous donne deux commandes : 
+   - ``winget search Microsoft.PowerShell`` qui vérifie quelle est la version en cours.
+   - ``winget install --id Microsoft.Powershell --source winget`` qui installera la version 7.x.
+
+Maintenant que l'installation est finie vous devriez obtenir ceci :<br>
+![](src/Images/windowsPowerShell7.png)
+> C'est quand même un peu mieux 😜
+
+# Les commandes
+
+Étant donné que nous allons utiliser le terminal pour la gestion de fichiers, nous verrons uniquement les commandes associées :
+
+| Commande | Description | 
+| :---: | :---- |
+| gci, dir, ls | Liste les fichiers/dossiers du répertoire. Exemple : ``ls`` ou ``ls .\Sirius\`` | 
+| gc, type, cat | Obtenir le contenu d'un **fichier**. Exemple : ``cat .\fichier.txt``  |
+| help, man | Aide. |
+| cls, clear | Efface l'écran. |
+| cpi, copy, cp | Copier un ou plusieurs fichiers/l'arborescence complète. Exemple : ``cp D:\Sirius\WebDev\fichier.txt C:\Autres`` |
+| mi, move, mv | Déplacer un fichier/répertoire. Exemple : ``mv .\fichier.txt .\Sirius\`` |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+
+	gcm	help	help, which	Liste des commandes
+	help, man	help	man	Aide
+	cls, clear	cls	clear	Efface l'écran
+	cpi, copy, cp	copy	cp	Copier un ou plusieurs fichiers / l'arborescence complète
+	mi, move, mv	move	mv	Déplacer un fichier / répertoire
+	ri, del, erase, rmdir, rd, rm	del, deltree, erase, rmdir, rd	rm, rmdir	Supprimer un fichier / répertoire
+	rni, ren, mv	ren, rename	mv	Renommer un fichier / répertoire
+	gl, pwd	cd	pwd	Afficher le répertoire de travail courant
+	popd	popd	popd	Changer le répertoire courant vers le répertoire le plus récemment poussé sur la pile
+	pushd	pushd	pushd	Pousser le répertoire courant sur la pile
+	sl, cd, chdir	cd, chdir	cd	Changer le répertoire courant
+	tee	NC	tee	Diriger l'entrée vers un fichier ou une variable, puis la passer dans un pipeline
+	echo, write	echo	echo	Afficher des chaînes, variables etc sur la sortie standard
+	gps, ps	tlist	ps	Liste de tous les processus en cours d'exécution
+	spps, kill	kill	kill	Arrêter un processus en cours d'exécution
+	sls, findstr	find, findstr	grep	Recherche d'une chaine de caractère
+	sv, set	set	env, export, set, setenv	Définir la valeur d'une variable / créer une variable
+	iwr, wget, curl	NC	wget, cURL	Obtient le contenu d'une page web
+
+https://fr.wikipedia.org/wiki/Windows_PowerShell
+
 
