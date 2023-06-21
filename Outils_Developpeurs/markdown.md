@@ -4,7 +4,7 @@
 
 Tu ne le sais peut-être pas mais tu consultes depuis le début déjà des fichiers écrit en Markdown. En effet, toutes les pages que tu consulte sur Github pour le moment sont écrites avec ce langage, si tu es attentif, tu as du voir que chacune de ces pages comporte l'extension **.md**.
 
-Il s'agit d'un langage de balisage léger qu'utilise Github (et autres) pour mettre en forme les pages de repository comme le Readme.md et aussi les commentaires lors des review de code. Il serait du coup judicieux pour toi d'en savoir un peu plus et d'apprendre à l'utiliser. Tu pourrais retrouver ce langage dans d'autres outils comme Astro, Jekyll,... qui sont des CMS léger qui utilise le Markdown pour créer ses pages.Même Trello utilise le Markdown dans ses commentaires.
+Il s'agit d'un langage de balisage léger qui est utilisé par Github (et autres) pour mettre en forme les pages de repository comme le Readme.md et aussi les commentaires lors des review de code. Il serait du coup judicieux pour toi d'en savoir un peu plus et d'apprendre à l'utiliser. Tu pourrais retrouver ce langage dans d'autres outils comme Astro, Jekyll,... qui sont des CMS léger qui utilise le Markdown pour créer ses pages.Même Trello utilise le Markdown dans ses commentaires.
 
 On ne va pas trop rentrer dans l'origine de ce langage car ce n'est pas ce qui nous intéresse, on va plutôt directement apprendre à l'utiliser.
 
