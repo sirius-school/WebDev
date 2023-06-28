@@ -28,7 +28,7 @@ Git ne vient pas de nulle part, il répond à un besoin des développeurs. Il a 
 ## Rappel : repositery
 
 Qu'est qu'un repositery (dépôt) ?<br>
-La structure d'un repositery est exactement la même qu'un dossier dans votre machine, à part que le repositery lui est **en ligne**, contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
+Contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
 Un exemple concret, votre site web fonctionne bien et vous décider de faire une mise à jour. A cause des modifications que vous venez de faire votre site est inutilisable, quoi que vous fassiez impossible de trouver la source du problème. Vous avez grâce à Git la possibilité de revenir en arrière en parcourant votre historique sur Github !
 
 ## Rappel : .gitignore
@@ -84,7 +84,7 @@ Cela affichera une liste de tes projets.
 
 ![Alt text](./src/Images/repoList.png)
 
-2. Une fois que vous avez sélectionné le dépôt sur lequel vous souhaitez travailler, assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
+2. Une fois que vous avez sélectionné le dépôt sur lequel vous souhaitez travailler, assurez-vous d'être sur l'onglet "Current repository" (dépôt actuel) dans GitHub Desktop.
 
 ![Alt text](./src/Images/scrollMenu.png)
 
@@ -118,7 +118,7 @@ Vous avez créé avec succès une nouvelle branche sur GitHub Desktop. Vous pouv
 
 2. Ouvrez GitHub Desktop et sélectionnez le dépôt dans lequel vous avez travaillé.
 
-3. Assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
+3. Assurez-vous d'être sur l'onglet "Current repository" (dépôt actuel) dans GitHub Desktop.
 
 4. Dans la liste déroulante des branches, sélectionnez la branche que vous souhaitez fusionner avec la branche "main". La branche sélectionnée sera votre branche actuelle. Cliquez sur le bouton de la branche actuelle pour afficher la liste déroulante des branches.
 
@@ -142,7 +142,7 @@ Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (r
 
 1. Ouvrez GitHub Desktop et sélectionnez le dépôt contenant la branche que vous souhaitez supprimer.
 
-2. Assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
+2. Assurez-vous d'être sur l'onglet "Current repository" (dépôt actuel) dans GitHub Desktop.
 
 3. Dans la liste déroulante des branches, cliquez droit sur la branche que vous souhaitez supprimer.
 
