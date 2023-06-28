@@ -144,15 +144,17 @@ Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (r
 
 2. Assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
 
-3. Dans la liste déroulante des branches, sélectionnez la branche que vous souhaitez supprimer. La branche sélectionnée sera votre branche actuelle. Restez dans la liste déroulante des branches.
+3. Dans la liste déroulante des branches, cliquez droit sur la branche que vous souhaitez supprimer.
 
-4. Vous verrez une option intitulée "Delete branch" (Supprimer la branche). Cliquez sur cette option.
+4. Une liste d'options apparait dont l'option 'delete' cliquez sur cette option.
 
-5. Une fenêtre contextuelle apparaîtra pour confirmer la suppression de la branche. Vérifiez une fois de plus que vous souhaitez bien supprimer la branche, car cette action est irréversible.
+![Alt text](./src/Images/branchOptions.png)
 
-6. Cliquez sur le bouton "Delete branch" (Supprimer la branche) dans la fenêtre contextuelle pour confirmer la suppression.
+5. Une fenêtre contextuelle apparaîtra pour confirmer la suppression de la branche. Vérifiez une fois de plus que vous souhaitez bien supprimer la branche, car **cette action est irréversible**.
 
-GitHub Desktop supprimera maintenant la branche localement sur votre ordinateur, ainsi que sur le dépôt distant sur GitHub.
+![Alt text](./src/Images/modalDeleteBranch.png)
+
+6. Cochez 'Yes, delete this branch on the remote' (Oui, supprimer cette branche sur le dépôt distant) si vous souhaitez supprimer la branche aussi bien en local, sur votre machine et sur Github.com.
 
 Notez que si d'autres collaborateurs travaillent sur la même branche ou si vous avez déjà fusionné des commits sur d'autres branches, il est recommandé de ne pas supprimer la branche immédiatement, car cela peut entraîner la perte des commits et de l'historique de la branche. Dans ce cas, il est préférable de conserver la branche ou de la supprimer ultérieurement une fois qu'elle n'est plus nécessaire.
 
