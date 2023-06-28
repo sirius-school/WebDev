@@ -101,7 +101,7 @@ Extensions navigateur:
 Cette année on va utiliser Discord pour communiquer. C'est gratuit et simple.
 
 - [Clique ici pour t'inscrire](https://discord.com/register)
-- [Clique ici pour rejoindre le serveur de l'école](https://discord.gg/qdwMKyKB9D)
+- [Clique ici pour rejoindre le serveur de l'école](https://discord.gg/GeaWYGdTW)
 
 ## Activité brise glace
 
