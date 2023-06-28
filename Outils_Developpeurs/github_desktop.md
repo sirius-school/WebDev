@@ -10,11 +10,14 @@
 - [Ajouter un projet, cloner un projet](#ajouter-un-projet-cloner-un-projet)
 - [Naviguer avec Github Desktop](#naviguer-avec-github-desktop)
 - [Les branches](#les-branches)
+  - [Créer une nouvelle branche](#créer-une-nouvelle-branche)
+  - [Fusionner des branches (merge)](#fusionner-des-branches-merge)
+  - [Supprimer une branche](#supprimer-une-branche)
 - [Conclusion](#conclusion)
 
 ## Rappel : introduction
 
-Github Desktop ne vient pas de nulle part, il répond à un besoin des développeurs. Il a été créer dans le but d'archiver en ligne tous les changements que le développeur et ses collaborateurs feront dans le code source du site ou du logiciel. Durant notre formation nous avons utilisés assez régulièrement **Git** et voici le temps pour l'utilisation de l'interface *Github Dekstop*. Le programme Github Desktop est beaucoup plus simple à utiliser que le programme de base, **Git** qui lui comme vous l'avez vu est dépourvu d'une interface visuelle.
+Git ne vient pas de nulle part, il répond à un besoin des développeurs. Il a été créer dans le but d'archiver en ligne tous les changements que le développeur et ses collaborateurs feront dans le code source du site ou du logiciel. Durant notre formation nous avons utilisés assez régulièrement **Git** et voici le temps pour l'utilisation de l'interface *Github Dekstop*. Le programme Github Desktop est beaucoup plus simple à utiliser que le programme de base, **Git** qui lui comme vous l'avez vu est dépourvu d'une interface visuelle.
 
 ## Installation
 
@@ -25,7 +28,7 @@ Github Desktop ne vient pas de nulle part, il répond à un besoin des développ
 ## Rappel : repositery
 
 Qu'est qu'un repositery (dépôt) ?<br>
-Prenons comme exemple un fichier local sur votre machine, c'est pareil ! A part que le repositery lui est **en ligne**, contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
+La structure d'un repositery est exactement la même qu'un dossier dans votre machine, à part que le repositery lui est **en ligne**, contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
 Un exemple concret, votre site web fonctionne bien et vous décider de faire une mise à jour. A cause des modifications que vous venez de faire votre site est inutilisable, quoi que vous fassiez impossible de trouver la source du problème. Vous avez grâce à Git la possibilité de revenir en arrière en parcourant votre historique sur Github !
 
 ## Rappel : .gitignore
@@ -44,7 +47,7 @@ En cliquant sur le bouton *Add* ou *Ajouter* tu auras 3 possibilités :<br>
    - Cette option te permet de cloner un projet déjà tracké sur ta machine donc en locale. C'est un projet existant sur Github.com.
 
 2. Create new repositery
-   - Cette option te permet de créer un repositery totalement vierge. Ce modal apparaitra : <br>
+   - Cette option te permet de créer un repositery totalement vierge. Cette modal apparaitra :<br>
 ![Alt text](./src/Images/modalCreatNewRepo.png)<br>
    - Si tu souhaites le publier directement sur Github.com et commencé le tracking, il faut cliquer sur **Publish repositery** :<br>
 ![Alt text](./src/Images/publishRepo.png)<br>
@@ -75,19 +78,83 @@ Cela affichera une liste de tes projets.
 
 ## Les branches
 
-Rien de plus simple lorsque tu souhaites créer une branche :
-- Il faut sélectionner le repository dans lequel tu veux créer une nouvelle branche, clique ensuite sur cet autre menu déroulant :<br>
+### Créer une nouvelle branche
+
+1. Ouvrez GitHub Desktop. Si vous avez déjà cloné un dépôt, il apparaîtra dans la liste des dépôts disponibles. Sinon, vous devrez cloner un dépôt en utilisant l'URL du dépôt distant.
+
+![Alt text](./src/Images/repoList.png)
+
+2. Une fois que vous avez sélectionné le dépôt sur lequel vous souhaitez travailler, assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
+
+![Alt text](./src/Images/scrollMenu.png)
+
+3. En haut de la fenêtre de l'application, vous verrez un bouton avec le nom de la branche actuelle. Cliquez sur ce bouton pour afficher une liste déroulante des branches disponibles.
+
 ![Alt text](./src/Images/branchMenu.png)
-- De nouveau quelques options :
+
+4. Dans la liste déroulante, cliquez sur l'option "New branch" (Nouvelle branche). Une fenêtre contextuelle s'ouvrira vous demandant de donner un nom à votre nouvelle branche.
+
+![Alt text](./src/Images/newBranchModal.png)
+
+5. Entrez un nom qui décrit la fonctionnalité que vous souhaitez créer pour votre nouvelle branche. Il est courant d'utiliser des noms qui décrivent la fonctionnalité ou le correctif que vous allez développer.
+
+6. Vous pouvez également choisir de créer la nouvelle branche à partir de la branche actuelle ou d'une autre branche disponible. Par défaut, GitHub Desktop sélectionnera automatiquement la branche actuelle.
+
+![Alt text](./src/Images/chooseCloneBranch.png)
+
+7. Une fois que vous avez donné un nom à votre nouvelle branche et sélectionné la branche de départ, cliquez sur le bouton "Create branch" (Créer une branche).
+
+8. GitHub Desktop créera maintenant la nouvelle branche localement sur votre ordinateur. La nouvelle branche apparaîtra dans la liste déroulante des branches en haut de la fenêtre.
+
 ![Alt text](./src/Images/optionsBranchMenu.png)
 
-<!-- This is where i stopped the 20/06/23 -->
+9.  Pour publier votre nouvelle branche sur GitHub, cliquez sur le bouton "Publish branch" (Publier la branche) à côté de la nouvelle branche dans la liste déroulante. Cela enverra la branche sur le dépôt distant correspondant sur GitHub.
 
+Vous avez créé avec succès une nouvelle branche sur GitHub Desktop. Vous pouvez maintenant commencer à travailler sur cette branche en effectuant des modifications, en ajoutant des fichiers, etc. N'oubliez pas de faire des **commits réguliers** pour enregistrer vos modifications et de pousser vos commits sur GitHub en utilisant le bouton "Push origin" dans GitHub Desktop. Notez que si vous travaillez en équipe, il est important de communiquer avec vos collègues pour vous assurer que vous ne travaillez pas sur des branches qui pourraient entrer en conflit !
 
+### Fusionner des branches (merge) 
 
+1. Assurez-vous d'avoir terminé votre travail sur la branche que vous souhaitez fusionner avec la branche "main". Vous devez avoir effectué plusieurs commits et **poussé (push)** ces commits sur le dépôt distant.
 
+2. Ouvrez GitHub Desktop et sélectionnez le dépôt dans lequel vous avez travaillé.
 
+3. Assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
 
+4. Dans la liste déroulante des branches, sélectionnez la branche que vous souhaitez fusionner avec la branche "main". La branche sélectionnée sera votre branche actuelle. Cliquez sur le bouton de la branche actuelle pour afficher la liste déroulante des branches.
+
+![Alt text](./src/Images/optionsBranchMenu.png)
+
+5. Dans la liste déroulante, vous verrez l'option "Choose a branch to merge into" (Choisir une branche à fusionner avec). Sélectionnez "main" dans cette liste.
+
+![Alt text](./src/Images/chooseBranchToMerge.png)
+
+6. Après avoir sélectionné la branche "main", cliquez sur le bouton "Merge branch" (Fusionner la branche). Cela déclenchera le processus de fusion entre votre branche actuelle et la branche "main".
+
+7. GitHub Desktop effectuera la fusion automatiquement en créant un nouveau commit de fusion. Si des conflits surviennent pendant la fusion, GitHub Desktop vous le signalera et vous devrez les résoudre manuellement. Suivez les instructions fournies par GitHub Desktop pour résoudre les conflits.
+
+8.  Une fois que la fusion est terminée avec succès, vous pouvez pousser le commit de fusion sur le dépôt distant en cliquant sur le bouton "Push origin" (Pousser l'origine) dans GitHub Desktop.
+
+Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (repositery) sur GitHub.com.
+
+### Supprimer une branche
+
+⚠️ ATTENTION ⚠️ Une suppression est définitive, vérifiez que tout votre travail a bien été fusoinné avec votre branche principale avant toute manipulation dans le menu de suppression.
+
+1. Ouvrez GitHub Desktop et sélectionnez le dépôt contenant la branche que vous souhaitez supprimer.
+
+2. Assurez-vous d'être sur l'onglet "Current repository" (Référentiel actuel) dans GitHub Desktop.
+
+3. Dans la liste déroulante des branches, sélectionnez la branche que vous souhaitez supprimer. La branche sélectionnée sera votre branche actuelle. Restez dans la liste déroulante des branches.
+
+4. Vous verrez une option intitulée "Delete branch" (Supprimer la branche). Cliquez sur cette option.
+
+5. Une fenêtre contextuelle apparaîtra pour confirmer la suppression de la branche. Vérifiez une fois de plus que vous souhaitez bien supprimer la branche, car cette action est irréversible.
+
+6. Cliquez sur le bouton "Delete branch" (Supprimer la branche) dans la fenêtre contextuelle pour confirmer la suppression.
+
+GitHub Desktop supprimera maintenant la branche localement sur votre ordinateur, ainsi que sur le dépôt distant sur GitHub.
+
+Notez que si d'autres collaborateurs travaillent sur la même branche ou si vous avez déjà fusionné des commits sur d'autres branches, il est recommandé de ne pas supprimer la branche immédiatement, car cela peut entraîner la perte des commits et de l'historique de la branche. Dans ce cas, il est préférable de conserver la branche ou de la supprimer ultérieurement une fois qu'elle n'est plus nécessaire.
 
 ## Conclusion
 

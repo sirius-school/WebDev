@@ -21,7 +21,7 @@ Git ne vient pas de nulle part, il répond à un besoin des développeurs. Il a 
 ## Repositery
 
 Qu'est qu'un repositery (dépôt) ?<br>
-Prenons comme exemple un fichier local sur votre machine, c'est pareil ! A part que le repositery lui est **en ligne**, contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
+La structure d'un repositery est exactement la même qu'un dossier dans votre machine, à part que le repositery lui est **en ligne**, contient tout l'**historique** des changements que vous avez effectués et permet à vos collègues de **contribuer** eux aussi au projet, pas mal non ⁉<br>
 Un exemple concret, votre site web fonctionne bien et vous décider de faire une mise à jour. A cause des modifications que vous venez de faire votre site est inutilisable, quoi que vous fassiez impossible de trouver la source du problème. Vous avez grâce à Git la possibilité de revenir en arrière en parcourant votre historique sur Github !
 
 ## .gitignore
