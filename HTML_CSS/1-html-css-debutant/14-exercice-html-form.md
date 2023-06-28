@@ -109,7 +109,7 @@ form{
 
 ## Voilà
 
-![form](./img/16/form-resultat.png)
+![form](./img/14/form-resultat.png)
 
 C'est déjà terminé pour les formulaires, tu as vu que c'était un vrai jeu d'enfant que de sélectionner nos éléments et de les styliser, non? :) 
 

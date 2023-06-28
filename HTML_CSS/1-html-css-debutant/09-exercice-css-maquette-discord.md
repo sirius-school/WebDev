@@ -31,9 +31,9 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 
 ## Screenshot
 
-![exo-css](./img/11/ex-css.png)
+![exo-css](./img/09/ex-css.png)
 
-![exo-css](./img/11/ex-css-2.png)
+![exo-css](./img/09/ex-css-2.png)
 
 ## HTML
 

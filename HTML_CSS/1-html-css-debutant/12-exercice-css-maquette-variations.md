@@ -26,8 +26,8 @@ Voici encore un exercice dans lequel tu vas devoir mettre tes compétences à l'
 
 ## Screenshot
 
-![variant01](img/14/14-01.png)
+![variant01](img/12/12-01.png)
 
-![variant02](img/14/14-03.png)
+![variant02](img/12/12-03.png)
 
 [:rewind: Retour au sommaire du cours](README.md#table-des-matières)

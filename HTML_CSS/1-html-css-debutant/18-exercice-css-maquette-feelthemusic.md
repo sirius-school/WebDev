@@ -38,19 +38,19 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
 
 ### index.html
 
-![index](./img/20/index.png)
+![index](./img/18/index.png)
 
-![index-decoupe](./img/20/index-decoupe.png)
+![index-decoupe](./img/18/index-decoupe.png)
 
 > La découpe en "bloc" et donc en éléments HTML!
 
 ### discover.html
 
-![discover](./img/20/discover.png)
+![discover](./img/18/discover.png)
 
 ### comments.html
 
-![comments](./img/20/comment.png)
+![comments](./img/18/comment.png)
 
 ## Les ressources
 

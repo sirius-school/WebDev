@@ -232,7 +232,7 @@ Lorsque vous avez besoin de faire référence à un fichier il est possible d'ut
 
 Si votre ressource fait partie de votre projet, alors vous pouvez y faire référence directement. Voyons un rapide exemple:
 
-![File tree](img/04/filetree.png)
+![File tree](img/02/filetree.png)
 
 Ici je possède deux images, une dans un dossier *Images* et l'autre à la racine de mon projet. Regardez le bout de code suivant
 

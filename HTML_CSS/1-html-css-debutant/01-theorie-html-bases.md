@@ -159,7 +159,7 @@ Faisons une toute petite pause théorique.
 
 > :exclamation: Lors d'une mise à jour de VScode il est possible que cette dernière fonctionnalité ai changée. Il faut désormais activer `Emmet: Use Inline Completions` qui est un paramètre à  dans VSCode. Ainsi, lorsque tu écriras du code Emmet, VScode te montrera directement le résultat et il faudra valider avec `Tab`.
 
-![vscode-emmet-inline](./img/03/vscode-emmet-inline.png)
+![vscode-emmet-inline](./img/01/vscode-emmet-inline.png)
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)
 

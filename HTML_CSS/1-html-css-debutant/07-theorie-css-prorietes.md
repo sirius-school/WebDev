@@ -28,8 +28,8 @@ Alors, on va faire au plus court, car des propriétés il y en a beaucoup... vra
   - [En une ligne](#en-une-ligne)
 - [Dimensions, margin et padding](#dimensions-margin-et-padding)
   - [Inline et block](#inline-et-block)
-  - [width & height (max & min)](#width--height-max--min)
-  - [margin & padding](#margin--padding)
+  - [width \& height (max \& min)](#width--height-max--min)
+  - [margin \& padding](#margin--padding)
   - [Calculer une largeur avec des marges](#calculer-une-largeur-avec-des-marges)
   - [Centrer horizontalement grâce aux margin](#centrer-horizontalement-grâce-aux-margin)
 - [Display](#display)
@@ -252,7 +252,7 @@ body{
 
 Permet de gérer la taille de notre image grâce à : **auto**, **cover**, **contain**,...
 
-![bg-size](img/09/bg-size.png)
+![bg-size](img/07/bg-size.png)
 
 ### background-repeat
 
@@ -265,10 +265,10 @@ body{
 }
 ```
 
-![no-repeat](img/09/norepeat.png)
-![repeat-x](img/09/repeatx.png)
-![repeat-y](img/09/repeaty.png)
-![repeat](img/09/repeat.png)
+![no-repeat](img/07/norepeat.png)
+![repeat-x](img/07/repeatx.png)
+![repeat-y](img/07/repeaty.png)
+![repeat](img/07/repeat.png)
 
 Définit la répétition d'une image d'arrière-plan si le conteneur est plus grand que l'image. Prends les valeurs suivantes: **no-repeat**, **repeat-x**, **repeat-y**, **repeat**.
 
@@ -324,7 +324,7 @@ Les éléments en `display:inline;` (span, a, strong, img,...) prennent la large
 
 Les éléments en inline-block peuvent prendre une hauteur spécifique contrairement aux éléments en `display:inline;`
 
-![inline-block](img/09/inline-block.png)
+![inline-block](img/07/inline-block.png)
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -350,7 +350,7 @@ img{
 
 ### margin & padding
 
-![marges](img/09/marges.png)
+![marges](img/07/marges.png)
 
 ```css
 // On aura des marges équivalente de chaque côté
@@ -503,7 +503,7 @@ Permet de retirer un élement de la page. Il ne sera plus visible et ne prendra 
 
 Permet de placer un contenu en dehors du "flux" de la page et le reste des blocks "coule" autour. Prends **left**, **right** ou **none** comme valeur.
 
-![float](img/09/float.png)
+![float](img/07/float.png)
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -517,7 +517,7 @@ Permet de placer un contenu en dehors du "flux" de la page et le reste des block
 
 Permet d'empêcher le contournement des blocs flottants. Prends **left**, **right** ou **both** comme valeur.
 
-![un exemple de float et clear](img/09/float&clear.png)
+![un exemple de float et clear](img/07/float&clear.png)
 
 ### Créer un affichage en colones
 
@@ -621,10 +621,10 @@ Prenons l'exemple suivant:
 Si nous ne précision pas d'élément en `position:relative` notre bulle va se placer par rapport à notre body et donc se place en bas à droite (image 1). Si on précise un élément avec la `position: relative` notre bulle se place par rapport à cet élément (image 2).
 
 **Image 1**
-![position-relative](img/09/pos-absolute.png)
+![position-relative](img/07/pos-absolute.png)
 
 **Image 2**
-![position-relative](img/09/pos-relative.png)
+![position-relative](img/07/pos-relative.png)
 
 Un élément se comporte de la même manière que avec static. On peut se servir des propriétés **top**, **left**, **right**, **bottom** pour déplacer l'élément. Le reste du contenu ne sera pas affecté.
 

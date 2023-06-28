@@ -71,6 +71,6 @@ Il est temps de réaliser ta première page. Suis bien ce pas-à-pas.
 
 Tu devrais avoir quelque chose dans ce goût-là. Si c'est le cas, tant mieux tu peux passer à [l'exercice suivant](6-exercice-recette.md). Sinon, revois la théorie et pose des questions!
 
-![exo-inter-example](img/05/ex-inter-example.png)
+![exo-inter-example](img/03/ex-inter-example.png)
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)

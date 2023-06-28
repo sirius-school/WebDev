@@ -43,6 +43,6 @@ Si tu bloque, n'hésite pas à demander de l'aide à tes collègues ou à ton fo
 
 ## Exemple
 
-![exemple-recette](img/06/exemple-recette.png)
+![exemple-recette](img/04/exemple-recette.png)
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)

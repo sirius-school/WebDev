@@ -3,7 +3,7 @@
 
 Voyons ensemble comment créer des formulaires HTML pour que vous puissiez récolter les données de vos visiteurs.
 
-Il existe pleins de forme de form (ahah) et toutes sortes d'utilités. Principalement, le but d'un formulaire est de recueillir les informations de votre visiteur et d'ensuite pouvoir les utiliser. Cela peut-être pour l'inscrire et lui donner accès à diverses fonctionnalités sur votre site ou application. Vous pouvez par exemple récupérer son nom et adresse email pour lui envoyer une newsletter ou bien éffectuer un questionnaire concernant la qualité de votre service. Il est également possible de créer un formulaire pour gérer la partie support de votre app et de recevoir les infos directement dans votre compte email.
+Il existe pleins de forme de form (ahah) et toutes sortes d'utilités. Principalement, le but d'un formulaire est de recueillir les informations de votre visiteur et d'ensuite pouvoir les utiliser. Cela peut-être pour l'inscrire et lui donner accès à diverses fonctionnalités sur votre site ou application. Vous pouvez par exemple récupérer son nom et adresse email pour lui envoyer une newsletter ou bien effectuer un questionnaire concernant la qualité de votre service. Il est également possible de créer un formulaire pour gérer la partie support de votre app et de recevoir les infos directement dans votre compte email.
 <!-- omit in toc -->
 ## Table des matières
 
