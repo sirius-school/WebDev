@@ -42,6 +42,10 @@ Tu devras être présent le **lundi, mercredi et jeudi** de **9h à 16h**. Tandi
 
 Toute absence devra être **justifiée**. Si tu es absent, envoie un email à ruth.escobar@possibles.org. Tu peux y ajouter ton justificatif en photo.
 
+#### Vacances
+
+Une pause de 2 semaines sera organisées du **21 Août** au **1 Septembre**. On recommence les cours le lundi 4 Septembre! Alors profite bien! 🏝️ 🌞
+
 ### Les pauses
 
 Il y a une pause à **10h30** et **14h30**, de **15 minutes** chacune.
