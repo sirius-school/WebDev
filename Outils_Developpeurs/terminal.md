@@ -57,8 +57,9 @@ Maintenant que l'installation est finie vous devriez obtenir ceci :<br>
 | mi, move, mv | Déplacer un fichier/répertoire. Exemple : ``mv .\fichier.txt .\Sirius\`` |
 | del, rmdir, rd, rm | Suppression de fichier/répertoire. Exemple : ``rm .\fichier.txt``|
 | start | Ouvrir un fichier dans un autre programme. Pas obligatoire vous pouvez simplement mettre le nom du fichier. |
-| ni, New-Item | Créer un nouveau fichier, il faut spécifier son extenstion. Exemple : ``ni fichier.txt``. Attention uniquement sur PowerShell. |
-| ren, mv | Renommer un fichier/répertoire. |
+| md, mkdir | Créer un dossier. Exemple : ``md D:\Sirius\WebDev\Nouveau`` en spécifiant le chemin, ``md Nouveau`` si vous ne spécifiez pas de chemin le dossier sera créé dans le répertoire actuel. |
+| ni, New-Item | Créer un nouveau fichier, il faut spécifier son extension. Exemple : ``ni fichier.txt``. Attention uniquement sur PowerShell. |
+| ren, mv | Renommer un fichier/répertoire. Exemple : ``mv .\fichier.txt nouveauFichier.txt`` si vous êtes dans le bon répertoire sinon vous devez spécifier vous-même le chemin |
 | cd, chdir | **L'une des commandes les plus importante**. Changer de répertoire courant. Exemple : ``cd .\Sirius``, ``cd .\Sirius\Autres\``, ``cd..`` ce dernier vous permettra de revenir en arrière un fois. ``cd ..\..`` celui-ci vous fera revenir en arrière deux fois. |
 | echo, write | Afficher des chaînes, variables etc sur la sortie standard. Permet aussi d'écrire dans les fichiers. Exemple : ``echo "Bonjour"``, ``echo "Bonjour" > .\fichier.txt`` |
 | gps, ps | Liste de tous les processus en cours d'éxectution. |
@@ -86,6 +87,29 @@ Après l'apprentissage des quelques commandes ci-dessus vous pouvez enfin un peu
 - Affichez le contenu du fichier ``test.txt``.
 - Supprimez le fichier ``test.txt`` se trouvant dans votre dossier ``WebDev``.
 - Toujours via le terminal ouvrez le fichier ``test.txt``.
+
+Un seul me semblait trop peu, je me suis permis d'en ajouter un autre un peu plus poussé, amusez-vous bien 😁 :
+
+> Comme pour le premier n'utilisez pas la commande `clear` afin que je puisse voir les commandes que vous avez utilisées.
+
+- Dans le dossier `Sirius`, créez un nouveau dossier appelé `Scripts`.
+- À l'intérieur du dossier `Scripts`, créez un fichier PowerShell nommé `script.ps1`.
+   > Pssst, si tu sais ne pas ce qu'est un fichier 'ps1' utilise Google 😊
+- Utilisez la commande PowerShell pour afficher le contenu du dossier `Scripts` et vérifiez que le fichier `script.ps1` est présent.
+- Ouvrez le fichier `script.ps1` dans un éditeur de texte et ajoutez-y le code suivant :
+
+```powershell
+Write-Host "Hello, World !"
+```
+   > N'oublie pas de sauvergarder -> ``Ctrl + S`` :wink:
+
+- Retourne dans ton terminal et utilise une commande (ou pas ❓) PowerShell pour exécutez le script `script.ps1` et vérifiez que le message "Hello, World !" est affiché dans le terminal.
+- Renommez le fichier `script.ps1` en `my_script.ps1`.
+- Utilisez la commande PowerShell pour copier le fichier `my_script.ps1` dans le dossier `WebDev` qui se trouve dans le dossier `Sirius`.
+- Vérifiez que le fichier `my_script.ps1` est bien présent dans le dossier `WebDev` en utilisant la commande PowerShell pour **afficher** (pas lancer le script) le contenu du fichier `my_script.ps1`.
+- Tu n'auras plus besoin de ce fichier tu peux donc le supprimer à l'aide d'une commande PowerShell.
+
+Bien joué tu maîtrises les bases du terminal 🎉
 
 [:rewind: Retour au sommaire du cours](../README.md)
 
