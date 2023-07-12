@@ -164,7 +164,7 @@ Il est possible d'insérer du code dans un bloc avec la syntaxe en couleur, c'es
 
 Github supporte les emojis.
 
-[Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com)
+[Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
 ```md
 :bulb: :alien: :japanese_goblin:
