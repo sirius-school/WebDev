@@ -101,7 +101,7 @@ Un seul me semblait trop peu, je me suis permis d'en ajouter un autre un peu plu
 ```powershell
 Write-Host "Hello, World !"
 ```
-   > N'oublie pas de sauvergarder -> ``Ctrl + S`` :wink:
+   > N'oublie pas de sauvegarder -> ``Ctrl + S`` :wink:
 
 - Retourne dans ton terminal et utilise une commande (ou pas ❓) PowerShell pour exécutez le script `script.ps1` et vérifiez que le message "Hello, World !" est affiché dans le terminal.
 - Renommez le fichier `script.ps1` en `my_script.ps1`.
@@ -109,7 +109,110 @@ Write-Host "Hello, World !"
 - Vérifiez que le fichier `my_script.ps1` est bien présent dans le dossier `WebDev` en utilisant la commande PowerShell pour **afficher** (pas lancer le script) le contenu du fichier `my_script.ps1`.
 - Tu n'auras plus besoin de ce fichier tu peux donc le supprimer à l'aide d'une commande PowerShell.
 
-Bien joué tu maîtrises les bases du terminal 🎉
+Petit quiz musical 🎵 une façon détournée de vous montrer l'étendue des pouvoirs du terminal, enjoy 😜 :
+
+> Comme pour le premier et le deuxième n'utilisez pas la commande `clear` afin que je puisse voir les commandes que vous avez utilisées.
+
+- Dans le dossier `Sirius`, retournez dans le dossier `Scripts` précédemment créé.
+- À l'intérieur du dossier `Scripts`, créez un fichier PowerShell nommé `firstSound.ps1`.
+- Ouvrez le fichier `firstSound.ps1` dans un éditeur de texte et ajoutez-y le code suivant :
+
+```powershell
+[console]::beep(440,500)
+[console]::beep(440,500)
+[console]::beep(440,500)
+[console]::beep(349,350)
+[console]::beep(523,150)
+[console]::beep(440,500)
+[console]::beep(349,350)
+[console]::beep(523,150)
+[console]::beep(440,1000)
+[console]::beep(659,500)
+[console]::beep(659,500)
+[console]::beep(659,500)
+[console]::beep(698,350)
+[console]::beep(523,150)
+[console]::beep(415,500)
+[console]::beep(349,350)
+[console]::beep(523,150)
+[console]::beep(440,1000)
+```
+   > N'oublie pas de sauvegarder -> ``Ctrl + S`` :wink:
+
+- Retourne dans ton terminal et utilise une commande (ou pas ❓) PowerShell pour exécutez le script `firstSound.ps1`.
+- Si tu as reconnu la musique qui vient d'être jouée, note-le quelque part :grin:
+
+- Toujours dans le dossier `Scripts`, créez un fichier PowerShell nommé `secondSound.ps1`.
+- Ouvrez le fichier `secondSound.ps1` dans un éditeur de texte et ajoutez-y le code suivant :
+
+```powershell
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(932,150)
+Start-Sleep -m 150
+[console]::beep(1047,150)
+Start-Sleep -m 150
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(699,150)
+Start-Sleep -m 150
+[console]::beep(740,150)
+Start-Sleep -m 150
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(932,150)
+Start-Sleep -m 150
+[console]::beep(1047,150)
+Start-Sleep -m 150
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(784,150)
+Start-Sleep -m 300
+[console]::beep(699,150)
+Start-Sleep -m 150
+[console]::beep(740,150)
+Start-Sleep -m 150
+[console]::beep(932,150)
+[console]::beep(784,150)
+[console]::beep(587,1200)
+Start-Sleep -m 75
+[console]::beep(932,150)
+[console]::beep(784,150)
+[console]::beep(554,1200)
+Start-Sleep -m 75
+[console]::beep(932,150)
+[console]::beep(784,150)
+[console]::beep(523,1200)
+Start-Sleep -m 150
+[console]::beep(466,150)
+[console]::beep(523,150)
+```
+   > N'oublie pas de sauvegarder -> ``Ctrl + S`` :wink:
+
+- Comme pour le premier son utilise une commande (ou pas ❓) PowerShell pour exécutez le script `secondSound.ps1`.
+- Si tu as reconnu la musique qui vient d'être jouée, note-le quelque part :grin:
+- Tu n'auras plus besoin des fichiers que tu viens de créer, tu peux donc les supprimer grâce à une commande PowerShell.
+
+Après cette interlude musical on peut aller encore plus loin, en demandant à PowerShell de parler, oui oui de parler :
+- Entrez la commande ci-dessous directement dans votre terminal :
+```powershell
+Add-Type -AssemblyName System.speech
+$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
+```
+- La commande que vous venez d'intégrer va faire exploser votre ordinateur dans 10 secondes... Je plaisante, cette commande vient seulement d'installer un synthétiseur de voix 😊
+- Pour faire parler votre terminal, il suffit de mettre cette commande :
+```powershell
+$speak.Speak("Salut je suis un robot et tu viens de me permettre de prendre le contrôle de ton ordinateur mouHAHAHAHA")
+```
+> Psssst, si tu veux pas qu'elle prenne le contrôle de ton ordi, change la phrase 😜
+
+J'espère que ces petits exercices vous ont permis de comprendre un peu comment fonctionne le terminal et que les derniers vous ont au moins un peu amusés. Et au fait, **well done** tout le monde vous maîtrisez les bases du terminal 🎉
 
 [:rewind: Retour au sommaire du cours](../README.md)
 
