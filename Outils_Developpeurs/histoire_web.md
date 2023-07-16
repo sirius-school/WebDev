@@ -202,8 +202,10 @@ Bon travail à tous !
 
 [:arrow_up: Revenir au début](#table-des-matières)
 
-[:rewind: Retour au sommaire du cours](../README.md#sommaire-du-cours)
+[:arrow_right: Suite du cours : *Le terminal*](./terminal.md)
+
+[:rewind: Retour au sommaire du cours](../README.md)
 
 > Cours original : Julie Vanderbyse
 >
-> Modifications : Jeremy Scala & Lucas Ielli
+> Modifications : [Jeremy Scala](https://github.com/scalajeremy) & [Lucas Ielli](https://github.com/LucasIelli)

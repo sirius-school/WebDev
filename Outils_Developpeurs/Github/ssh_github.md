@@ -28,4 +28,8 @@ Une fois que vous avez configuré une clé SSH sur votre compte Github, vous pou
 
 Il est important de noter que la clé privée doit rester confidentielle et ne doit pas être partagée avec d'autres personnes. Elle doit être protégée sur votre ordinateur avec un mot de passe fort.
 
-> Cours original : Lucas Ielli
+[:arrow_up: Revenir au début](#table-des-matières)
+
+[:rewind: Retour au sommaire du cours](../../README.md)
+
+> Cours original : [Lucas Ielli](https://github.com/LucasIelli)
