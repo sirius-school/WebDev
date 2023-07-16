@@ -138,7 +138,7 @@ Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (r
 
 ### Supprimer une branche
 
-⚠️ ATTENTION ⚠️ Une suppression est définitive, vérifiez que tout votre travail a bien été fusoinné avec votre branche principale avant toute manipulation dans le menu de suppression.
+⚠️ ATTENTION ⚠️ Une suppression est définitive, vérifiez que tout votre travail a bien été fusionné avec votre branche principale avant toute manipulation dans le menu de suppression.
 
 1. Ouvrez GitHub Desktop et sélectionnez le dépôt contenant la branche que vous souhaitez supprimer.
 

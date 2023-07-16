@@ -2,7 +2,7 @@
 # Le Terminal
 
 <!-- omit in toc -->
-## Tables des matières 
+## Tables des matières
 - [A quoi cela sert ?](#a-quoi-cela-sert-)
 - [Installation](#installation)
 - [Les commandes](#les-commandes)
@@ -87,6 +87,10 @@ Après l'apprentissage des quelques commandes ci-dessus vous pouvez enfin un peu
 - Supprimez le fichier ``test.txt`` se trouvant dans votre dossier ``WebDev``.
 - Toujours via le terminal ouvrez le fichier ``test.txt``.
 
+[:arrow_up: Revenir au début](#table-des-matières)
+
+[:arrow_right: Suite du cours : *Git & Github*](../Outils_Developpeurs/Github/git_github.md)
+
 [:rewind: Retour au sommaire du cours](../README.md)
 
-> Made by : [Lucas Ielli](https://github.com/lucasielli)
+> Cours original : [Lucas Ielli](https://github.com/lucasielli)

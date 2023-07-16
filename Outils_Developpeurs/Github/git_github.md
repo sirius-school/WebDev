@@ -132,8 +132,8 @@ Git et Github sont des outils indispensables pour un développeur et pour travai
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-[:arrow_right: Suite du cours : *Les bases de JavaScript*](../JavaScript/JS_Bases/)
+[:arrow_right: Suite du cours : *Exercice de logique*](../../Python/exercice_logique.md)
 
-[:rewind: Retour au sommaire du cours](../README.md)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
-> Cours original : Lucas Ielli
+> Cours original : [Lucas Ielli](https://github.com/LucasIelli)
