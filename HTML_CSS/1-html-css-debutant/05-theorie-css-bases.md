@@ -34,7 +34,15 @@ Prêt à découvrir le CSS alors?
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-## CSS interne vs CSS externe
+## Attribut style vs CSS interne vs CSS externe
+
+### Attribut
+
+On peut écrire du style CSS sur **un** élément en ajoutant un attribut "style". Attention, ceci n'est pas une bonne pratique car le maintient du code est alors un véritable enfers! C'est à utiliser dans certains cas précis comme quand on n'a pas l'accès aux styles et qu'on veut modifier un élement via JavaScript et un framework.
+
+```html
+<div style="background-color:red;border:solid 2px blue"></div>
+```
 
 ### Interne à la page
 
