@@ -58,25 +58,25 @@ Ce ne sont là que quelques-uns des termes couramment utilisés sur Github. Il e
 
 Maintenant que vous avez effectué l'installation et que vous connaisez quelques termes Git. Attardons-nous un peu sur l'interface du site github.com et particulièrement sur le dépôt de votre [cours](https://github.com/sirius-school/WebDev).
 
-![](./src/Images/githubCodeButton.png)<br>
+![](../src/Images/githubCodeButton.png)<br>
 - Ce bouton vous permet d'accèder à la modal suivante :<br>
-![](./src/Images/githubCodeModal.png)<br>
+![](../src/Images/githubCodeModal.png)<br>
 - Dans cette modal nous retrouvons l'url `.git` qui est nécessaire pour pouvoir **cloner** un repository (qu'il soit à vous ou à quelqu'un d'autre).
 - Durant la formation nous n'utiliserons que l'onglet HTTPS car vous êtes la plupart sur des ordinateurs qui changeront de mains à un moment donné. Quoi qu'il en soit sachez qu'il existe les clés SSH et je vous renvoi vers [une autre partie du cours](./ssh_github.md) si cela vous intéresse.
 - Plus tard dans la formation nous aurons l'occasion de nous familiariser avec le programme ``Github Desktop`` et donc d'utiliser le bouton `Open with Github Desktop`. 
 - Vous avez aussi la possibilité d'enregistrer n'importe quel repository en fichier compressé ``.zip`` attention toutefois que le fichier téléchargé sera indépendant de Github et donc uniquement enregistré localement sur votre machine.
 
-![](./src/Images/githubBranchButton.png)<br>
+![](../src/Images/githubBranchButton.png)<br>
 - Ce bouton-ci vous permet d'accèder au menu des branches du repository :<br>
-![](./src/Images/githubBranchModal.png)<br>
+![](../src/Images/githubBranchModal.png)<br>
 - A savoir, la branche `main` ou `master` est la branche créée par défaut. Les 3 autres branches reprise dans l'image ci-dessus descendent directement de la branche `main`.<br>
-![](./src/Images/githubRepoContent.png)<br>
+![](../src/Images/githubRepoContent.png)<br>
 - Cette partie du site Github.com nous montre le contenu du repository sur la branche `main` mais aussi la dernière modification ayant été faite et par qui (Jeremy dans ce cas-ci). En haut à droite de l'image on retrouve le nombre de commits ayant été faits sur cette branche et nous pouvons accèder à tout l'historique en cliquant dessus.
 
 Une chose très importante lorsque vous travaillez en équipe sur le même projet et donc sur le même repository c'est la ***COMMUNICATION***. Si vous faites une modification sur une branche sur laquelle vous et vos collègues vous travaillez en même temps, il est ***PRIMORDIAL*** de les avertir. Car si de leurs côtés ils n'ont pas `fetch` et `pull` cette nouvelle version et qu'ils effectuent une modification sur une ancienne version, le résultat risque fort d'être un conflit. Ce n'est pas grave en soi et il suffit de suivre les indications données par Github pour s'en sortir mais c'est une perte de temps et parfois de données.
 
 ## Les branches
-![](./src/Images/github-flow.png)<br>
+![](../src/Images/github-flow.png)<br>
 - Le principe de branche est fondamentale lorsqu'un projet est géré par plusieurs personnes. L'image ci-dessus nous explique comment cela fonctionne.
     - Un projet démarre toujours par la branche `main` ou `master`.
     - La branche `Bugfix` est créée descendant de la branche `main`.
