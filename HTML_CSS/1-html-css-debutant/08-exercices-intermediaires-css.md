@@ -17,7 +17,7 @@ Voyons un peu ensemble si tu as bien compris comment faire du CSS :)
 
 ## Ta première page HTML gagne un niveau
 
-Reprend ta page HTML réalisé dans [l'exercices intermédiaire HTML](05-exercices-intermediaires-html.md) et sélectionne les balises que tu as utilisés et laisse ta créativité parler. Ajoute des couleurs, change la taille du texte, ajoute un fond de couleur à la page et aux éléments,... Bref c'est le moment de faire n'importe quoi et de t'amuser avec le CSS.
+Reprend ta page HTML réalisé dans [l'exercices intermédiaire HTML](03-exercices-intermediaires-html.md) et sélectionne les balises que tu as utilisés et laisse ta créativité parler. Ajoute des couleurs, change la taille du texte, ajoute un fond de couleur à la page et aux éléments,... Bref c'est le moment de faire n'importe quoi et de t'amuser avec le CSS.
 
 ## CSS Diner
 
@@ -32,7 +32,7 @@ Réalise [les exercices sur la W3 School](https://www.w3schools.com/css/exercise
 
 ## Ta recette gagne un niveau
 
-Maintenant que tu as vu quelques propriétés CSS, il est temps d'améliorer ta structure HTML de recette réalisé dans [l'exercice recette](06-exercice-recette.md)!
+Maintenant que tu as vu quelques propriétés CSS, il est temps d'améliorer ta structure HTML de recette réalisé dans [l'exercice recette](04-exercice-recette.md)!
 
 Pas de consigne précise, mets quelques propriétés pour changer la couleur du texte de tes titres et paragraphes. Change la couleur de ton fond. Arrondis les coins de ton image. Bref, lâche toi !
 
