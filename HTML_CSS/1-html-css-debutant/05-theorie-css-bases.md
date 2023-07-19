@@ -9,7 +9,7 @@ Le CSS permet aussi la gestion des différents médias possibles pour votre page
 
 > :bulb: Regardez ce site [http://csszengarden.com/], il propose le même contenu mais vous pouvez changer de style. C'est un exemple parfait de la puissance du CSS.
 > 
-> La puissance du CSS pour créer des portraits [Pure CSS Portrait: Francine](https://diana-adrianne.com/purecss-francine/)
+> La puissance du CSS pour créer des portraits [Pure CSS Portrait](https://diana-adrianne.com/)
 
 Prêt à découvrir le CSS alors?
 
