@@ -8,6 +8,8 @@ Le plus grand avantage, c'est la centralisation de vos styles et leurs maintient
 Le CSS permet aussi la gestion des différents médias possibles pour votre page. Pour que votre site apparaisse correctement sur d'autres types d'écrans (tablette, smartphone,...) il faut lui dire comment se comporter, c'est encore là que le CSS brille!
 
 > :bulb: Regardez ce site [http://csszengarden.com/], il propose le même contenu mais vous pouvez changer de style. C'est un exemple parfait de la puissance du CSS.
+> 
+> La puissance du CSS pour créer des portraits [Pure CSS Portrait: Francine](https://diana-adrianne.com/purecss-francine/)
 
 Prêt à découvrir le CSS alors?
 
