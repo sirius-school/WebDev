@@ -17,12 +17,14 @@ Prêt à découvrir le CSS alors?
 ## Table des matières
 
 - [Quelques infos pratiques](#quelques-infos-pratiques)
-- [CSS interne vs CSS externe](#css-interne-vs-css-externe)
+- [Attribut style vs CSS interne vs CSS externe](#attribut-style-vs-css-interne-vs-css-externe)
+  - [Attribut](#attribut)
   - [Interne à la page](#interne-à-la-page)
   - [Externe aux pages](#externe-aux-pages)
 - [La syntaxe](#la-syntaxe)
   - [Les commentaires en CSS](#les-commentaires-en-css)
 - [Les outils de développement](#les-outils-de-développement)
+
 
 ## Quelques infos pratiques
 
