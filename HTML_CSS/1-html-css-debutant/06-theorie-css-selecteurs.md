@@ -218,19 +218,24 @@ Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments co
 
 ```css
 /* css */
-div > span {
-  background-color: blue;
+span {
+  background-color: aqua;
+}
+
+div + span {
+  background-color: yellow;
 }
 ```
 
 ```html
 <!-- html -->
 <div>
-  <span>Premier span du div.
-    <span>Deuxième span, dans un span dans un div.</span>
+  <span>
+    Span #1, in the div.
+    <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>
-<span>Troisième span, en dehors de tout div.</span>
+<span>Span #3, not in the div at all.</span>
 ```
 
 ## Convention de nommage
