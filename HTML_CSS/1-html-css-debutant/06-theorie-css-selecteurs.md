@@ -169,24 +169,32 @@ p * {...}
 
 ## Combinateur de voisin direct
 
-Le combinateur `+` est un peu plus compliqué, il permet de cibler un voisin direct d'un autre élément.
+Le combinateur `+` est un peu plus compliqué, il permet de cibler un voisin direct (qui suit) d'un autre élément.
 
 ```css
 /* css */
-p + .intro {...}
+.container + .important{...} 
 ```
 
 ```html
 <!-- html -->
-<p>Coucou je suis un paragraphe avec <a href="#" class="intro">un lien</a>.</p>
-<a href="#" class="intro">Et moi je suis un lien tout seul</a>
+<main>
+    <div class="container">
+      <p class="important">
+       Je ne suis pas sélectionné car je suis un enfant/.
+      </p>
+    </div>
+    <p class="important">
+     Je suis sélectionné car je suis un voisin direct
+    </p>
+  </main>
 ```
 
-> :bulb: Dans cet exemple le lien à l'intérieur du paragraphe ne sera pas sélectionné, car ici on ne cible pas la descendance mais le fait que le lien est "à côté" ou "à la suite" du paragraphe pas englober dans le paragraphe.
+> :bulb: Dans cet exemple le `<p class="important">` à l'intérieur de `<div class="container">` ne sera pas sélectionné, car ici on ne cible pas la descendance mais le fait que le lien est "à côté" ou "à la suite" du paragraphe pas englober dans le paragraphe.
 
 ## Sélecteurs de voisins généraux
 
-Le combinateur `~` permet de séparer deux sélecteurs et de cibler un élément si celui-ci correspond au second sélecteur et est précédé (mais pas forcément voisin immédiat) d'un autre élément correspondant au premier sélecteur qui partage le même parent. Les deux éléments sont des fils d'un même parent Element, voisins immédiats ou pas.
+Le combinateur `~` permet de sélectionner tous les voisins direct ou pas direct qui suivent le premier élément sélectionné. C'est comme le sélecteur de voisin direct vu au dessus sauf qu'on peut en sélectionner plusieurs.  
 
 ```css
 /* css */
