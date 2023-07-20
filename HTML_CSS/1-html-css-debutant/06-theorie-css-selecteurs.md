@@ -222,7 +222,7 @@ span {
   background-color: aqua;
 }
 
-div + span {
+div > span {
   background-color: yellow;
 }
 ```
