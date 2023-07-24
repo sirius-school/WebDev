@@ -59,7 +59,9 @@ body{
 }
 ```
 
-Cette propriété définit la famille de police d'écriture à utiliser. Dans cet exemple, tout texte dans le `body` de votre page utilisera Arial en priorité, ensuite Helvetica si la police n'est pas disponible et pour finir n'importe quelle police sans-serif si les deux première ne sont pas sur l'ordinateur de l'utilisateur.
+Cette propriété définit la famille de police d'écriture à utiliser. Dans cet exemple, tout texte dans le `body` de votre page utilisera Arial en priorité, ensuite Helvetica si la police n'est pas disponible et pour finir n'importe quelle police sans-serif si les deux première ne sont pas sur l'ordinateur de l'utilisateur. 
+
+Les types de polices disponnibles en HTML/CSS sont les suivants: Sans-serif, Serif, Monospace, Cursive, Fantasy. Plus d'infos sur [w3school](https://www.w3schools.com/css/css_font.asp)
 
 Voici une liste des polices dites "safe" à utiliser sur vos pages web: [https://www.cssfontstack.com/]
 
