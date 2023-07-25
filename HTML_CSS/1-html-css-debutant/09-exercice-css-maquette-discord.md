@@ -17,7 +17,7 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 
 ## Mise en place
 
-1. Copie et colle le code HTML fournit plus bas dans un nouveau fichier HTML.
+1. Copie et colle le code HTML fournit plus bas dans un nouveau fichier HTML. (Si t'es vraiment chaud, tu peux essayer de faire le code HTML toi même)
 2. Crée une nouvelle feuille de style et lie-là à ton fichier HTML.
 3. Affiche la page dans ton navigateur (avec Live Server) pour voir le résultat. Tous les éléments sont là mais rien n'est mis en place.
 4. Regarde le screenshot plus bas et tente de reproduire le même style.
@@ -30,6 +30,8 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 11. Bon courage!
 
 ## Screenshot
+
+Le premier screenshot représente la page "zoomée", mais au final tu dois arriver au résultat du screenshot 2.
 
 ![exo-css](./img/09/ex-css.png)
 
@@ -50,7 +52,7 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 <body>
   <header>
     <div class="container">
-      <img src="https://raw.githubusercontent.com/sirius-school/initiation-html-css-2022/main/1-html-css-debutant/assets/discord/logo-discord.png" alt="logo-discord">
+      <img src="https://raw.githubusercontent.com/sirius-school/WebDev/main/HTML_CSS/1-html-css-debutant/assets/discord/logo-discord.png" alt="logo-discord">
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -67,7 +69,7 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
   </section>
   <section>
     <h2>Téléchargez-le!</h2>
-    <img src="https://raw.githubusercontent.com/sirius-school/initiation-html-css-2022/main/1-html-css-debutant/assets/discord/illu-discord.svg" alt="">
+    <img src="https://raw.githubusercontent.com/sirius-school/WebDev/8bf4b3c7ea8075b16d5053cd3f3ced7cf43f315f/HTML_CSS/1-html-css-debutant/assets/discord/illu-discord.svg" alt="">
   </section>
   <footer>
     <div>Mon premier site web qu'avec du HTML et CSS simple</div>
@@ -93,7 +95,7 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 
 - le logo fait 100px de large.
 - la largeur des sections est de 790px **max**.
-- pour ce qui est des marges et padding, utilise les valeurs que tu veux tant que ça ressemble un minimum à ce qu'il y a sur les screenshots.
+- pour ce qui est des margin et padding, utilise les valeurs que tu veux tant que ça ressemble un minimum à ce qu'il y a sur les screenshots.
 
 ## Positions
 
@@ -103,7 +105,7 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 
 ## CSS
 
-N'oublie pas, ceci sont les sélecteurs que j'ai utilisé mais tu peux sans problème tenter de réaliser l'exercice sans en prendre compte et choisir tes propres sélecteurs si tu te sens à l'aise.
+N'oublie pas, ceci sont les sélecteurs que j'ai utilisé mais tu peux sans problème tenter de réaliser l'exercice sans en prendre compte et choisir tes propres sélecteurs si tu te sens à l'aise. Il n'y a pas de bonne ou mauvaise utilisation des sélecteurs, juste une façon optimale de le faire.
 
 ```css
 body{

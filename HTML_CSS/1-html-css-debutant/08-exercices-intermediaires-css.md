@@ -28,7 +28,25 @@ Tu peux allez plus loin mais on a pas encore vu la théorie, ça arrive ne te tr
 
 ## W3 School
 
-Réalise [les exercices sur la W3 School](https://www.w3schools.com/css/exercise.asp) jusqu'au chapitre sur les **CSS Font**.
+Réalise [les exercices sur la W3 School](https://www.w3schools.com/css/exercise.asp).
+
+Sujets déjà abordés (correspondant aux sections des exercices sur W3School):
+
+- Selector
+- How To...
+- Background
+- Border
+- Margin
+- Padding
+- Height/Width
+- Box Model
+- Text
+- Font
+- Positioning
+- Z-Index
+- Align
+- Backgrounds
+- Colors
 
 ## Ta recette gagne un niveau
 

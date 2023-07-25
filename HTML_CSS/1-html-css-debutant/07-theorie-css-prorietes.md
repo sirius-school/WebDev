@@ -26,27 +26,28 @@ Alors, on va faire au plus court, car des propriétés il y en a beaucoup... vra
   - [background-position](#background-position)
   - [background-attachment](#background-attachment)
   - [En une ligne](#en-une-ligne)
-- [Dimensions, margin et padding](#dimensions-margin-et-padding)
-  - [Inline et block](#inline-et-block)
-  - [width \& height (max \& min)](#width--height-max--min)
-  - [margin \& padding](#margin--padding)
-  - [Calculer une largeur avec des marges](#calculer-une-largeur-avec-des-marges)
-  - [Centrer horizontalement grâce aux margin](#centrer-horizontalement-grâce-aux-margin)
 - [Display](#display)
   - [display: block](#display-block)
   - [display: inline](#display-inline)
   - [display: inline-block](#display-inline-block)
   - [display: none](#display-none)
+- [Dimensions, margin et padding](#dimensions-margin-et-padding)
+  - [Inline et block](#inline-et-block)
+  - [width \& height (max \& min)](#width--height-max--min)
+  - [margin \& padding](#margin--padding)
+  - [box-sizing](#box-sizing)
+  - [Calculer une largeur avec des marges avec la fonction calc()](#calculer-une-largeur-avec-des-marges-avec-la-fonction-calc)
+  - [Centrer horizontalement grâce aux margin](#centrer-horizontalement-grâce-aux-margin)
 - [Positionnement](#positionnement)
   - [float](#float)
   - [clear](#clear)
   - [Créer un affichage en colones](#créer-un-affichage-en-colones)
-  - [Z-index](#z-index)
 - [Position](#position)
   - [position: static](#position-static)
   - [position: fixed](#position-fixed)
   - [position: absolute et relative](#position-absolute-et-relative)
-  - [Attention](#attention)
+  - [Z-index](#z-index)
+  - [Attention à l'utilisation de position](#attention-à-lutilisation-de-position)
 - [L'auto-complete de VSCode](#lauto-complete-de-vscode)
 
 ## Typographie
@@ -316,6 +317,62 @@ body{
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
+## Display
+
+Cette propriété va permettre une mise en forme avancée. Voici quelques valeurs possibles: **block**, **inline**, **inline-block**, **none**,... Certaines de ces valeurs sont appliquées par défaut en fonction des éléments (par exemple un `<p>` ou un `<div>` prend par défaut un **display:block**)
+
+### display: block
+
+```css
+a{
+  display: block;
+}
+```
+
+Permet de changer les éléments **inline** en block. Par défaut il prend toute la largeur de son parent et est suivi d'un retour à la ligne.
+
+Peux être modifié avec une **width** et **height**.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+### display: inline
+
+```css
+p{
+  display: inline;
+}
+```
+
+Permet de transformer l'élément en type inline ce qui aura pour effet de le laisser sur une seule ligne. La largeur est égale au contenu.
+
+Ne peux pas être modifié avec **width** et **height**.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+### display: inline-block
+
+```css
+p{
+  display: inline-block;
+}
+```
+
+Peux être modifié en **height** mais pas en **width**.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+### display: none
+
+```css
+img{
+  display: none;
+}
+```
+
+Permet de retirer un élément de la page. Il ne sera plus visible et ne prendra plus de place. 
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ## Dimensions, margin et padding
 
 ### Inline et block
@@ -384,7 +441,13 @@ Ce qu'il faut retenir:
 - Par défaut la valeur s'applique sur chaque côté (top, right, bottom, left) mais il est possible de préciser une valeur différente pour chaque côté.
 - Peut s'écrire en une seule ligne (top, right, bottom, left)
 
-### Calculer une largeur avec des marges
+### box-sizing
+
+Il existe une propriété en CSS qui est attribuée à tous les éléments. C'est le `box-sizing:content-box`. Il s'agit de préciser comment est calculé la taille totale d'un élément. Par défaut, il prend en compte le `content` plus le `padding` et la `border`. Ce qui veut dire que si vous attribuez la propriété `width: 500px` l'élément ferra 500px de large si il n'y a que son contenu et donc pas de border ou de padding. A partir du moment où l'on met en plus l'un de ces éléments on se retrouve avec un élément qui fait plus que les 500px désiré. Il faut donc alors changer le `box-sizing` en `border-box`. Du coup notre élément ferra bien 500px en prenant en compte le padding et la border.
+
+> :bulb: [Un exemple interactif sur la MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
+### Calculer une largeur avec des marges avec la fonction calc()
 
 Imaginons que vous placer deux colones côte à côte (grâce à **float**, que l'on verra plus bas) et que celles-ci sont en **width: 50%;**, cela va les placer l'une contre l'autre. La logique voudrait de rajouter une petite **margin** de chaque côté histoire de ne pas se retrouver avec deux colones complètement collée l'une à l'autre, mais en faisant cela mon élément crée un décalage horizontale ou le float ne fonctionne plus. Cela est dû au fait que la **width** correspond à la largeur du contenu sans les marges. Du coup mon élément est plus large que 50%, il est plus large d'autant de pixel que j'ai inséré dans mes margins. Du coup, au lieu d'essayer de rectifier le soucis en changeant le pourcentage, on peut demander à notre CSS de calculer la valeur exacte. Pour cela on utilise la fonction **calc()**
 
@@ -432,64 +495,6 @@ body{width: 100%}
 ```
 
 > :question: On verra plus tard que l'on peut utiliser une autre propriété pour centrer nos éléments. Mais ne nous emballons pas.
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-## Display
-
-Cette propriété va permettre une mise en forme avancée. Voici quelques valeurs possibles: **block**, **inline**, **inline-block**, **none**,... Certaines de ces valeurs sont appliquées par défaut en fonction des éléments (par exemple un `<p>` ou un `<div>` prend par défaut un **display:block**)
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-### display: block
-
-```css
-a{
-  display: block;
-}
-```
-
-Permet de changer les éléments **inline** en block. Par défaut il prend toute la largeur de son parent et est suivi d'un retour à la ligne.
-
-Peux être modifié en **width** et **height**.
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-### display: inline
-
-```css
-p{
-  display: inline;
-}
-```
-
-Permet de transformer l'élément en type inline ce qui aura pour effet de le laisser sur une seule ligne.
-
-Ne peux pas être modifié en **width** et **height**.
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-### display: inline-block
-
-```css
-p{
-  display: inline-block;
-}
-```
-
-Peux être modifié en **height** mais pas en **width**.
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-### display: none
-
-```css
-img{
-  display: none;
-}
-```
-
-Permet de retirer un élement de la page. Il ne sera plus visible et ne prendra plus de place. 
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -542,18 +547,6 @@ Exemple de 2 colones
 }
 .row {
     clear: both;
-}
-```
-
-[:arrow_up: Revenir au top](#table-des-matières)
-
-### Z-index
-
-Permet de définir la position en "profondeur" d'un élément. La valeur par défaut étant `0`, si on met une valeur positive l'élément sera par dessus tous ceux qui sont à 0 et si on met une valeur négative l'élément sera en dessous de ceux qui sont à 0.
-
-```css
-img{
-  z-index:1;
 }
 ```
 
@@ -623,18 +616,32 @@ Prenons l'exemple suivant:
 Si nous ne précision pas d'élément en `position:relative` notre bulle va se placer par rapport à notre body et donc se place en bas à droite (image 1). Si on précise un élément avec la `position: relative` notre bulle se place par rapport à cet élément (image 2).
 
 **Image 1**
+
 ![position-relative](img/07/pos-absolute.png)
 
 **Image 2**
+
 ![position-relative](img/07/pos-relative.png)
 
 Un élément se comporte de la même manière que avec static. On peut se servir des propriétés **top**, **left**, **right**, **bottom** pour déplacer l'élément. Le reste du contenu ne sera pas affecté.
 
 Pour mieux comprendre les positions, voici un lien vers [la documentation de cette balise sur W3School](https://www.w3schools.com/css/css_positioning.asp). Il y a pleins d'exemples.
 
+  [:arrow_up: Revenir au top](#table-des-matières)
+
+### Z-index
+
+Permet de définir la position en "profondeur" d'un élément. La valeur par défaut étant `0`, si on met une valeur positive l'élément sera par dessus tous ceux qui sont à 0 et si on met une valeur négative l'élément sera en dessous de ceux qui sont à 0.
+
+```css
+img{
+  z-index:1;
+}
+```
+
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Attention
+### Attention à l'utilisation de position
 
 On n'utilise pas `position` (ni `margin` et `padding`) pour placer nos conteneurs principaux sur notre page, ça sera plutôt réservé à des éléments décoratifs. Il est impensable de placer nos `div` ou nos `img` avec cette propriété, on n'aura pas le contrôle total surtout en responsive. Le positionnement avec cette propriété va souvent demander des valeurs peu précise ou dépendante de la taille de votre écran au moment où vous la choisissez (% ou pixels). On utilisera plutôt `flexbox` mais ça sera pour plus tard.
 
