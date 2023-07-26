@@ -1,12 +1,23 @@
 <!-- omit in toc -->
-# Module 3 - Introduction JavaScript
+# Introduction JavaScript
 
 <!-- omit in toc -->
 ## Table des matières
 
-- [À propos de JavaScript ?](#à-propos-de-javascript-)
-- [La balise ``<script>``](#la-balise-script)
+- [Qu'est-ce que JavaScript](#quest-ce-que-javascript)
+- [Questionnaire rapide](#questionnaire-rapide)
+  - [Question 1](#question-1)
+  - [Question 2](#question-2)
+  - [Question 3](#question-3)
+  - [Question 4](#question-4)
+  - [Question 5](#question-5)
+- [La balise `<script>`](#la-balise-script)
 - [Votre première fonction](#votre-première-fonction)
+  - [`console.log()` un ami pour comprendre votre code](#consolelog-un-ami-pour-comprendre-votre-code)
+  - [Où trouver la console](#où-trouver-la-console)
+  - [Comment utiliser `console.log()`](#comment-utiliser-consolelog)
+  - [À quoi cela sert-il](#à-quoi-cela-sert-il)
+  - [Dernière astuce](#dernière-astuce)
 - [Les variables](#les-variables)
   - [La syntaxe](#la-syntaxe)
   - [Les types de variables](#les-types-de-variables)
@@ -20,32 +31,158 @@
 - [Résumé](#résumé)
 - [Conclusion](#conclusion)
 
-## À propos de JavaScript ?
 
-Le Javascript ça sert à quoi? Il fut un temps où l'utilisation du JS se résumait à l'animation de certains composants web. De nos jours, la totalité d'un contenu web peut être codé en Javascript, autant du côté front-end que back-end, ce qui fait de lui un langage prédominant sur le marché, voir indispensable. Les standards ECMAscript reprennent les bonnes pratiques actuelles. Avec les années le langage s'enrichit et s'étoffe de nouvelles fonctionnalités, parfois utiles, parfois performantes, parfois non. Les standards ECMAscript sont là pour indiquer au développeur ce qui est recommandé d'utilisation.
-<br>
-Comme nous venons de l'aborder, le Javascript est donc à la base des plus gros frameworks et librairies actuelles. React.JS, Vue.JS, Angular, Node.JS, Express.JS, Typescript, chacun de ces langages est soit une réécriture de Javascript, soit une librairie de fonctions pré-écrite par les développeurs, soit un super-set (une version améliorée et boostée du langage officiel). Il est donc primordial de maîtriser la base pour être capable de travailler avec ces langages plus avancés.
+## Qu'est-ce que JavaScript
 
-## La balise ``<script>``
+Le langage **JavaScript** est un langage de programmation très utilisé dans le développement web. Il a été créé à l'origine pour rendre les pages web interactives en permettant aux développeurs d'ajouter des fonctionnalités dynamiques aux sites web. Depuis sa création, JavaScript est devenu l'un des piliers essentiels du développement web moderne.
 
-La balise script permet d'injecter du contenu Javascript dans votre page HTML ou de lier un fichier script à votre page. Tout comme l'attribut onclick nous préfèrerons lier un fichier script.js plutôt que d'insérer du code en javascript directement dans cette balise.
-Pour rendre fonctionnel votre eventListener il faut insérer la balise script non pas dans les méta donnée mais après la fermeture de la balise body dans votre index.html:
+Voici quelques points clés pour mieux comprendre ce qu'est **JavaScript** :
+
+1. **Langage interprété côté client :** JavaScript est principalement exécuté sur le navigateur web de l'utilisateur (côté client), ce qui signifie que le code est exécuté sur l'ordinateur ou l'appareil de l'utilisateur plutôt que sur le serveur web. Cela permet aux pages web de réagir instantanément aux actions de l'utilisateur, comme cliquer sur un bouton, remplir un formulaire ou faire défiler une page.
+
+2. **Polyvalence :** JavaScript est un langage polyvalent. Il peut être utilisé pour créer des fonctionnalités interactives et dynamiques sur les sites web, mais il est également utilisé pour le développement côté serveur (à l'aide de plateformes telles que Node.js) et dans de plus rares cas dans le développement d'applications mobiles et de jeux.
+
+3. **Syntaxe facile à apprendre :** La syntaxe de JavaScript est relativement simple et similaire à d'autres langages de programmation comme Java et C++. C'est un bon choix pour débuter dans le développement web.
+
+4. **Manipulation du DOM :** JavaScript est utilisé pour interagir avec le DOM (Document Object Model), qui est la représentation de la page web chargée dans le navigateur. Cela signifie que vous pouvez utiliser JavaScript pour modifier dynamiquement le contenu, le style et le comportement des éléments d'une page web sans avoir à recharger toute la page.
+
+5. **Large communauté et bibliothèques :** JavaScript bénéficie d'une vaste communauté de développeurs et dispose d'une multitude de bibliothèques et de frameworks, tels que **React.JS**, **Angular.JS** et **Vue.JS**, qui facilitent le développement web et l'ajout de fonctionnalités plus avancées.
+
+En résumé, JavaScript est un langage de programmation puissant qui permet de créer des **sites web interactifs et dynamiques**. C'est devenu un outil essentiel pour tout développeur web, je tiens à préciser que si vous souhaitez apprendre un framework JS il est indispensable d'apprendre le langage de base, ***JavaScript***.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+## Questionnaire rapide
+
+### Question 1
+**Qu'est-ce que le DOM en relation avec JavaScript ?**
+- A) Un langage de programmation côté client.
+- B) Une représentation du code JavaScript côté serveur.
+- C) La structure de fichiers utilisée pour stocker du code JavaScript.
+- D) La représentation de la page web chargée dans le navigateur, avec laquelle JavaScript interagit.
+
+### Question 2
+**Quel est l'avantage principal de JavaScript en tant que langage côté client ?**
+- A) Il permet d'exécuter du code sur le serveur pour une meilleure performance.
+- B) Il rend les pages web plus esthétiques avec des animations.
+- C) Il réagit instantanément aux actions de l'utilisateur sans recharger la page.
+- D) Il est facile à apprendre pour les débutants en programmation.
+
+### Question 3
+**Quel rôle joue JavaScript côté serveur avec l'utilisation de Node.js ?**
+- A) Il permet de créer des sites web complets (Frontend & Backend).
+- B) Il crée des animations interactives sur les sites web.
+- C) Il gère le style et la présentation des pages web.
+- D) Il interagit avec le navigateur pour charger les pages web.
+
+### Question 4
+**Qu'est-ce que les bibliothèques et les frameworks JavaScript apportent au développement web ?**
+- A) Ils fournissent des outils pour gérer les bases de données.
+- B) Ils permettent de développer des jeux en ligne.
+- C) Ils facilitent la création de pages web interactives et dynamiques.
+- D) Ils sont utilisés pour stocker et gérer les fichiers JavaScript.
+
+### Question 5
+**Pourquoi est-il important d'apprendre le langage de base JavaScript avant d'utiliser un framework JavaScript tel que React.JS, Angular.JS ou Vue.JS ?**
+- A) Les frameworks JavaScript ne sont pas compatibles avec les navigateurs modernes.
+- B) Le langage de base JavaScript est obsolète et doit être utilisé uniquement pour le support de vieux navigateurs.
+- C) Les frameworks JavaScript ne sont pas populaires auprès des développeurs web.
+- D) Les frameworks JavaScript sont construits sur la base du langage de base JavaScript, donc une bonne compréhension de ce dernier est nécessaire pour les utiliser de manière efficace.
+
+> Généré par ChatGPT en fonction de la théorie.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+<!--
+Généré par ChatGPT en fonction de la théorie.
+Réponse au questionnaire
+
+**Question 1:** Qu'est-ce que le DOM en relation avec JavaScript ?
+- Réponse: D) La représentation de la page web chargée dans le navigateur, avec laquelle JavaScript interagit.
+
+**Question 2:** Quel est l'avantage principal de JavaScript en tant que langage côté client ?
+- Réponse: C) Il réagit instantanément aux actions de l'utilisateur sans recharger la page.
+
+**Question 3:** Quel rôle joue JavaScript côté serveur avec l'utilisation de Node.js ?
+- Réponse: A) Il permet de créer des applications web complètes.
+
+**Question 4:** Qu'est-ce que les bibliothèques et les frameworks JavaScript apportent au développement web ?
+- Réponse: C) Ils facilitent la création de pages web interactives et dynamiques.
+
+**Question 5:** Pourquoi est-il important d'apprendre le langage de base JavaScript avant d'utiliser un framework JavaScript tel que React.js, Angular.js ou Vue.js ?
+- Réponse: D) Les frameworks JavaScript sont construits sur la base du langage de base JavaScript, donc une bonne compréhension de ce dernier est nécessaire pour les utiliser de manière efficace.
+-->
+
+## La balise `<script>`
+
+La balise `<script>` permet d'injecter du contenu JavaScript dans votre page HTML ou de simplement lier un fichier script à votre page. Elle est **essentielle** pour rendre vos pages web interactives et dynamiques. Durant la formation nous lierons un fichier JavaScript externe plutôt que d'insérer directement du code JavaScript dans cette balise, cela fait partie des **bonnes pratiques** à mettre en place dès le départ de votre apprentissage.
+
+Pour utiliser un fichier JavaScript externe, nous devons insérer la balise `<script>` à l'intérieur de notre fichier HTML. Mais attention ! Il est important de la placer à un emplacement spécifique pour assurer le bon fonctionnement de notre code.
+
+Ainsi, nous devons insérer la balise `<script>` non pas dans la section `<head>` de notre document (les méta-données), mais après la fermeture de la balise `<body>` dans notre fichier `index.html`, de cette manière :
+
 ```html
-</body> 
-<script src="script.js"></script> 
-</html> 
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Les méta-données, les styles et autres éléments -->
+</head>
+<body>
+    <!-- Le contenu de la page -->
+    <h1>Titre de la page</h1>
+    <p>Contenu de la page...</p>
+
+    <!-- La balise script pour lier notre fichier JavaScript externe -->
+    <script src="script.js"></script>
+</body>
+    <!-- OU -->
+    <script src="script.js"></script>
+</html>
 ```
-Pourquoi? Car de cette façon le navigateur pourra d'abord charger l'ensemble des balises html avant de passer au fichier script, si l'ensemble des balises sont chargées alors la récupération de l'élément HTML au sein du fichier script est assurée, si ce n'était pas le cas vous pourriez obtenir un "undefined" à la place de pointer vers l'élément désiré. 
+
+Pourquoi placer le script à cet endroit ? Eh bien, en plaçant la balise `<script>` à la fin du corps (`<body>`) de notre document, nous assurons que le navigateur a d'abord chargé l'ensemble des balises HTML, y compris les éléments avec lesquels nous souhaitons interagir dans notre fichier JavaScript. Ainsi, lorsque le fichier `script.js` est chargé, il peut accéder à ces éléments sans rencontrer de problèmes.
+
+Si nous placions la balise `<script>` dans la section `<head>`, le fichier JavaScript pourrait être chargé avant que le reste du contenu ne soit totalement disponible, entraînant des erreurs et rendant difficile l'accès aux éléments souhaités. Cela pourrait provoquer des erreurs telles que des éléments "undefined" au lieu de pointer vers l'élément désiré.
+
+En résumé, en plaçant la balise `<script>` à la fin du corps de notre document HTML, nous nous assurons que notre code JavaScript interagit correctement avec notre page web, ce qui est important, surtout lorsque nous commençons à apprendre et à utiliser JavaScript.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## Votre première fonction
 
-Avant d'entrer dans le vif du sujet, vous aurez besoin de connaitre LA fonction qui sera votre meilleur atout durant la suite de la formation :
-```js
-console.log();
+### `console.log()` un ami pour comprendre votre code
+
+En JavaScript, `console.log()` est une fonction très utile qui permet d'afficher des informations dans la console du navigateur. C'est un outil précieux pour les développeurs car il permet de vérifier ce qui se passe dans le code et d'obtenir des informations importantes pendant le processus de développement.
+
+### Où trouver la console
+
+Avant même d'écrire dans votre code il faut savoir ou le résultat (**l'output**) sera affiché 😛 Pour accèder à votre console et cela pour la plupart des navigateurs, vous pouvez faire un clic droit sur votre page web, choisir "Inspecter" ou "Inspecter l'élément" ou appuyer sur la touche "F12" de votre clavier, puis accéder à l'onglet "Console".
+
+### Comment utiliser `console.log()`
+
+Pour utiliser `console.log()`, vous devez simplement écrire `console.log()` dans un `fichier.js` et avoir bien mis la balise `<script>` dans votre HTML. Entre les parenthèses de `log()`, vous pouvez mettre ce que vous voulez afficher dans la console. Par exemple :
+
+```javascript
+console.log("Je vais enfin apprendre JavaScript chez Sirius School ! 🥰");
 ```
-Cette fonction vous permettra d'afficher les données que vous souhaitez dans la console de votre navigateur. Pour accèder à cette console, cliquez droit sur votre page web et ouvrez l'inspecteur, dans la fenêtre qui vient de s'ouvrir en haut cliquez sur l'onglet "Console". L'inspecteur est un outil formidable qui vous sera d'une grande aide et vous serez amené à l'utiliser régulièrement. Il existe plusieurs façons d'afficher dans votre [console](https://developer.mozilla.org/fr/docs/Web/API/Console).
+
+### À quoi cela sert-il
+
+`console.log()` sert à plusieurs choses :
+
+1. **Débogage (Debugging) :** Lorsque vous développez une application, il est courant d'ajouter des `console.log()` à différents endroits de votre code pour vérifier si certaines valeurs sont correctes ou pour voir si certaines parties du code sont exécutées.
+
+2. **Afficher des informations :** Vous pouvez utiliser `console.log()` pour afficher des messages, des variables, des tableaux, des objets ou tout autre type de données que vous souhaitez examiner.
+
+3. **Suivi de l'exécution :** Cela peut vous aider à suivre l'exécution de votre code et à comprendre dans quel ordre les instructions sont exécutées.
+
+4. **Vérification des erreurs :** Si vous rencontrez des problèmes avec votre code, `console.log()` peut être un moyen rapide de trouver où se situent les erreurs.
+
+### Dernière astuce
+
+Lorsque vous débutez en JavaScript, `console.log()` est votre meilleur atout ! N'hésitez pas à l'utiliser autant que nécessaire pour comprendre comment votre code fonctionne et pour repérer d'éventuelles erreurs. Une fois que vous avez terminé de déboguer votre code, vous pouvez simplement commenter ou supprimer les `console.log()` pour rendre votre code plus propre.
+
+> Faites confiance à `console.log()` et laissez-le vous aider à maîtriser la magie de JavaScript ! ✨
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
