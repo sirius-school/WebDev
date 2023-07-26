@@ -45,6 +45,7 @@ Alors, on va faire au plus court, car des propriétés il y en a beaucoup... vra
 - [Position](#position)
   - [position: static](#position-static)
   - [position: fixed](#position-fixed)
+  - [position: sticky](#position-sticky)
   - [position: absolute et relative](#position-absolute-et-relative)
   - [Z-index](#z-index)
   - [Attention à l'utilisation de position](#attention-à-lutilisation-de-position)
@@ -576,6 +577,20 @@ Valeur par défaut de tous les éléments. Un élément avec position static n'e
 Un élément positionné avec **fixed** ne bougera pas. Il sortira du flux de la page et se positionnera par dessus les autres éléments et ce même si on fait défiler la page. Sa position est définie par rapport à l'espace affichable par le navigateur.
 
 [:arrow_up: Revenir au top](#table-des-matières)
+
+### position: sticky
+
+```css
+.sticky{
+  position: sticky;
+  top:0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+```
+
+La différence ici avec `position:fixed` est que notre élément va rester à sa position original dans le flux de notre page. Du coup il va suivre le scroll de l'utilisateur jusqu'à ce qu'il atteigne sa position précisée (dans l'exemple: `top:0`) et à ce moment là il va devenir `fixed` et rester à cette position là tout le long du scroll.
 
 ### position: absolute et relative
 
