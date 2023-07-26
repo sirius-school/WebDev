@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Les propriétés CSS
 
-Alors, on va faire au plus court, car des propriétés il y en a beaucoup... vraiment beaucoup. On va en voir quelques-une très rapidement, il vous faudra fouiller la documentation CSS pour en trouver d'autre ou chercher des exemples sur [Codepen](http://www.codepen.io) (ou autre). N'hésitez pas non plus a faire des recherches Google pour trouver ce que vous souhaitez comme effet.
+Les propriétés CSS vont servir à changer nos éléments sélectionnées et à leurs donner du style! :sunglasses: Le soucis c'est que des propriétés il y en a beaucoup... vraiment beaucoup. On va commencer par voir les plus utiles pour construire nos pages web. il vous faudra fouiller la documentation CSS pour en trouver d'autre ou chercher des exemples sur [Codepen](http://www.codepen.io) (ou autre). N'hésitez pas non plus a faire des recherches Google pour trouver ce que vous souhaitez comme effet.
 
 <!-- omit in toc -->
 ## Table des matières
@@ -34,6 +34,7 @@ Alors, on va faire au plus court, car des propriétés il y en a beaucoup... vra
 - [Dimensions, margin et padding](#dimensions-margin-et-padding)
   - [Inline et block](#inline-et-block)
   - [width \& height (max \& min)](#width--height-max--min)
+  - [object-fit \& object-position](#object-fit--object-position)
   - [margin \& padding](#margin--padding)
   - [box-sizing](#box-sizing)
   - [Calculer une largeur avec des marges avec la fonction calc()](#calculer-une-largeur-avec-des-marges-avec-la-fonction-calc)
@@ -408,6 +409,25 @@ img{
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
+### object-fit & object-position
+
+Lorsqu'on insère une image sur notre page, il se peut que celle-ci soit trop grande ou avec une mauvaise proportion (16:9 alors qu'on l'a veut en 1:1). Il n'est pas nécessaire de repasser l'image dans un logiciel quelconque mais tout simplement de lui donner la taille que l'on veut avec les propriétés **width** et **height**. 
+
+Si du coup notre image n'a pas la bonne proportion, on peut lui appliquer la propriété `object-fit` pour régler les soucis. Cette propriété fonctionne comme `background-size` et peut prendre les valeurs **contain** ou **cover**. Ainsi, notre image aura bien la taille voulue et on pourra faire en sorte qu'elle ne soit pas déformée.
+
+Si en plus on veut gérer la façon dont elle est positionnée, on peut utiliser `object-position` qui prend les mêmes valeurs que `background-position` pour déplacer notre image.
+
+```css
+img{
+  width: 500px;
+  heigth: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+```
+
+  [:arrow_up: Revenir au top](#table-des-matières)
+
 ### margin & padding
 
 ![marges](img/07/marges.png)
@@ -604,12 +624,14 @@ Prenons l'exemple suivant:
 <head>
  <style>
     body{display: grid;place-items: center;height: 100vh;background-color: red;margin:0;}
+    
     .container {
       height: 400px;
       width: 400px;
       background-color: blue;
       position: relative;
     }
+    
     .bulle{
       height: 100px;
       width: 100px;
