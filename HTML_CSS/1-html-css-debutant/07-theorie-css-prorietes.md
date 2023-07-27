@@ -688,7 +688,7 @@ On n'utilise pas `position` (ni `margin` et `padding`) pour placer nos conteneur
 
 Si vous ne savez pas exactement quelle propriété existe ou comment elle s'écrit, VSCode est là pour vous aider. En effet quand vous travaillez dans un document CSS ou HTML enregistré, VSCode détecte votre syntaxe et vous aide à compléter votre frappe.
 
-Passons à quelques [exercices intermédiaires](10-exercices-intermediaires-css.md) pour assimiler tout ça.
+Passons à quelques [exercices intermédiaires](08-exercices-intermediaires-css.md) pour assimiler tout ça.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
