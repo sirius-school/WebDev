@@ -56,6 +56,8 @@ Pas de consigne précise, mets quelques propriétés pour changer la couleur du 
 
 ## CSS Zen Garden (exercice optionnel)
 
+❗❗❗ **Lien de téléchargement du fichier HTML casé. Veuillez attendre de nouvelles instructions de la part de votre formateur**
+
 1. Télécharge le fichier HTML et CSS sur la page principale de [CSS Zen Garden](http://www.csszengarden.com/)
 2. Ouvre les fichiers et jette un coup d'oeil.
 3. Créer une nouvelle feuille de style et inspire toi de la leur pour créer ton propre style CSS pour CSS Zen Garden
