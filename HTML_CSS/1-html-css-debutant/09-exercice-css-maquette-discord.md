@@ -17,17 +17,19 @@ Il est temps de mettre en pratique tout ce qu'on a vu jusqu'à maintenant. Tu va
 
 ## Mise en place
 
-1. Copie et colle le code HTML fournit plus bas dans un nouveau fichier HTML. (Si t'es vraiment chaud, tu peux essayer de faire le code HTML toi même)
-2. Crée une nouvelle feuille de style et lie-là à ton fichier HTML.
-3. Affiche la page dans ton navigateur (avec Live Server) pour voir le résultat. Tous les éléments sont là mais rien n'est mis en place.
-4. Regarde le screenshot plus bas et tente de reproduire le même style.
-5. Je te fournis plus bas le code HTML, les couleurs utilisées, quelques indications de taille et le code CSS avec seulement les sélecteurs.
-6. Il n'y a pas qu'une bonne méthode, si tu veux utiliser tes propres sélecteurs, tu peux!
-7. Tu as vus toute la théorie nécessaire à la réalisation de cet exercice.
-8. Souviens-toi, utilise l'inspecteur d'élément pour tester des valeurs directement dans ton navigateur.
-9. N'hésite pas à retourner voir la théorie et la documentation en cas de besoin.
-10. Essaye d'allez le plus loin possible sans demander de l'aide.
-11. Bon courage!
+1. Crée un nouveau repository public sur ton compte Github flambant neuf et fais en sorte que ton travail y soit push! 
+2. Copie et colle le code HTML fournit plus bas dans un nouveau fichier HTML. (Si t'es vraiment chaud, tu peux essayer de faire le code HTML toi même)
+3. Crée une nouvelle feuille de style et lie-là à ton fichier HTML.
+4. Affiche la page dans ton navigateur (avec Live Server) pour voir le résultat. Tous les éléments sont là mais rien n'est mis en place.
+5. Regarde le screenshot plus bas et tente de reproduire le même style.
+6. Je te fournis plus bas le code HTML, les couleurs utilisées, quelques indications de taille et le code CSS avec seulement les sélecteurs.
+7. Il n'y a pas qu'une bonne méthode, si tu veux utiliser tes propres sélecteurs, tu peux!
+8. Tu as vus toute la théorie nécessaire à la réalisation de cet exercice.
+9. Souviens-toi, utilise l'inspecteur d'élément pour tester des valeurs directement dans ton navigateur.
+10. N'hésite pas à retourner voir la théorie et la documentation en cas de besoin.
+11. Essaye d'allez le plus loin possible sans demander de l'aide.
+12. Quand tu as finis, envoie moi le lien vers ton repository
+13. Bon courage!
 
 ## Screenshot
 
