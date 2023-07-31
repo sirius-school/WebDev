@@ -15,6 +15,9 @@ VSCode est un outil merveilleux avec pleins de fonctionnalités, même trop par 
   - [Menu de gauche](#menu-de-gauche)
   - [Split view](#split-view)
 - [Tips dans l'éditeur](#tips-dans-léditeur)
+  - [Quelques paramètres intéressants](#quelques-paramètres-intéressants)
+    - [Word wrap](#word-wrap)
+    - [Format on save et default formatter](#format-on-save-et-default-formatter)
 - [Extensions](#extensions)
   - [Live Server](#live-server)
   - [Auto Rename Tag](#auto-rename-tag)
@@ -29,11 +32,14 @@ VSCode est un outil merveilleux avec pleins de fonctionnalités, même trop par 
   - [`Alt` + `suppr`](#alt--suppr)
   - [`Ctrl` + `suppr`](#ctrl--suppr)
   - [`Ctrl` + `f`](#ctrl--f)
+  - [`Ctrl` + `Enter`](#ctrl--enter)
+  - [`Alt` + `Z`](#alt--z)
 - [Emmet](#emmet)
   - [Structure HTML](#structure-html)
   - [Lorem Ipsum](#lorem-ipsum)
-  - [Les listes](#les-listes)
+  - [Les listes et descendance](#les-listes-et-descendance)
   - [Contenu, Class et ID, multiplicateur, Attribut](#contenu-class-et-id-multiplicateur-attribut)
+  - [Le CSS avec Emmet](#le-css-avec-emmet)
   - [Cheatsheet](#cheatsheet)
 
 ## L'interface
@@ -113,6 +119,18 @@ Voici quelques astuces quand tu utilises VSCode. Pour le moment, comme c'est le 
 - Quand tu sélectionnes une balise, sa jumelle est sélectionnée également. Cela te permet de savoir si elle est bien fermée ou non.
 - L'indentation automatique te permet également de savoir si tu es dans la bonne balise ou non. Si lorsque tu va à la ligne l'indentation ne te semble pas correcte, c'est probablement que ton code est mal interprété et qu'il y a un soucis quelque part. Jette un coup d'oeil aux balises précédentes pour voir ce qu'il se passe.
 
+### Quelques paramètres intéressants
+
+Vous pouvez rechercher ces paramètres dans les "Settings (UI)" de VSCode en cliquant sur le petit engrenage en bas à gauche ou en ouvrant le menu avec la palette (ctrl+p)
+
+#### Word wrap
+
+Vous pouvez activer cette fonctionnalité si vous voulez que le texte passe à la ligne visuellement quand il arrive en bout de fenêtre. Cela ne crée pas une nouvelle ligne. C'est bien pratique quand vous avez beaucoup de texte. Vous pouvez aussi utiliser le raccourcis `alt+Z` pour l'activer ou le désactiver sur le document en cours.
+
+#### Format on save et default formatter
+
+Cette option va vous permettre d'activer un formateur de code quand vous sauvegarder vos fichiers. Cela peut vous aider à respecter l'indentation de votre code si vous êtes un peu maladroit. Il est également possible de choisir quel formateur vous voulez du style Prettier ou autre. Attention que ça ne corrige pas le code pour vous, ça ne fait que l'ajuster visuellement.
+
 ## Extensions
 
 Vous pouvez personnaliser votre expérience avec VSCode au fur et à mesure de votre apprentissage et de votre carrière grâce aux extensions. Ces petits bout de code qui vont venir vous filer un coup de main pour écrire votre code ou modifier le comportement de VSCode.
@@ -148,7 +166,7 @@ Une petite extension visuelle pour changer les icônes et l'apparence de vos fic
 
 Il y a évidement des centaines, des milliers d'extensions. Vous pouvez par exemple installer des extensions qui gère la mise en forme du code (Prettier) ou des aides pour écrire votre code JavaScript, Python, C++,...
 
-> :exclamation: Ne pas installer **trop** d'extensions au risque parfois d'avoir des incompatibilités. N'installer que ce dont vous avez besoin.
+> :exclamation: Ne pas installer **trop** d'extensions au risque parfois d'avoir des incompatibilités. N'installer que ce dont vous avez besoin et surppimer le surplus.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -186,9 +204,19 @@ Ce raccourci permet de supprimer toute la ligne où est votre curseur.
 
 Ce raccourci permet d'afficher la recherche dans le document en cours.
 
+### `Ctrl` + `Enter`
+
+Ce raccourci permet d'allez directement à la ligne suivante sans embarquer le reste de la ligne actuelle. On peut aussi allez à la ligne précédente en appuyant sur  `Ctrl + Shift + Enter`
+
+### `Alt` + `Z`
+
+Active ou désactive le [word wrap](VSCode.md####Word-wrap)
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ## Emmet
 
-Il s'agit d'un petit plugin directement intégré à VSCode qui permet de taper du code HTML et CSS beaucoup plus rapidement. Alors, ça demande un petit temps d'apprentissage aussi pour l'utiliser, mais ça simplifie grandement la vie.
+Il s'agit d'un petit plugin directement intégré à VSCode qui permet de taper du code HTML et CSS beaucoup plus rapidement. Alors, ça demande un petit temps d'apprentissage aussi pour l'utiliser, mais ça simplifie grandement la vie sur le long terme.
 
 Pour pouvoir l'utiliser correctement il faut bien être dans un document HTML ou CSS. Donc pense bien à enregistrer ton fichier dans le bon format.
 
@@ -200,17 +228,13 @@ Voici quelques exemples:
 
 En écrivant juste `!` et en validant avec `enter` tu peux directement créer ton squelette HTML de base.
 
-> :exclamation: Lors d'une mise à jour de VScode il est possible que cette dernière fonctionnalité ai changée. Il faut désormais activer `Emmet: Use Inline Completions` qui est un paramètre à  dans VSCode. Ainsi, lorsque tu écriras du code Emmet, VScode te montrera directement le résultat et il faudra valider avec `Tab`.
-
-![vscode-emmet-inline](src/Images/vscode-screens/vscode-emmet-inline.png)
-
 ### Lorem Ipsum
 
-Le lorem ipsum est un texte fictif en latin qui est devenu la référence du texte de substitution. C'est à dire un texte que l'on utilise pour remplir nos `<div>`et `<p>`dans le but de pouvoir commencer rapidement à styliser notre page, sans devoir attendre le contenu complet.
+Le lorem ipsum est un texte fictif en latin qui est devenu la référence du texte de substitution. C'est à dire un texte que l'on utilise pour remplir nos `<div>`et `<p>`dans le but de pouvoir commencer rapidement à styliser notre page, sans devoir attendre le contenu complet fournit par le client.
 
-Pour l'utiliser il suffit d'écrire `lorem`et de valider avec `enter`. Cela va créer un paragraphe de Lorem Ipsum. Si tu veux plusieurs paragraphes tu peux utiliser la commande suivante `lorem*2`qui du coup te créera 2 paragraphe.
+Pour l'utiliser il suffit d'écrire `lorem`et de valider avec `enter`. Cela va créer un paragraphe de Lorem Ipsum. Si tu veux plusieurs paragraphes tu peux utiliser ajoute un multiplicateur à la suite de  `lorem` comme par exemple `lorem*2`ce qui du coup te créera 2 paragraphe. On peut aussi décider du nombre de mots dont on a besoin, il suffit d'ajouter un chiffre à la fin de `lorem`, comme par exemple `lorem10` pour obtenir 10 mots. 
 
-### Les listes
+### Les listes et descendance
 
 Il est également possible de créer des listes plus rapidement, pour ce faire tu n'a qu'a écrire le type de liste que tu veux (`ul`ou `ol`).
 
@@ -227,6 +251,16 @@ C'est possible de donner la valeur d'un attribut également en utilisant `[]`. I
 Il est également possible de préciser la classe ou l'id de notre élément directement: `div.ma-classe` ou `div#monID`
 
 Du coup on peut combiner le tout: `(div.ma-classe#monID$>p>lorem)*5`. Ici ce qui est en parenthèse va être répéter 5 fois. On a un div avec une classe, un id unique et une balise `<p>` à l'intérieur contenant chacun un paragraphe de Lorem, le tout qui se répète 5 fois. Très pratique!
+
+### Le CSS avec Emmet
+
+Dès que vous écrivez une propriété en CSS, Emmet se charge ce compléter si besoin. Mais il y a également d'autres petites choses bien pratique comme par exemple les propriétés raccourcies.
+
+Si je tape `m10` comme propriété, Emmet va m'ajouter `margin:10px;`. De nouveau, c'est un gain de temps. On peut allez plus loin en demandant par exemple `mr5`, ce qui donnera `margin-right:5px`.
+
+Il y a tout un tas de propriétés raccourcies, à vous de le trouver à force d'en utiliser. Vous verrez aussi que ces propriétés raccourcies ressemblent à celle qu'on peut retrouver dans des outils comme Tailwind ou Bootstrap.
+
+Il y a d'autres astuces comme par exemple les couleurs. Si on rentre `#1` cela va directement compléter par `#111111`.
 
 ### Cheatsheet
 
