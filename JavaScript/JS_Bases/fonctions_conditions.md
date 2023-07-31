@@ -112,10 +112,10 @@ Bon travail !
 
 ![](https://media.giphy.com/media/13GIgrGdslD9oQ/giphy.gif)
 
-[:arrow_right: Suite du cours : *Window & document*](4_window_document.md)
+[:arrow_right: Suite du cours : *Window & document*](./window_document.md)
 
-[:rewind: Retour au sommaire du cours](../README.md#au-programme)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Created by Julie Vanderbyse
 > 
-> Edited by Jeremy Scala & Lucas Ielli
+> Edited by [Jeremy Scala](https://github.com/scalajeremy) & [Lucas Ielli](https://github.com/LucasIelli)

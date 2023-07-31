@@ -2,7 +2,7 @@
 # Window & document
 <!-- omit in toc -->
 ## Table des matières
-- [L'objet Window & Document](#lobjet-window--document)
+- [L'objet Window \& Document](#lobjet-window--document)
 - [Prompt](#prompt)
 - [Alert](#alert)
 - [Confirm](#confirm)
@@ -14,7 +14,7 @@
     - [Math.floor()](#mathfloor)
     - [Math.random()](#mathrandom)
     - [Utilisation de Math.floor et de Math.Random](#utilisation-de-mathfloor-et-de-mathrandom)
-  - [ParseInt & ParseFloat](#parseint--parsefloat)
+  - [ParseInt \& ParseFloat](#parseint--parsefloat)
     - [parseInt()](#parseint)
     - [parseFloat()](#parsefloat)
   - [Les fonctions CallBack](#les-fonctions-callback)
@@ -262,13 +262,13 @@ Bon ! On arrive tout doucement au bout de la théorie et vous n'aurez non pas un
 
 ![](https://media.giphy.com/media/BUKgXhu9o5kqI/giphy.gif)
 
-[:arrow_right: Suite du cours : *Boucles*](5_loops.md)
+[:arrow_right: Suite du cours : *Boucles*](./boucles.md)
 
-[:rewind: Retour au sommaire du cours](../README.md#au-programme)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Created by Julie Vanderbyse
 > 
-> Edited by Jeremy Scala & Lucas Ielli
+> Edited by [Jeremy Scala](https://github.com/scalajeremy) & [Lucas Ielli](https://github.com/LucasIelli)
 
  
 

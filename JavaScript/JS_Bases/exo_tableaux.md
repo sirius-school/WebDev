@@ -10,7 +10,7 @@ Avant de vous lancer dans les exercices nous allons apprendre comment manipuler 
   - [Supprimer la dernière donnée](#supprimer-la-dernière-donnée)
   - [Supprimer la première donnée](#supprimer-la-première-donnée)
   - [Ajouter une donnée à l'indice 0](#ajouter-une-donnée-à-lindice-0)
-  - [Supprimer une donnée grâce à son indice[]](#supprimer-une-donnée-grâce-à-son-indice)
+  - [Supprimer une donnée grâce à son indice\[\]](#supprimer-une-donnée-grâce-à-son-indice)
   - [Copier un tableau](#copier-un-tableau)
 - [Méthodes](#méthodes)
   - [findIndex](#findindex)
@@ -27,7 +27,7 @@ Avant de vous lancer dans les exercices nous allons apprendre comment manipuler 
   - [4. Empty Array](#4-empty-array)
   - [5. How many letters?](#5-how-many-letters)
   - [6. Which one is a number?](#6-which-one-is-a-number)
-  - [7. Gemini (optional & hard)](#7-gemini-optional--hard)
+  - [7. Gemini (optional \& hard)](#7-gemini-optional--hard)
 
 ## Opérations de tableaux (arrays operations)
 
@@ -286,11 +286,11 @@ let studentCoursesB = ['Geography', 'Spanish', 'Programming'];
 ```
 - Find a way to compare it and if there any common words, console.log them.
 
-[:arrow_right: Suite du cours : *les fonctions et condition*](3_functions_conditions.md)
+[:arrow_right: Suite du cours : *les fonctions et conditions*](./fonctions_conditions.md)
 
-[:rewind: Retour au sommaire du cours](../README.md#au-programme)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
-> Exercises Credits : [Kauress](https://dev.to/kauresss/some-js-array-exercises-for-beginners-9j8)
+> Exercises credits : [Kauress](https://dev.to/kauresss/some-js-array-exercises-for-beginners-9j8)
 > 
-> Edited by Lucas Ielli Sirius
+> Created by [Lucas Ielli](https://github.com/LucasIelli)
 

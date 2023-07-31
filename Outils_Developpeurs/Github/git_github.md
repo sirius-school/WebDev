@@ -21,10 +21,10 @@ Git ne vient pas de nulle part, il répond à un besoin des développeurs. Il a 
 
 1. Vous devez tout d'abord créer votre compte [Github](https://github.com/) ou lier votre adresse mail. Le site Github est la plateforme qui vous lie au monde du développement web et vous permettra d'accèder à vos projets.
 2. Une fois que vous avez créé votre compte Github, vous devez installer Git sur votre ordinateur. Git est un logiciel de contrôle de version qui vous permettra de gérer vos projets et de collaborer avec d'autres développeurs.
-3. Rendez-vous sur le [site officiel de Git](https://git-scm.com/downloads) et téléchargez l'installateur Git pour Windows.
-Une autre façon d'installer Git est de passer par ``winget`` avec la commande `winget install --id Git.Git -e --source winget`.
-4. Exécutez l'installateur téléchargé et suivez les instructions d'installation. Vous pouvez accepter les paramètres par défaut, à moins que vous souhaitiez personnaliser certaines options.
-5. Après l'installation, vous pouvez vérifier si Git est correctement installé en ouvrant le terminal PowerShell 7. Tapez la commande ``git --version`` et vous devriez voir la version de Git s'afficher. Si ce n'est pas le cas, il sera peut-être nécessaire de redémarrer votre ordinateur.
+3. Rendez-vous sur le [site officiel de Git](https://git-scm.com/downloads) et téléchargez l'installateur Git pour Windows en version ``standalone``.
+Une autre façon d'installer Git est de passer par ``winget`` avec la commande `winget install --id Git.Git -e --source winget` (disponible pour des versions récentes de Windows).
+1. Exécutez l'installateur téléchargé et suivez les instructions d'installation. Vous pouvez accepter les paramètres par défaut, à moins que vous souhaitiez personnaliser certaines options.
+2. Après l'installation, vous pouvez vérifier si Git est correctement installé en ouvrant le terminal PowerShell 7. Tapez la commande ``git --version`` et vous devriez voir la version de Git s'afficher. Si ce n'est pas le cas, il sera peut-être nécessaire de redémarrer votre ordinateur.
 
 ## Les termes
 

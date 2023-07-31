@@ -37,6 +37,8 @@ En réalité c'est simplement que Windows 10 n'embarque pas la nouvelle version 
    - ``winget search Microsoft.PowerShell`` qui vérifie quelle est la version en cours.
    - ``winget install --id Microsoft.Powershell --source winget`` qui installera la version 7.x.
 
+3. Si votre version de Windows ne possède pas l'installeur de package `winget` il faudra alors télécharger le fichier ``.zip`` et du coup extraire les dossiers via ``WinRar`` ou ``7zip``. Dans le dossier extrait chercher après le fichier ``pwsh.exe`` et ouvrez-le, ensuite suivez simplement les instructions.
+
 Maintenant que l'installation est finie vous devriez obtenir ceci :<br>
 ![](src/Images/windowsPowerShell7.png)
 > C'est quand même un peu mieux 😜

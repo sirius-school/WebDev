@@ -519,11 +519,11 @@ Toute cette théorie n'est pas à retenir par coeur, mais vous devez savoir que 
 
 ![](https://media.giphy.com/media/xePnbnJiehT1e/giphy.gif)
 
-[:arrow_right: Suite du cours : *Exercices*](2-1_manip_arrays.md)
+[:arrow_right: Suite du cours : *Exercices*](./exo_tableaux.md)
 
-[:arrow_right: Suite du cours : *les fonctions et conditions*](3_functions_conditions.md)
+[:arrow_right: Suite du cours : *les fonctions et conditions*](./fonctions_conditions.md)
 
-[:rewind: Retour au sommaire du cours](../README.md#au-programme)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Cours original : Julie Vanderbyse
 >

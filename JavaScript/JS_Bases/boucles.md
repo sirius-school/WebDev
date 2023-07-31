@@ -77,10 +77,10 @@ La théorie pour cette partie du cours est **finie** !!! J'espère que vous ête
 
 ![](https://c.tenor.com/Fthj62gIHrIAAAAM/falling-papers-people-are-awesome.gif)
 
-[:arrow_right: Suite du cours : *Exercices !*](../ExercisesJS/)
+[:arrow_right: Suite du cours : *Exercices !*](../ExercicesJS/)
 
-[:rewind: Retour au sommaire du cours](../README.md#au-programme)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Created by Julie Vanderbyse
 > 
-> Edited by Jeremy Scala & Lucas Ielli
+> Edited by [Jeremy Scala](https://github.com/scalajeremy) & [Lucas Ielli](https://github.com/LucasIelli)
