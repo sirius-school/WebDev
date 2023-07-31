@@ -203,8 +203,7 @@ Dans votre code vous avez encodé vous-même votre tableau **mais** quand vous s
 
 ## Let's go practice !
 
-Pour vous habituer à lire de la documentation, l'exercice ne portera pas que sur les tableaux mais aussi sur votre compréhension à l'anglais ou à l'utilisation de tous les outils qu'Internet vous offre ! Il y a aussi certains que nous n'avons pas encore vu *mais* vous avez **google** ou votre *coach* 😁 
-
+Pour vous habituer à lire de la documentation, l'exercice ne portera pas que sur les tableaux mais aussi sur votre compréhension à l'anglais ou à l'utilisation de tous les outils qu'Internet vous offre ! Il y a aussi certaines choses que nous n'avons pas encore vu *mais* vous avez **google** ou votre *coach* 😁 
 
 ### 1. Length 
 ```js

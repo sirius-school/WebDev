@@ -23,8 +23,8 @@ Git ne vient pas de nulle part, il répond à un besoin des développeurs. Il a 
 2. Une fois que vous avez créé votre compte Github, vous devez installer Git sur votre ordinateur. Git est un logiciel de contrôle de version qui vous permettra de gérer vos projets et de collaborer avec d'autres développeurs.
 3. Rendez-vous sur le [site officiel de Git](https://git-scm.com/downloads) et téléchargez l'installateur Git pour Windows en version ``standalone``.
 Une autre façon d'installer Git est de passer par ``winget`` avec la commande `winget install --id Git.Git -e --source winget` (disponible pour des versions récentes de Windows).
-1. Exécutez l'installateur téléchargé et suivez les instructions d'installation. Vous pouvez accepter les paramètres par défaut, à moins que vous souhaitiez personnaliser certaines options.
-2. Après l'installation, vous pouvez vérifier si Git est correctement installé en ouvrant le terminal PowerShell 7. Tapez la commande ``git --version`` et vous devriez voir la version de Git s'afficher. Si ce n'est pas le cas, il sera peut-être nécessaire de redémarrer votre ordinateur.
+4. Exécutez l'installateur téléchargé et suivez les instructions d'installation. Vous pouvez accepter les paramètres par défaut, à moins que vous souhaitiez personnaliser certaines options.
+5. Après l'installation, vous pouvez vérifier si Git est correctement installé en ouvrant le terminal PowerShell 7. Tapez la commande ``git --version`` et vous devriez voir la version de Git s'afficher. Si ce n'est pas le cas, il sera peut-être nécessaire de redémarrer votre ordinateur.
 
 ## Les termes
 
@@ -108,6 +108,7 @@ Voici la liste des principales commandes Git sous Windows :
 | `git push` | Envoie les modifications validées vers le référentiel distant. |
 | `git pull` | Récupère les dernières modifications depuis le référentiel distant et **les fusionne** avec votre version locale. |
 | `git fetch` | Récupère les dernières modifications depuis le référentiel distant **sans les fusionner immédiatement** avec votre branche de travail. |
+| `git branch <branche>` | Créer une nouvelle branche dans votre référentiel Git. |
 | `git branch` | Affiche la liste des branches dans votre référentiel Git. |
 | `git checkout <branche>` | Bascule vers la branche spécifiée. |
 | `git merge <branche>` | Fusionne la branche spécifiée avec la branche actuelle. |

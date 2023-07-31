@@ -497,8 +497,9 @@ let numberNew = new Number();
 let booleanNew = new Boolean();  // Default value : false
 let arrayNew = new Array(); 
 let objectNew = new Object();
+// L'utilisation du mot-clé new est plus approprié dans la création d'objets plus complexes. Préfèrer donc utiliser la version simplifié pour les types String, Number et Boolean.
 
-// Constuctors
+// Constructors
 let string = String(""); 
 let number = Number(); 
 let boolean = Boolean();  // Default value : false
@@ -527,4 +528,4 @@ Toute cette théorie n'est pas à retenir par coeur, mais vous devez savoir que 
 
 > Cours original : Julie Vanderbyse
 >
-> Modification : Lucas Ielli
+> Modification : [Lucas Ielli](https://github.com/LucasIelli)
