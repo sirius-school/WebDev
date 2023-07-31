@@ -24,11 +24,17 @@ Voici encore un jeu que tu peux compléter. Cette fois-ci ce ne sont pas des gre
 
 [Flexbox Zombies](https://mastery.games/flexboxzombies/)
 
+## Flexbox Tower Defense
+
+Et tu n'en as pas encore assez de Flexbox? Et bien tiens, voici encore un p'tit jeu dans la même veine que Froggy. Cette fois le but c'est d'apprendre à position des éléments, ici des tours, pour supprimer les ennemis quand ils passent devant les tours. Ils doivent tous être supprimé avant d'arriver à la fin du parcours
+
+[Flexbox Defense](http://www.flexboxdefense.com/)
+
 ## Maquette Discord (optionnel)
 
 [Reprends la maquette "Discord" qu'on a fait plus tôt](11-exercice-css-maquette-discord.md) et essaye de changer le header, la nav et les sections en `display:flex`.
 
-## Exercices 
+## Exercices
 
 ### Exercice 1
 
