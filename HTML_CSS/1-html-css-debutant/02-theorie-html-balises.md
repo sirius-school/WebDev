@@ -1,4 +1,5 @@
 <!-- omit in toc -->
+
 # Quelques balises pour mettre en forme
 
 Maintenant qu'on en sait un peu plus sur comment est structuré une page web basique, voyons un peu comment mettre tous ça en page.
@@ -8,9 +9,11 @@ Il existe une multitude de balises à utiliser pour rédiger un document HTML, n
 > :bulb: Ouvrez VS code et expérimentez les balises qu'on va voir à partir d'ici. Pas besoin de grand chose, juste un fichier .html avec ces balises suffiront ou tu peux reprendre le squelette créer précédemment.
 
 <!-- omit in toc -->
+
 ## Table des matières
 
 - [Un peu de sémantique](#un-peu-de-sémantique)
+  - [Créer ses propres balises sémantique](#créer-ses-propres-balises-sémantique)
   - [SEO](#seo)
   - [Accessibilité](#accessibilité)
 - [Classe et ID](#classe-et-id)
@@ -66,6 +69,10 @@ Voici la liste de ces balises:
 
 > :book: [plus d'infos](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
+### Créer ses propres balises sémantique
+
+Contrairement à ce que l'on pourrait croire, créer ses propres balises sémantique n'est pas une mauvaise pratique. Au contraire, cela donne un contexte à nos éléments, aussi bien pour le navigateur que pour les personnes qui vont travailler avec nous sur notre site. Donc vas-y, crée tes propres balises et sélectionnes-les en CSS par après.
+
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ### SEO
@@ -84,7 +91,7 @@ On veut que votre page soit accessible au plus de personne possible, y compris l
 
 ## Classe et ID
 
-Pour identifier nos différentes balises et les différentier, on peut leurs attribuer des `classes`et des `id`. 
+Pour identifier nos différentes balises et les différentier, on peut leurs attribuer des `classes`et des `id`.
 
 - **classe**: peut être multiple sur la page.
 - **id**: doit être unique sur la page.
@@ -132,7 +139,8 @@ Cette balise sert à insérer une citation. Le bloc est suivi d'un retour à la 
 
 ```html
 <blockquote cite="https://www.microsoft.com/">
-  Célébrer le succès, c’est bien, mais il est plus important de tirer les leçons de l’échec. - Bill Gates
+  Célébrer le succès, c’est bien, mais il est plus important de tirer les leçons de l’échec. - Bill
+  Gates
 </blockquote>
 ```
 
@@ -147,7 +155,11 @@ Permet d'ajouter des détails que l'utilisateur peut ouvrir ou fermer.
 ```html
 <details>
   <summary>Rammstein</summary>
-  <p>Rammstein [ˈʁamʃtaɪn][3] est un groupe de metal industriel allemand, originaire de Berlin. Formé en 1994, il se compose depuis le début de six membres originaires d'Allemagne de l'Est ; décrit comme appartenant au genre Neue Deutsche Härte, il en est le représentant le plus connu.</p>
+  <p>
+    Rammstein [ˈʁamʃtaɪn][3] est un groupe de metal industriel allemand, originaire de Berlin. Formé
+    en 1994, il se compose depuis le début de six membres originaires d'Allemagne de l'Est ; décrit
+    comme appartenant au genre Neue Deutsche Härte, il en est le représentant le plus connu.
+  </p>
 </details>
 ```
 
@@ -167,7 +179,7 @@ Met le texte entre balise **en gras.**
 
 ## La balise `<em>`
 
-Met le texte entre balise *en italique.*
+Met le texte entre balise _en italique._
 
 ```html
 <p><em>Je suis en italique</em> et moi je ne le suis pas</p>
@@ -190,7 +202,7 @@ Met le texte entre balise *en italique.*
 Cette balise sert à insérer une image dans votre page. Elle peut se placer un peu où vous voulez dans votre **\<body>**. Généralement dans un **\<div>** ou dans un **\<p>**
 
 ```html
-<img src="lien vers mon image" alt="description de l'image"/>
+<img src="lien vers mon image" alt="description de l'image" />
 ```
 
 - `src`: tout simplement un lien externe ou interne vers votre fichier image.
@@ -221,7 +233,7 @@ Il est possible d'amener le visiteur de votre site vers un point précis de votr
 ```html
 <a href="#contact">Contact</a>
 ...
-<div id="contact">
+<div id="contact"></div>
 ```
 
 [:arrow_up: Revenir au top](#table-des-matières)
@@ -234,16 +246,16 @@ Si votre ressource fait partie de votre projet, alors vous pouvez y faire réfé
 
 ![File tree](img/02/filetree.png)
 
-Ici je possède deux images, une dans un dossier *Images* et l'autre à la racine de mon projet. Regardez le bout de code suivant
+Ici je possède deux images, une dans un dossier _Images_ et l'autre à la racine de mon projet. Regardez le bout de code suivant
 
 ```html
 <!-- index.html-->
 <body>
   <div id="header">
-    <img src="logo.jpg" alt="mon logo"/>
+    <img src="logo.jpg" alt="mon logo" />
   </div>
   <div id="content">
-    <img src="/images/monImage.jpg"/>
+    <img src="/images/monImage.jpg" />
   </div>
 </body>
 ```
@@ -293,7 +305,7 @@ Remplissons notre tableau avec quelques lignes et cellules.
     <td>ligne 1 colonne 1</td>
     <td>ligne 1 colonne 2</td>
     <td>ligne 1 colonne 3</td>
-  </tr> 
+  </tr>
   <tr>
     <td>ligne 2 colonne 2</td>
     <td>ligne 2 colonne 1</td>

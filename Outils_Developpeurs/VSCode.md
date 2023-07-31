@@ -25,12 +25,12 @@ VSCode est un outil merveilleux avec pleins de fonctionnalités, même trop par 
   - [Le reste ?](#le-reste-)
 - [Raccourcis](#raccourcis)
   - [Les flèches](#les-flèches)
-  - [`Alt` + flèches](#alt--flèches)
-  - [`Alt` + `Shift` + flèches](#alt--shift--flèches)
+  - [`Alt` + flèches haut et bas](#alt--flèches-haut-et-bas)
+  - [`Alt` + `Shift` + flèches haut et bas](#alt--shift--flèches-haut-et-bas)
   - [`Ctrl` + `Shift` + P](#ctrl--shift--p)
   - [`Alt` + curseur](#alt--curseur)
-  - [`Alt` + `suppr`](#alt--suppr)
-  - [`Ctrl` + `suppr`](#ctrl--suppr)
+  - [`ctrl` + `retour arrière`](#ctrl--retour-arrière)
+  - [`shift` + `suppr`](#shift--suppr)
   - [`Ctrl` + `f`](#ctrl--f)
   - [`Ctrl` + `Enter`](#ctrl--enter)
   - [`Alt` + `Z`](#alt--z)
@@ -172,15 +172,23 @@ Il y a évidement des centaines, des milliers d'extensions. Vous pouvez par exem
 
 ## Raccourcis
 
+Voici quelques raccourcis VSCode, ceux-ci peuvent varier d'un système d'opération à l'autre, ici Windows.
+
+Voici [un lien vers tous les raccourcis pour Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) :window:
+
+Voici [un lien vers tous les raccourcis pour Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) :apple:
+
+Pas besoin de les retenir tous, juste ceux que vous trouver utiles pour votre utilisation de VSCode, les autres viendront quand vous en aurez besoin.
+
 ### Les flèches
 
-Ce n'est pas un raccourcis lié à VSCode, mais il est très important d'apprendre à naviguer dans son code à l'aide des flèches. Normalement on garde ses deux mains sur le clavier et ainsi on a plus facile à rectifier du code en utilisant les fmèches.
+Ce n'est pas un raccourcis lié à VSCode, mais il est très important d'apprendre à naviguer dans son code à l'aide des flèches. Normalement on garde ses deux mains sur le clavier et ainsi on a plus facile à rectifier du code en utilisant les flèches.
 
-### `Alt` + flèches
+### `Alt` + flèches haut et bas
 
 L'utilisation de `alt` est super importante quand vous coder dans VSCode. Le fait de maintenir `alt` et d'ensuite utiliser les flèches haut et bas de votre clavier permet de déplacer une ligne de code. Bien plus pratique que d'utiliser un copier/coller.
 
-### `Alt` + `Shift` + flèches
+### `Alt` + `Shift` + flèches haut et bas
 
 Ce raccourci permet de dupliquer la ligne sur laquelle se trouve votre curseur actuellement ou la sélection.
 
@@ -192,11 +200,11 @@ Ce raccourci permet de faire apparaître la palette de VSCode. Dedans vous pouve
 
 Ce raccourci permet de placer de multiple curseur dans votre document.
 
-### `Alt` + `suppr`
+### `ctrl` + `retour arrière`
 
 Ce raccourci permet de supprimer mot par mot.
 
-### `Ctrl` + `suppr`
+### `shift` + `suppr`
 
 Ce raccourci permet de supprimer toute la ligne où est votre curseur.
 
