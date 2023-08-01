@@ -48,6 +48,12 @@ Sujets déjà abordés (correspondant aux sections des exercices sur W3School):
 - Backgrounds
 - Colors
 
+## Codingame
+
+Réalise [les exercices sur Codingame](https://www.codingame.com/playgrounds/36092/exercices-css/introduction)
+
+> ❗ On a pas encore vu la matière pour résoudrele chapitre 4. Tu peux essayer si tu veux ceci dit! 
+
 ## Ta recette gagne un niveau
 
 Maintenant que tu as vu quelques propriétés CSS, il est temps d'améliorer ta structure HTML de recette réalisé dans [l'exercice recette](04-exercice-recette.md)!
