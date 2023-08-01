@@ -101,10 +101,14 @@ Crée des liens et styliser-les en suivant les instructions suivantes:
 
 ## Exercice 3
 
-Réalise les exercices sur [cette page](https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes1)
+Réalise les exercices sur [W3School](https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes1) sur les pseudo-classes
 
 ## Exercice 4
 
-Réalise les exercices sur [cette page](https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_elements1)
+Réalise les exercices sur [W3School](https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_elements1) sur les pseudo-elements
+
+## Exercice 5
+
+Réalise les exercices sur [Codingame](https://www.codingame.com/playgrounds/36092/exercices-css/finale)
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)
