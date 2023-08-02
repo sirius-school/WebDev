@@ -4,19 +4,26 @@
 Vous avez peut-être déjà vu certains mot-clé derrière des sélecteurs en CSS (hover, link, visited, active, first-child,...). Ce sont les pseudo sélecteurs, on en distingue de deux types: les **pseudo-elements** et les **pseudo-class**.
 
 - [Pseudo-class](#pseudo-class)
+  - [Hover](#hover)
   - [Les liens](#les-liens)
   - [Focus](#focus)
   - [Pseudo-class et CSS Class](#pseudo-class-et-css-class)
   - [First-child](#first-child)
   - [Last-child](#last-child)
+  - [Only-child](#only-child)
   - [First-of-type](#first-of-type)
   - [Last-of-type](#last-of-type)
+  - [Only-of-type](#only-of-type)
   - [Nth-child](#nth-child)
   - [Nth-last-child](#nth-last-child)
+  - [Empty](#empty)
+  - [Not(X)](#notx)
+  - [Attribut](#attribut)
+  - [Attribut valeur](#attribut-valeur)
   - [Toutes les pseudo-class](#toutes-les-pseudo-class)
 - [Pseudo-Element](#pseudo-element)
-  - [After & Before](#after--before)
-  - [First-letter & First-line](#first-letter--first-line)
+  - [After \& Before](#after--before)
+  - [First-letter \& First-line](#first-letter--first-line)
   - [Selection](#selection)
   - [Tous les pseudo-element](#tous-les-pseudo-element)
 - [On combine tout!](#on-combine-tout)
@@ -30,6 +37,27 @@ Les pseudo-class permet de définir l'état d'un élement. Par exemple:
 - Le style d'un élément quand il est "focus"
 
 Il se note à la suite d'un sélecteur avec `:pseudo-class`
+
+### Hover 
+
+Permet de préciser le style d'un élément lorsque l'utilisateur passe sa souris par dessus l'élément sélectionné.
+
+```html
+<div class="bubulle"></div>
+```
+
+```css
+.bubulle{
+  width:250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.bubulle:hover{
+  background-color: red;
+}
+```
 
 ### Les liens
 
@@ -155,6 +183,26 @@ p:first-child{
 
 Fonctionne comme pour `:first-child` mais au lieu de sélectionner le premier enfant de l'élément, il sélectionnera le dernier.
 
+### Only-child
+
+Sélectionne l'enfant d'un parent si il est le seul élément de ce parent.
+
+```html
+<div class="parent">
+  <p>Je suis unique</p>
+</div>
+<div class="parent">
+  <p>Je ne suis pas unique</p>
+  <p>Je ne suis pas unique</p>
+</div>
+```
+
+```css
+.parent p:only-child{
+  color:red;
+}
+```
+
 ### First-of-type
 
 La pseudo-class `:first-of-type` va sélectionner tous les éléments dont c'est leur première apparition.
@@ -179,6 +227,26 @@ La pseudo-class `:first-of-type` va sélectionner tous les éléments dont c'est
 ### Last-of-type
 
 Fonctionne comme `:first-of-type` mais sélectionnera le dernier élément qui apparaît.
+
+### Only-of-type
+
+Sélectionne un élément dans son parent si c'est le seul de ce type là présent.
+
+```html
+<div class="parent">
+  <img src="...">
+</div>
+<div class="parent">
+  <img src="...">
+  <img src="...">
+</div>
+```
+
+```css
+.parent img:only-of-type{
+  border: 2px solid red;
+}
+```
 
 ### Nth-child
 
@@ -236,6 +304,119 @@ C'est un peu compliqué ces formules, c'est bien de savoir que ça existe pour q
 ### Nth-last-child
 
 Fonctionne comme `:nth-child` mais compte en commençant par la fin.
+
+### Empty
+
+Sélectionne un élément si il n'a pas d'enfant
+
+```html
+<section>
+  <div>Plop</div>
+</section>
+<section>
+</section>
+```
+
+```css
+section:empty{
+  width:100px;
+  height:100px;
+  background-color: red;
+}
+```
+
+### Not(X)
+
+Sélectionne tous les éléments qui **ne** sont **pas** le sélecteur **X**.
+
+```html
+<div>
+  <p class="important">...</p>
+  <p class="info">...</p>
+  <p class="important">...</p>
+  <p>...</p>
+</div>  
+```
+
+```css
+p:not(.important){
+  color:red;
+}
+```
+
+### Attribut
+
+Il est possible d'ajouter des attributs spécifiques à nos éléments HTML en plus de ceux qu'on connaît déjà (src, href,...). Cela peut avoir un intérêt en JavaScript pour exécuter du code sur certain élément spécifique. Comme par exemple définir la couleur d'un élément en fonction de l'attribut "color". Alors c'est vraiment spécifique, on verra sans doute ça bien plus tard, mais voici déjà comment sélectionner un élément par son attribut.
+
+```html
+<div color="red">...</div>
+```
+
+```css
+div[color]{
+  border: 2px blue solid;
+}
+```
+
+> :bulb: Ici on sélectionnera toutes les `div` qui on un attribut `color`, peu importe la valeur
+
+### Attribut valeur
+
+Il est également possible de sélectionner un élément qui a un attribut avec une valeur spécifique.
+
+```html
+<div color="red">...</div>
+```
+
+```css
+div[color="red"]{
+  border: 2px blue solid;
+}
+```
+
+> :bulb: Ici on sélectionnera toutes les `div` qui on un attribut `color` **ET** la valeur `red.
+
+On peut également sélectionné un élément dont la valeur de l'attribut commence par notre sélecteur, pratique si on a plusieurs valeurs qui commencent par la même lettre ou combinaison de lettre.
+
+```html
+<div color="red">...</div>
+<div color="blue">...</div>
+<div color="royalblue">...</div>
+```
+
+```css
+div[color^="r"]{
+  border: 2px blue solid;
+}
+```
+
+Et on peut faire la même chose mais pour l'attribut dont la valeur se termine par notre sélecteur.
+
+```html
+<div color="red">...</div>
+<div color="blue">...</div>
+<div color="royalblue">...</div>
+```
+
+```css
+div[color$="ue"]{
+  border: 2px blue solid;
+}
+```
+
+Et pour allez encore plus loin, on peut aussi sélectionner un attribut dont la valeur contient notre sélecteur, peu importe sa position.
+
+```html
+<div color="red">...</div>
+<div color="blue">...</div>
+<div color="royalblue">...</div>
+```
+
+```css
+div[color*="e"]{
+  border: 2px blue solid;
+}
+```
 
 ### Toutes les pseudo-class
 
