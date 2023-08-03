@@ -14,7 +14,7 @@
 
 ## Exercice 0
 
-Reprenez vos exercices sur les sélecteurs avec [CSS Diner](https://flukeout.github.io/). Essayez d'accomplir les niveaux 15 à 24 si ce n'est pas déjà fait. Il y a des sélecteurs que l'on a pas vu, essayer de résoudre les niveaux en lisant la théorie.
+Reprenez vos exercices sur les sélecteurs avec [CSS Diner](https://flukeout.github.io/). Essayez d'accomplir les niveaux 15 à 32 si ce n'est pas déjà fait. Il y a des sélecteurs que l'on a pas vu, essayer de résoudre les niveaux en lisant la théorie.
 
 ## Exercice 1
 
