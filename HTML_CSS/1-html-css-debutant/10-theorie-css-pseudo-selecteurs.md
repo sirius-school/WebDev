@@ -30,11 +30,7 @@ Vous avez peut-être déjà vu certains mot-clé derrière des sélecteurs en CS
 
 ## Pseudo-class
 
-Les pseudo-class permet de définir l'état d'un élement. Par exemple: 
-
-- Le style d'un élément quand on le survol avec le curseur de la souris
-- Le style d'un lient visité et non-visité
-- Le style d'un élément quand il est "focus"
+Les pseudo-classes permettent d'appliquer un style à un élément non seulement en fonction de son contenu dans le document mais aussi en fonction de facteurs externes (l'historique de navigation par exemple avec :visited ; le statut du contenu avec :checked ; la position de la souris :hover).
 
 Il se note à la suite d'un sélecteur avec `:pseudo-class`
 
