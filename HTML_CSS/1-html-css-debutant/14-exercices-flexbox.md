@@ -40,7 +40,7 @@ Et tu n'en as pas encore assez de Flexbox? Et bien tiens, voici encore un p'tit 
 
 Reproduis la mise en page suivante.
 
-![ex1](img/17/flexbox-ex1.png)
+![ex1](img/14/flexbox-ex1.png)
 
 Pour ce faire tu auras besoin du code HTML et CSS suivant:
 
@@ -100,7 +100,7 @@ section{
 
 Reproduis la mise en page suivante.
 
-![ex2](img/17/flexbox-ex2.png)
+![ex2](img/14/flexbox-ex2.png)
 
 Reprends le code HTML plus haut, rajoute cette `<div>` et trouve comment faire en sorte qu'elle soit différente comme sur le screenshot.
 
@@ -112,7 +112,7 @@ Reprends le code HTML plus haut, rajoute cette `<div>` et trouve comment faire e
 
 Reproduis la mise en page suivante.
 
-![ex2](img/17/flexbox-ex3.png)
+![ex2](img/14/flexbox-ex3.png)
 
 Utilise l'HTML et CSS suivant.
 

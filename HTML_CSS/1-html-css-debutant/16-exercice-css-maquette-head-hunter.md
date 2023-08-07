@@ -19,13 +19,13 @@
 
 ## Screenshot
 
-![index](./img/19/HH.jpg)
+![index](./img/16/HH.jpg)
 
 ## Les ressources
 
 Tu peux retrouver les images nécessaires à la réalisation de cet exercice par ici:
 
-[https://github.com/sirius-school/initiation-html-css-2022/tree/main/1-html-css-debutant/assets/head-hunter](https://github.com/sirius-school/initiation-html-css-2022/tree/main/1-html-css-debutant/assets/head-hunter)
+[https://github.com/sirius-school/WebDev/tree/main/HTML_CSS/1-html-css-debutant/assets/head-hunter](https://github.com/sirius-school/WebDev/tree/main/HTML_CSS/1-html-css-debutant/assets/head-hunter)
 
 ## Les couleurs
 

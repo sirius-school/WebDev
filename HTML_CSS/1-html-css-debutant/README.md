@@ -19,19 +19,17 @@ Bienvenue dans le cours sur l'HTML et le CSS de niveau débutant, on est là pou
 10. [Théorie - Pseudo-sélecteur](10-theorie-css-pseudo-selecteurs.md)
 11. [Exercices intermédiaires - CSS - Pseudo-sélecteurs](11-exercices-css-pseudo-selecteurs.md)
 12. [Exercices - CSS - Maquette Variations](12-exercice-css-maquette-variations.md)
-13. Théorie - HTML - Formulaire
-14. Exercice - HTML - Formulaire
-15. Théorie - CSS - Unités de mesures
-16. [Théorie - Flexbox](16-theorie-flexbox.md)
-17. [Exercices - Flexbox](17-exercices-flexbox.md)
-18. [Exercice - Maquette Flexbox - Feel The Music](18-exercice-css-maquette-feelthemusic.md)
-19. [Exercice - Maquette Flexbox - Head Hunter](19-exercice-css-maquette-head-hunter.md)
+13. [Théorie - Flexbox](13-theorie-flexbox.md)
+14. [Exercices - Flexbox](14-exercices-flexbox.md)
+15. [Exercice - Maquette Flexbox - Feel The Music](15-exercice-css-maquette-feelthemusic.md)
+16. [Exercice - Maquette Flexbox - Head Hunter](16-exercice-css-maquette-head-hunter.md)
+17. teasing... maquette... discord... work in progress... :robot:
 
 - [La boîte à outils de l'intégrateur junior!](bonus-outils.md)
 - [Bonne pratiques](bonus-bonnes-pratiques.md)
 
 ## La règle d'OR
 
-Consulte la documentation, Google, la théorie, tes collègues ou ton super formateur trop gentil si tu as la moindre question! Tu es là pour apprendre, si quelque chose t'échappe, tu risquerais de prendre du retard et de ne plus rien comprendre. ALORS SURTOUT T'HÉSITE PAS!!! OK???
+![google-that-shit](https://media.giphy.com/media/J5q4qtKqQ4plPl4YJN/giphy.gif)
 
-![google-that-shit](https://media.giphy.com/media/vnkYQLFjCX0Gmjp6wV/giphy.gif)
+Consulte la documentation, Google, la théorie, tes collègues ou ton super formateur trop gentil si tu as la moindre question! Tu es là pour apprendre, si quelque chose t'échappe, tu risquerais de prendre du retard et de ne plus rien comprendre. ALORS SURTOUT T'HÉSITE PAS!!! OK???

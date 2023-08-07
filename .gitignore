@@ -1,3 +1,12 @@
 .vscode
 node_modules
 .DS_Store
+
+# Just for the moment, while I'm working on it
+# Pages
+x13-theorie-html-form.md
+x14-exercice-html-form.md
+x15-theorie-css-mesures.md
+# Folders
+x14
+x15

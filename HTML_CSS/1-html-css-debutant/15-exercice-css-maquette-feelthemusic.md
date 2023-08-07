@@ -38,25 +38,25 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
 
 ### index.html
 
-![index](./img/18/index.png)
+![index](./img/15/index.png)
 
-![index-decoupe](./img/18/index-decoupe.png)
+![index-decoupe](./img/15/index-decoupe.png)
 
 > La découpe en "bloc" et donc en éléments HTML!
 
 ### discover.html
 
-![discover](./img/18/discover.png)
+![discover](./img/15/discover.png)
 
 ### comments.html
 
-![comments](./img/18/comment.png)
+![comments](./img/15/comment.png)
 
 ## Les ressources
 
 Tu peux retrouver les images et logos nécessaires à la réalisation de cet exercice par ici:
 
-[https://github.com/sirius-school/initiation-html-css-2022/tree/main/1-html-css-debutant/assets/feelthemusic](https://github.com/sirius-school/initiation-html-css-2022/tree/main/1-html-css-debutant/assets/feelthemusic)
+[https://github.com/sirius-school/WebDev/tree/main/HTML_CSS/1-html-css-debutant/assets/feelthemusic](https://github.com/sirius-school/WebDev/tree/main/HTML_CSS/1-html-css-debutant/assets/feelthemusic)
 
 ## Les couleurs
 
