@@ -23,8 +23,9 @@ Bienvenue dans le cours sur l'HTML et le CSS de niveau débutant, on est là pou
 14. [Exercices - Flexbox](14-exercices-flexbox.md)
 15. [Exercice - Maquette Flexbox - Feel The Music](15-exercice-css-maquette-feelthemusic.md)
 16. [Exercice - Maquette Flexbox - Head Hunter](16-exercice-css-maquette-head-hunter.md)
-17. teasing... maquette... discord... work in progress... :robot:
+17. teasing... maquette... discord...avancée... work in progress... :robot:
 
+- [Exercices supplémentaires](bonus-exos-supp.md)
 - [La boîte à outils de l'intégrateur junior!](bonus-outils.md)
 - [Bonne pratiques](bonus-bonnes-pratiques.md)
 
