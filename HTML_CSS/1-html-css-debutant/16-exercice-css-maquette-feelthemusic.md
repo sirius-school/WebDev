@@ -20,14 +20,14 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
 ## Consignes
 
 - Sois le plus fidèle possible au modèle
-- Chaque page doit contenir le même header et footer. Soit tu le fais sur une page et tu recopies le code sur les autres, soit tu utilises [le "hack" en JQuerry](#en-jquery) expliqué plus bas
+- Chaque page doit contenir le même header et footer. Soit tu le fais sur une page et tu recopies le code sur les autres, soit tu utilises [le "hack" en JQuerry](#en-jquery) expliqué plus bas.
   - **Le header**: doit contenir le logo et le titre à gauche. Le menu est sur la droite.
   - **Le footer**: un menu à gauche vers d'autres pages (`href="#"`) et à droite les liens sociaux.
 - Il te faut 3 pages:
   - **index.html**: la page d'accueil
     - Il faut le portrait de la femme
     - A sa droite doit se trouver le titre d'accroche, le sous-titre et le bouton pour arriver sur la page "comments.html" ("Join Now")
-    - Il y a des bulles présentes en arrière-plan. Tu devras utiliser la propriété `z-index`et `border-radius`pour y arriver!
+    - Il y a des bulles (enfin!) présentes en arrière-plan. Tu devras utiliser la propriété `z-index`et `border-radius`pour y arriver!
   - **discover.html**: la page qui présente le produit. Cette page est un peu plus libre.
     - Affiches quelques pochettes d'album que tu aimes, essayes de reproduire le style sur le screenshot.
     - Places un texte d'accroche
@@ -38,19 +38,19 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
 
 ### index.html
 
-![index](./img/15/index.png)
+![index](./img/16/index.png)
 
-![index-decoupe](./img/15/index-decoupe.png)
+![index-decoupe](./img/16/index-decoupe.png)
 
 > La découpe en "bloc" et donc en éléments HTML!
 
 ### discover.html
 
-![discover](./img/15/discover.png)
+![discover](./img/16/discover.png)
 
 ### comments.html
 
-![comments](./img/15/comment.png)
+![comments](./img/16/comment.png)
 
 ## Les ressources
 

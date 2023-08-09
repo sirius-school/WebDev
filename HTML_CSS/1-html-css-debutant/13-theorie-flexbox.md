@@ -1,18 +1,25 @@
 <!-- omit in toc -->
 # Flexbox
 
-Pour le moment on a vu que l'on a des éléments de type block et inline, on utilise float pour de la mise en page. On a également vu les tableaux mais ça ne sert pas à mettre un site en page, encore moins un site responsive. Vient alors à la rescousse: Flexbox!
+Pour le moment on a vu que les éléments ont une propriété `display:block;`  ou `display:inline;` par défaut. On devait utiliser float pour de la mise en page. On a également vu les tableaux mais ça ne sert pas à mettre un site en page, encore moins un site responsive.Vient alors à la rescousse: Flexbox!
 
-Flexbox permet d'avoir du contenu qui s'adapte, qui est flexible, en fonction de la taille de la page et des containers.
+Le modèle de mise en page Flexbox (Flexible Box) en CSS est conçu pour simplifier la création de mises en page complexes et adaptatives. Il s'agit d'un système **unidimensionnel** qui permet de gérer l'alignement, la distribution et l'ordre des éléments dans un conteneur.
+
+
+![flexible](https://media.giphy.com/media/xTiTnBzmxbZlMPdhlu/giphy.gif)
+
+
+:arrow_up: Toi quand on te dit que Flexbox rend tes éléments flexible mais que tu maîtrises pas encore bien.
 
 <!-- omit in toc -->
 ## Table des matières
 
 - [Comment ça fonctionne](#comment-ça-fonctionne)
-  - [Les propriétés du container](#les-propriétés-du-container)
+  - [Les propriétés du parent](#les-propriétés-du-parent)
     - [Flex-direction](#flex-direction)
     - [Flex-wrap](#flex-wrap)
     - [Flex-flow](#flex-flow)
+    - [Gap](#gap)
     - [Justify-content](#justify-content)
     - [Align-items](#align-items)
     - [Align-content](#align-content)
@@ -21,107 +28,147 @@ Flexbox permet d'avoir du contenu qui s'adapte, qui est flexible, en fonction de
     - [Flex-grow](#flex-grow)
     - [Flex-shrink](#flex-shrink)
     - [Flex-basis](#flex-basis)
+      - [Avantages de flex-basis par rapport à width](#avantages-de-flex-basis-par-rapport-à-width)
     - [Flex](#flex)
     - [Align-self](#align-self)
 - [Quelques liens utiles](#quelques-liens-utiles)
 
 ## Comment ça fonctionne
 
-Pour commencer il nous faut un flex container, ça sera le parent. Dedans on va placer nos éléments. On lui attribue ensuite la propriété **display:flex**. Tous les enfants deviendront du coup des éléments flexibles.
+C'est très simple, il nous faut un parent à qui on donne la propriété **display:flex;**. Dedans on va placer nos éléments que l'on souhaite distribuer dans l'espace. Tous les enfants directs deviendront du coup des éléments flexibles.
 
 ```html
 <!-- index.html -->
-<div class="flex-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
+<div class="parent">
+    <div class="child">Enfant 1</div>
+    <div class="child">Enfant 2</div>
+    <div class="another-parent">
+      <div class="child">Enfant 3</div>
+      <div class="child">Enfant 4</div>
+      <div class="child">Enfant 5</div>
+    </div>
+  </div>
+
 ```
 
 ```css
 /* style.css */
-.flex-container{
-display:flex;
+.parent {
+  display: flex; /* Appliquer Flexbox au parent */
+  justify-content: space-between;
+  border: blue 2px solid;
+}
+
+.child {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.another-parent {
+  border: red 2px solid;
+  display: flex;
 }
 ```
 
 [Voir en pratique sur W3School](https://www.w3schools.com/css/css3_flexbox.asp)
 
-### Les propriétés du container
+### Les propriétés du parent
 
 [Suivre sur W3School](https://www.w3schools.com/css/css3_flexbox_container.asp)
 
 #### Flex-direction
 
-Définis dans quel sens vont se positionner les éléments flexible à l'intérieur du container.
+Définit la direction des éléments à l'intérieur du conteneur. Les valeurs possibles sont **`row`** (par défaut), `row-reverse`, `column` et `column-reverse`.
 
 ```css
-.flex-container{
+.container {
   display: flex;
-  flex-direction: column; /* column-reverse, row, row-reverse */
+  flex-direction: row;
 }
 ```
 
 #### Flex-wrap
 
-Définit si les éléments doivent allez à la ligne ou pas
+Contrôle le comportement de l'enroulement des éléments dans le conteneur lorsque l'espace est insuffisant. Les valeurs sont **`nowrap`** (par défaut), `wrap` et `wrap-reverse`.
+
+En d'autres termes, flex-wrap vous permet de décider si les objets flexibles doivent continuer à tenir horizontalement à l'intérieur de la boîte (sans se soucier de leur taille) ou s'ils doivent être autorisés à se déplacer vers le bas (allez à la ligne) pour tenir verticalement lorsque l'espace est insuffisant.
 
 ```css
-.flex-container{
+.container{
   display: flex;
-  flex-wrap: wrap; /* no-wrap, wrap-reverse */
+  flex-wrap: wrap;
 }
 ```
 
 #### Flex-flow
 
-Permet juste de combiner le wrap et la direction
+La propriété flex-flow est en fait une courte façon de définir les deux propriétés flexbox principales : `flex-direction` et `flex-wrap`, en une seule déclaration. Cela simplifie le processus de configuration des directions et de l'enroulement des éléments flexibles dans un conteneur.
 
 ```css
-.flex-container{
+.container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap; /* Équivalent à flex-direction: row; flex-wrap: wrap; */
+}
+```
+
+#### Gap
+
+La propriété gap en Flexbox (et en Grid Layout) est utilisée pour définir l'espace entre les éléments flexibles dans un conteneur. Elle offre un moyen simple et efficace de gérer l'espacement entre les éléments sans avoir besoin d'ajouter de marges ou de rembourrages supplémentaires.
+
+La propriété gap combine à la fois les marges horizontales et verticales entre les éléments, ce qui permet de créer rapidement des mises en page plus aérées et organisées. Si tu souhaite un espace différent entre les lignes et les colonnes, tu peux spécifier deux valeurs.
+
+```css
+.container {
+  display: flex;
+  gap: 20px; /* Remplace les marges entre les éléments */
 }
 ```
 
 #### Justify-content
 
-Permet d'aligner horizontalement les éléments à l'intérieur du container
+Contrôle l'alignement horizontal des éléments flexibles dans le conteneur. Les valeurs possibles sont **`flex-start`** (par défaut), `flex-end`, `center`, `space-between` et `space-around`.
 
 ```css
-.flex-container{
+.container{
   display: flex;
-  justify-content: center; /* flex-start, flex-end, space-around, space-between  */
+  justify-content: center;
 }
 ```
 
-![justify-content](img/13/justify-content.svg)
+<img src="./img/13/justify-content.svg" width="65%">
+
+<!-- ![justify-content](img/13/justify-content.svg) -->
 
 #### Align-items
 
-Permet d'aligner verticalement les éléments à l'intérieur du container
+Contrôle l'alignement vertical des éléments flexibles dans le conteneur. Les valeurs possibles sont `flex-start`, `flex-end`, `center`, `baseline` et **`stretch`** (par défaut).
 
 ```css
 .flex-container{
   display: flex;
-  align-items: center; /* flex-start, flex-end, stretch, baseline  */
+  align-items: center;
 }
 ```
 
-![align-items](img/13/align-items.svg)
+<img src="./img/13/align-items.svg" width="65%">
+
+<!-- ![align-items](img/13/align-items.svg) -->
 
 #### Align-content
 
-Permet d'aligner les éléments à l'intérieur du container quand il y a plus d'une ligne d'élements
+Contrôle l'alignement vertical de l'espace supplémentaire dans le conteneur lorsque les éléments occupent plusieurs lignes. Les valeurs possibles sont similaires à celles de `justify-content`.
 
 ```css
 .flex-container{
   display: flex;
-  align-content: center; /* flex-start, flex-end, strech, space-between, space-around  */
+  flex-wrap: wrap;
+  align-content: space-between; /* flex-start, flex-end, strech, space-between, space-around  */
 }
 ```
 
-![align-content](img/13/align-content.svg)
+<img src="./img/13/align-content.svg" width="65%">
+
+<!-- ![align-content](img/13/align-content.svg) -->
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -131,75 +178,118 @@ Permet d'aligner les éléments à l'intérieur du container quand il y a plus d
 
 #### Order
 
-Permet de changer l'ordre des éléments. Par défaut les éléments apparaîtront dans l'ordre dans lequel ils sont écrits. On peut donner comme valeur n'importe quel chiffre et du coup l'ordre sera croissant. 
+La propriété `order` en Flexbox vous permet de spécifier l'ordre dans lequel les éléments flexibles sont affichés à l'intérieur de leur conteneur. Par défaut, tous les éléments ont une valeur d'ordre de 0. En utilisant la propriété `order`, vous pouvez changer cet ordre pour organiser les éléments d'une manière qui ne suit pas nécessairement l'ordre dans lequel ils apparaissent dans le code HTML.
 
 ```html
 <!-- index.html -->
-<div class="flex-container">
-  <div id="element1">1</div>
-  <div style="order: 1">2</div>
-  <div style="order: 2">3</div>
+<div class="container">
+  <div class="item">Premier</div>
+  <div class="item" style="order: 3;">Troisième</div>
+  <div class="item" style="order: 1;">Deuxième</div>
 </div>
 ```
 
 ```css
 /*styles.css */
-#element1 {
-  order: 3
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
 #### Flex-grow
 
-Permet d'augmenter la taille d'un élément par rapport aux autres. Il suffit de mettre une valeur relative aux autres éléments. La valeur par défaut est 0.
+La propriété `flex-grow` détermine comment l'espace disponible est réparti entre les éléments flexibles lorsque leur conteneur a de l'espace supplémentaire. Un élément avec une valeur de flex-grow plus élevée prendra davantage d'espace que ceux avec des valeurs plus faibles. La valeur par défaut est `0`.
 
 ```css
-#element1{
-  flex-grow: 2 /* Double la largeur */
+.container {display: flex;}
+
+.item {
+  flex-grow: 1; /* Prendra autant d'espace que possible */
+}
+
+.item:nth-child(2) {
+  flex-grow: 2; /* Prendra le double de l'espace par rapport aux autres */
 }
 ```
 
 #### Flex-shrink
 
-Permet de déterminer si un élément rétrécit par rapport aux autres. Il suffit de mettre une valeur relative aux autres éléments. La valeur par défaut est 1.
+La propriété `flex-shrink` détermine comment les éléments flexibles rétrécissent lorsque l'espace disponible est insuffisant. Un élément avec une valeur de flex-shrink plus élevée rétrécira davantage par rapport aux autres. La valeur par défaut est `1`.
 
 ```css
-#element1{
-  flex-shrink: 0;
+.container {display: flex; width: 300px;}
+
+.item {
+  border: red 2px solid;
+  width: 150px;
+  flex-shrink: 1; /* Rétrécira autant que possible */
 }
+
+.item:nth-child(2) {
+  flex-shrink: 0; /* Ne rétrécira pas */
+}
+
 ```
 
 #### Flex-basis
 
-Détermine la valeur initial de la longueur de l'élément.
+La propriété `flex-basis` détermine la taille initiale d'un élément flexible avant que l'espace restant ne soit distribué. Cela peut être spécifié en pixels, en pourcentage ou en une valeur spéciale comme auto.
 
 ```css
-#element1{
-  flex-basis: 200px;
+.container {display: flex;}
+
+.item {
+  flex-basis: 150px; /* Taille initiale de 150 pixels */
+}
+
+.item:nth-child(2) {
+  flex-basis: 25%; /* Taille initiale de 25% de l'espace disponible */
+}
+
+.item:nth-child(3) {
+  flex-basis: auto; /* Taille basée sur le contenu interne */
 }
 ```
 
+##### Avantages de flex-basis par rapport à width 
+
+1. **Flexibilité dans les mises en page responsives** : `flex-basis` est plus adaptatif car il peut être exprimé en pourcentage. Cela signifie que l'élément peut s'adapter à différents écrans et tailles de conteneurs.
+
+2. **Distribution équitable de l'espace** : Lorsque tu utilises `flex-basis` avec les propriétés `flex-grow` et `flex-shrink`, les éléments peuvent se répartir équitablement l'espace disponible tout en respectant leur taille initiale.
+
+3. **Optimisation pour des mises en page flexibles** : Lorsque tu travailles avec des dispositions flexibles qui peuvent changer en fonction du contenu ou de l'espace disponible, `flex-basis` offre une plus grande flexibilité.
+
+En résumé, si tu souhaites une largeur fixe et stable pour tes éléments, utilises `width`. Si tu veux une plus grande adaptabilité et une distribution flexible de l'espace, `flex-basis` est généralement préférable lorsque tu travailles avec des dispositions flexibles. On utilisera `flex-basis` quand on abordera le responsive design.
+
 #### Flex
 
-Permet de combiner **flex-grow**, **flex-shrink** et **flex-basis**
+Permet de combiner **flex-grow**, **flex-shrink** et **flex-basis** en une seule règle.
+
+:exclamation: Attention à bien respecter l'ordre des propriétés :exclamation:
 
 ```css
 #element1{
-  flex: 0 0 200px;
+  flex: 1 0 200px;
 }
 ```
 
 #### Align-self
 
-Permet de déterminer l'alignement d'un élément dans le container. Cette propriété surpasse l'alignement par défaut défini par **align-items**
+Contrôle l'alignement vertical d'un élément flexible individuel, annulant l'effet de `align-items` pour cet élément.
 
 ```css
-#element1{
+.item {
   align-self: center; /* flex-start, flex-end
   }
 ```
 
-[Voir en pratique](https://www.w3schools.com/css/css3_flexbox.asp#align-self)
+[Voir en pratique (en bas de page)](https://www.w3schools.com/css/css3_flexbox_items.asp)
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -212,4 +302,3 @@ Permet de déterminer l'alignement d'un élément dans le container. Cette propr
 [:arrow_up: Revenir au top](#table-des-matières)
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)
-

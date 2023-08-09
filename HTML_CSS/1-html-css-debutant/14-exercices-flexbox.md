@@ -12,21 +12,21 @@
 - La syntaxe est correcte
 - L'indentation est correcte
 
-## Flexbox Froggy
+## Flexbox Froggy (obligatoire!)
 
-Essayez de compléter un max d'exercice sur ce petit jeu, ça vous aidera a encore mieux visualiser les différentes propriétés liés à Flexbox.
+Essaie de compléter tous les exercices sur ce petit jeu, cela t'aidera à encore mieux visualiser les différentes propriétés liées à Flexbox. Le but est de placer les grenouilles de couleur sur les nénuphars de la même couleur.
 
 [Flexbox Froggy](https://flexboxfroggy.com/#fr)
 
-## Flexbox Zombies
+## Flexbox Zombies (optionnel)
 
 Voici encore un jeu que tu peux compléter. Cette fois-ci ce ne sont pas des grenouilles mais des zombies qu'il va falloir aligner pour les dégomer!
 
 [Flexbox Zombies](https://mastery.games/flexboxzombies/)
 
-## Flexbox Tower Defense
+## Flexbox Tower Defense (optionnel)
 
-Et tu n'en as pas encore assez de Flexbox? Et bien tiens, voici encore un p'tit jeu dans la même veine que Froggy. Cette fois le but c'est d'apprendre à position des éléments, ici des tours, pour supprimer les ennemis quand ils passent devant les tours. Ils doivent tous être supprimé avant d'arriver à la fin du parcours
+Et tu n'en as pas encore assez de Flexbox? Et bien tiens, voici encore un p'tit jeu dans la même veine que Froggy. Cette fois le but c'est d'apprendre à positionner tes éléments, ici des tours, pour supprimer les ennemis quand ils passent devant les tours. Ils doivent tous être supprimé avant d'arriver à la fin du parcours!
 
 [Flexbox Defense](http://www.flexboxdefense.com/)
 

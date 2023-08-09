@@ -1,5 +1,7 @@
 # Maquette Head Hunter
 
+Voici une autre maquette assez identique à la précédente en terme de mise en page. Il y a juste un petit casse-tête sympa avec Flexbox et l'illustration à droite.
+
 ## :memo: Objectifs
 
 - Réaliser une maquette sans HTML et CSS de base.
@@ -19,7 +21,7 @@
 
 ## Screenshot
 
-![index](./img/16/HH.jpg)
+![index](./img/17/HH.jpg)
 
 ## Les ressources
 
