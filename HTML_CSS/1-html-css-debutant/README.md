@@ -21,7 +21,7 @@ Bienvenue dans le cours sur l'HTML et le CSS de niveau débutant, on est là pou
 12. [Exercices - CSS - Maquette Variations](12-exercice-css-maquette-variations.md)
 13. [Théorie - Flexbox](13-theorie-flexbox.md)
 14. [Exercices - Flexbox](14-exercices-flexbox.md)
-15. Théorie - Les formulaires, visuellement... work in progress... :robot:
+15. [Théorie - Les formulaires, visuellement](15-theorie-form-visu.md)
 16. [Exercice - Maquette Flexbox - Feel The Music](16-exercice-css-maquette-feelthemusic.md)
 17. [Exercice - Maquette Flexbox - Head Hunter](16-exercice-css-maquette-head-hunter.md)
 18. teasing... maquette... discord...avancée... work in progress... :robot:
