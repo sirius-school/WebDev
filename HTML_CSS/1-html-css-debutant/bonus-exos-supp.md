@@ -65,7 +65,7 @@ Crée un document HTML avec quelques liens. Ensuite respecte les consignes suiva
 
 1. Ajoute une classe `attention` à certains liens. Sélectionne-les en CSS et change leurs couleurs d'écriture.
 2. Fais en sorte que quand on passe par dessus les liens ceux-ci sont soulignés. Ce qui donc veut dire que par défaut ils ne doivent pas l'être.
-3. Sélectionne les liens `visités` et fais en sorte que leurs police d'écriture soit différente.
+3. Sélectionne les liens `visités` et fais en sorte que leurs couleurs soient différentes et qu'ils soient encadré par un border rouge (il faut que la border existe sur les liens *avant* de changer son style pour les liens visités).
 
 [:arrow_up: Retour à l'index des exercices](bonus-exos-supp.md#table-des-matières)
 
