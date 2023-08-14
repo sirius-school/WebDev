@@ -115,8 +115,8 @@ Alors je te préviens, ici ça va être chaud patate comme on dit chez nous!
 
 ![welcome-to-hell](https://media.giphy.com/media/mDFpdL1UxdVZRBN2V4/giphy.gif)
 
-1. Ajoute une légende à chaque image en utilisant un attribut personnalisé!
-2. Grâce au pseudo-sélecteur, ajoute la valeur de ton attribut avant ou après ton image.
+1. Ajoute une `<div>` qui englobera tes images. Ajoute une légende à chaque `<div>` en utilisant un attribut personnalisé!
+2. Grâce au pseudo-sélecteur, ajoute la valeur de ton attribut avant ou après ta `<div>` .
 3. Positionne ensuite ce nouvel élément grâce aux positions.
 
 Oui c'est compliqué, mais si tu fais les bonnes recherches tu trouveras facilement!
