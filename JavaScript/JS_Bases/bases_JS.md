@@ -133,10 +133,10 @@ Ainsi, nous devons insérer la balise `<script>` non pas dans la section `<head>
     <p>Contenu de la page...</p>
 
     <!-- La balise script pour lier notre fichier JavaScript externe -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
     <!-- OU -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </html>
 ```
 
