@@ -60,8 +60,8 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
    1. Définissez une couleur de fond
    2. Définissez une couleur de bordure
    3. Définissez la propriété `cursor` de type `pointer`
-   4. Définissez une box-shadow de survol
-   5. Définissez une transition de survol
+   4. Définissez une propriété [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+   5. Définissez une [`box-shadow`](https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow) de survol
 6. Ciblez la liste `<ul>`
    1. Changez la marge par défaut
    2. Retirez le padding
@@ -132,7 +132,7 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
    2. La deuxième condition vient s'insérer entre votre `if` et votre `else` grâce au terme `else if (){}` qui est en quelque sorte un deuxième `if(){}` entre les parenthèses sera votre condition qui est la même que le `if` mais cette fois doit être égale à `"undo"`
       1. Si cette deuxième condition est respecté, vous souhaitez retirer la classe `undo`
       2. Et évidemment ajouter la classe `done`
-   3. Votre `else` quant à lui devra contenir le bout de code qui servait à supprimer la tâche de votre utilisateur. En effet si le bouton cible n'est ni "Done" ni "Undo" alors c'est que le bouton cible est "Delete"
+   3. Transformez votre `else` en `else if` avec toujours la même condition à part que cela doit être égale à `delete` cette fois. Si cette condition est remplie elle doit contenir le bout de code qui servait à supprimer la tâche de votre utilisateur. En effet si le bouton cible n'est ni "Done" ni "Undo" alors c'est que le bouton cible est "Delete"
 8. Dans votre première condition `if` il faut maintenant s'occuper de "désactiver" la tâche. Précédemment vous aviez créé une variable qui contient votre `li` avec `closest()` ou `parentElement` ajoutez lui la classe `completed`
 9. Dans votre deuxième condition `else if` il faut évidemment supprimer la classe `completed` pour "réactiver" la tâche de votre utilisateur
 10. Il ne reste plus qu'une chose à prendre en compte, le bouton `done` garde le texte "Done" ce serait plus intuitif que le texte soit "Undo".
@@ -140,7 +140,8 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
     2.  Dans votre deuxième condition c'est la même chose à part que le texte sera `Done`
 11. Je remarque qu'il y a une erreur lorsque vous cliquez sur le bouton "Done" il y a une ligne qui se créée entre les deux boutons "Undo" et "Delete", ce n'est pas très beau, règlons ça.
     1.  Le problème se situe au niveau de la variable avec la sélection via `parentElement` ou `closest()`
-    2.  Il suffit d'ajouter à la suite de `closest()` ou `parentElement` le terme `firstElementChild` qui permet de sélectionner le premier enfant de votre `li` qui n'est autre que votre balise `p`
+    2.  Dans les deux appels de cette variable il faut sélectionner le premier enfant de votre `li` qui n'est autre que votre balise `p` car c'est cette balise que l'on veut "désactivée" et non l'entièreté du `li`
+    3.  Utilisez `firstElementChild` dans l'appel de vos variables. Dans votre première condition et dans la deuxième condition aussi
 
 ## Étape 6: Publier votre projet
 1. Sur [Github.com](https://github.com) vous avez la possibilité de publier votre projet il sera donc disponible sur internet.
