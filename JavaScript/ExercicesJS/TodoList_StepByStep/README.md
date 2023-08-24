@@ -59,7 +59,7 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
 5. Stylez le bouton `<button>`
    1. Définissez une couleur de fond
    2. Définissez une couleur de bordure
-   3. Définissez un curseur
+   3. Définissez la propriété `cursor` de type `pointer`
    4. Définissez une box-shadow de survol
    5. Définissez une transition de survol
 6. Ciblez la liste `<ul>`
