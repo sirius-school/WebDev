@@ -342,7 +342,7 @@ parent.removeChild(enfantASupprimer);
 
 ### Naviguer dans le DOM
 
-Les propriétés `parentNode`, `previousSibling`, `nextSibling`, `firstChild` et `lastChild` permettent de naviguer dans le DOM et accéder aux éléments voisins et enfants.
+Les propriétés `parentNode`, `previousSibling`, `nextSibling`, `firstChild`, `firstElementChild` et `lastChild` permettent de naviguer dans le DOM et accéder aux éléments voisins et enfants.
 
 ### Autres méthodes
 
