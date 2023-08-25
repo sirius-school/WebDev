@@ -8,10 +8,8 @@
   - [Utilisation pratique](#utilisation-pratique)
   - [En résumé](#en-résumé)
 - [Sélection via un attribut HTML](#sélection-via-un-attribut-html)
-  - [La méthode `querySelector` avec attributs](#la-méthode-queryselector-avec-attributs)
-  - [La méthode `querySelectorAll` avec attributs](#la-méthode-queryselectorall-avec-attributs)
   - [Considérations importantes](#considérations-importantes)
-- [La propriété classList](#la-propriété-classlist)
+- [La propriété `classList`](#la-propriété-classlist)
   - [Accéder à classList](#accéder-à-classlist)
   - [Méthodes de classList](#méthodes-de-classlist)
   - [Utilisation pratique](#utilisation-pratique-1)
@@ -32,6 +30,7 @@
 
 
 ## querySelector & querySelectorAll
+
 En JavaScript, les méthodes `querySelector` et `querySelectorAll` sont des fonctions très utiles pour sélectionner des éléments dans le DOM (Document Object Model), votre page, en utilisant des sélecteurs comme vous le feriez en CSS. Ces méthodes permettent de cibler spécifiquement les éléments que vous souhaitez manipuler ou interagir avec.
 
 ### La méthode `querySelector`
@@ -101,11 +100,7 @@ Les méthodes `querySelector` et `querySelectorAll` sont des outils puissants po
 
 ## Sélection via un attribut HTML
 
-La sélection d'éléments HTML via des attributs est une technique utile en développement web pour cibler spécifiquement des éléments en fonction de leurs attributs. JavaScript offre des moyens flexibles pour effectuer ces sélections en utilisant différentes méthodes. Dans cette partie, nous allons explorer comment sélectionner des éléments en fonction de leurs attributs HTML.
-
-### La méthode `querySelector` avec attributs
-
-Comme vu dans la partie précédente la méthode `querySelector` permet de sélectionner un élément en fonction d'un sélecteur CSS, y compris les attributs. Voici comment sélectionner un élément avec un attribut spécifique :
+La sélection d'éléments HTML via des attributs est une technique utile en développement web pour cibler spécifiquement des éléments en fonction de leurs attributs. JavaScript offre des moyens flexibles pour effectuer ces sélections en utilisant différentes méthodes. Les méthodes de sélection (`getElementById, getElementsByClassName, getElementsByTagName`, `querySelector` et `querySelectorAll`) permettent de sélectionner un élément HTML, y compris ses attributs. Voici comment sélectionner un élément avec un attribut spécifique :
 
 ```javascript
 // Exemple théorique
@@ -116,15 +111,13 @@ const element = document.querySelector('[data-id="123"]');
 
 Ici, la variable `element` séléctionnera l'élément avec l'attribut `data-id` égal à `123`
 
-### La méthode `querySelectorAll` avec attributs
-
 ```javascript
 // Exemple théorique
 const elements = document.querySelectorAll('[attribut="valeur"]');
 // Exemple concret
 const elements = document.querySelectorAll('[data-content="title"]');
 ```
-Ici, la variable `elements` séléctionnera les éléments avec l'attribut `data-content` égaux à `title`
+Ici, la variable `elements` séléctionnera tous les éléments avec l'attribut `data-content` égaux à `title`
 
 ### Considérations importantes
 
@@ -132,13 +125,11 @@ Ici, la variable `elements` séléctionnera les éléments avec l'attribut `data
 
 - Les attributs ne sont pas toujours la meilleure méthode pour identifier les éléments, en particulier si vous avez d'autres options comme les classes, les IDs, ou d'autres attributs.
 
-- Les méthodes comme `querySelector` et `querySelectorAll` offrent une grande flexibilité en combinant des sélecteurs CSS avec des attributs.
-
 En conclusion, la sélection d'éléments via des attributs HTML en JavaScript est une approche puissante pour cibler des éléments spécifiques dans le DOM. Utilisez ces techniques de manière appropriée pour améliorer la manipulation et l'interaction avec les éléments de votre page web.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-## La propriété classList
+## La propriété `classList`
 
 La propriété `classList` en JavaScript est utilisée pour accéder et manipuler les classes CSS d'un élément HTML. Elle fournit des méthodes pratiques pour ajouter, supprimer, vérifier la présence de classes et bien plus encore. Cela offre une manière plus élégante et efficace de gérer les classes CSS par rapport à la manipulation manuelle de la chaîne de caractères de la propriété `class`.
 
@@ -358,5 +349,9 @@ Les propriétés `parentNode`, `previousSibling`, `nextSibling`, `firstChild` et
 D'autres méthodes comme `insertBefore()`, `replaceWith()`, `insertAdjacentHTML()`, `insertAdjacentElement()` sont également utiles pour des opérations spécifiques de manipulation de l'HTML.
 
 En résumé, JavaScript offre une variété de méthodes pour créer, supprimer et manipuler les éléments HTML sur une page web. La maîtrise de ces méthodes est essentielle pour un développement web interactif et dynamique.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Made by [Lucas Ielli](https://github.com/LucasIelli)
