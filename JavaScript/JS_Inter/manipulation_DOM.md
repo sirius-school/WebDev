@@ -23,20 +23,20 @@
   - [Modifier la propriété `id`](#modifier-la-propriété-id)
   - [Considérations importantes](#considérations-importantes)
 - [Manipuler votre HTML](#manipuler-votre-html)
-  - [Créer de nouveaux éléments](#créer-de-nouveaux-éléments)
-  - [Supprimer des éléments](#supprimer-des-éléments)
-  - [Rappel modifier le contenu d'éléments](#rappel-modifier-le-contenu-déléments)
-  - [Modifier les attributs d'éléments](#modifier-les-attributs-déléments)
-  - [Cloner des éléments](#cloner-des-éléments)
-  - [Manipuler les styles CSS](#manipuler-les-styles-css)
+  - [`createElement()` : créer de nouveaux éléments](#createelement--créer-de-nouveaux-éléments)
+  - [`remove()` : supprimer des éléments](#remove--supprimer-des-éléments)
+  - [`innerHTML` \& `textContent` : rappel modifier le contenu](#innerhtml--textcontent--rappel-modifier-le-contenu)
+  - [`setAttribute()` : modifier les attributs d'éléments](#setattribute--modifier-les-attributs-déléments)
+  - [`cloneNode` : cloner des éléments](#clonenode--cloner-des-éléments)
+  - [`style.*` : manipuler les styles CSS](#style--manipuler-les-styles-css)
   - [Manipuler les parents et les enfants](#manipuler-les-parents-et-les-enfants)
-    - [`appendChild()`](#appendchild)
-    - [`removeChild()`](#removechild)
-    - [`replaceChild()`](#replacechild)
-    - [`parentNode`](#parentnode)
-    - [`previousSibling` et `nextSibling`](#previoussibling-et-nextsibling)
-    - [`firstChild` et `lastChild`](#firstchild-et-lastchild)
-    - [`firstElementChild` et `lastElementChild`](#firstelementchild-et-lastelementchild)
+    - [`appendChild()` : ajouter un enfant](#appendchild--ajouter-un-enfant)
+    - [`removeChild()` : supprimer un enfant](#removechild--supprimer-un-enfant)
+    - [`replaceChild()` : remplacer un enfant](#replacechild--remplacer-un-enfant)
+    - [`parentNode` : accèder au parent](#parentnode--accèder-au-parent)
+    - [`previousSibling` et `nextSibling` : accèder à un élément de même niveau](#previoussibling-et-nextsibling--accèder-à-un-élément-de-même-niveau)
+    - [`firstChild` et `lastChild` : accèder aux enfants](#firstchild-et-lastchild--accèder-aux-enfants)
+    - [`firstElementChild` et `lastElementChild` : accèder aux balises enfants](#firstelementchild-et-lastelementchild--accèder-aux-balises-enfants)
   - [Autres méthodes](#autres-méthodes)
 
 ## querySelector & querySelectorAll
@@ -247,7 +247,7 @@ En conclusion, la propriété `id` est un outil puissant pour accéder et manipu
 
 ## Manipuler votre HTML
 
-### Créer de nouveaux éléments
+### `createElement()` : créer de nouveaux éléments
 
 Pour créer de nouveaux éléments HTML en JavaScript, vous pouvez utiliser la méthode `createElement()` :
 
@@ -265,7 +265,7 @@ L'HTML sera composera donc comme suit : `<body><p>Ceci est un nouveau paragraphe
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Supprimer des éléments
+### `remove()` : supprimer des éléments
 
 Pour supprimer des éléments HTML, vous pouvez utiliser la méthode `remove()` :
 
@@ -276,7 +276,7 @@ elementASupprimer.remove();
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Rappel modifier le contenu d'éléments
+### `innerHTML` & `textContent` : rappel modifier le contenu
 
 Comme vous l'avez déjà vu dans la première partie voici un rappel pour modifier le contenu HTML d'un élément, grâce à `innerHTML` ou `textContent` :
 
@@ -289,7 +289,7 @@ monDiv.textContent = "Nouveau contenu";
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Modifier les attributs d'éléments
+### `setAttribute()` : modifier les attributs d'éléments
 
 Pour modifier les attributs d'un élément, comme `src` pour une image ou `href` pour un lien, utilisez la méthode `setAttribute()` :
 
@@ -305,7 +305,7 @@ monLien.href = "https://www.example.be";
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Cloner des éléments
+### `cloneNode` : cloner des éléments
 
 La méthode `cloneNode()` permet de cloner un élément existant, soit en dupliquant seulement la structure (sans les événements), soit en dupliquant également les événements :
 
@@ -317,7 +317,7 @@ const clone = original.cloneNode(false); // flase pour cloner uniquement l'élé
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-### Manipuler les styles CSS
+### `style.*` : manipuler les styles CSS
 
 La propriété `style` permet de manipuler les styles CSS d'un élément. Vous pouvez accéder à des propriétés spécifiques ou ajouter de nouvelles propriétés en utilisant JavaScript :
 
@@ -334,7 +334,7 @@ monElement.style.backgroundColor = "green";
 
 Dans cette partie, nous allons explorer plusieurs propriétés importantes en JavaScript qui sont utilisées pour naviguer et manipuler la structure d'un document HTML. Ces propriétés fournissent des moyens simples d'accéder aux éléments parents, frères et sœurs, ainsi qu'aux enfants d'un élément donné dans le DOM (Document Object Model).
 
-#### `appendChild()`
+#### `appendChild()` : ajouter un enfant
 
 La méthode `appendChild()` permet d'ajouter un nouvel enfant à un élément existant. Cet enfant peut être un nœud texte, un élément HTML, ou même un fragment de document. Lorsque cette méthode est appelée sur un élément parent, l'enfant spécifié est **ajouté à la fin** de la liste des enfants de cet élément. Voici comment utiliser `appendChild()` :
 
@@ -349,7 +349,7 @@ Dans cet exemple, `newChildElement` est ajouté en tant qu'enfant à la fin de `
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `removeChild()`
+#### `removeChild()` : supprimer un enfant
 
 La méthode `removeChild()` permet de supprimer un enfant spécifique d'un élément parent. L'enfant à supprimer doit être passé en argument à la méthode. Voici comment utiliser `removeChild()` :
 
@@ -364,7 +364,7 @@ Dans cet exemple, `childToRemove` est retiré de la liste des enfants de `parent
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `replaceChild()`
+#### `replaceChild()` : remplacer un enfant
 
 La méthode `replaceChild()` permet de remplacer un enfant existant par un nouvel enfant. Elle prend **deux arguments** : le nouvel enfant à ajouter et l'enfant existant à remplacer. Voici comment utiliser `replaceChild()` :
 
@@ -383,7 +383,7 @@ Dans cet exemple, `childToReplace` est remplacé par `newChildElement` au sein d
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `parentNode`
+#### `parentNode` : accèder au parent
 
 La propriété `parentNode` permet d'accéder à l'élément parent d'un nœud DOM donné. Elle renvoie l'élément parent sous forme d'objet. Voici un exemple d'utilisation :
 
@@ -394,7 +394,7 @@ const parentElement = childElement.parentNode;
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `previousSibling` et `nextSibling`
+#### `previousSibling` et `nextSibling` : accèder à un élément de même niveau
 
 Les propriétés `previousSibling` et `nextSibling` permettent d'accéder respectivement à l'élément précédent et à l'élément suivant dans le même niveau de l'arborescence DOM. Cependant, il convient de noter que les nœuds "frères et sœurs" inclusent également les nœuds texte vides et d'autres nœuds **non élémentaires**. Voici comment les utiliser :
 
@@ -406,7 +406,7 @@ const nextSibling = someElement.nextSibling;
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `firstChild` et `lastChild`
+#### `firstChild` et `lastChild` : accèder aux enfants
 
 Les propriétés `firstChild` et `lastChild` permettent d'accéder respectivement au premier et au dernier enfant d'un nœud DOM donné. Cependant, tout comme pour les propriétés précédentes, elles peuvent également pointer vers des nœuds **non élémentaires** tels que des nœuds texte. Voici comment les utiliser :
 
@@ -418,7 +418,7 @@ const lastChild = parentElement.lastChild;
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-#### `firstElementChild` et `lastElementChild`
+#### `firstElementChild` et `lastElementChild` : accèder aux balises enfants
 
 Pour éviter de pointer vers des nœuds texte et accéder uniquement aux éléments enfants, on peut utiliser les propriétés `firstElementChild` et `lastElementChild`. Ces propriétés renvoient respectivement le premier et le dernier élément enfant d'un nœud DOM, **en ignorant les nœuds non élémentaires**. Voici comment les utiliser :
 
