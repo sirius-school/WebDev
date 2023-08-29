@@ -34,6 +34,7 @@
     - [`removeChild()` : supprimer un enfant](#removechild--supprimer-un-enfant)
     - [`replaceChild()` : remplacer un enfant](#replacechild--remplacer-un-enfant)
     - [`parentNode` : accèder au parent](#parentnode--accèder-au-parent)
+    - [`parentElement` : accèder à la balise parente](#parentelement--accèder-à-la-balise-parente)
     - [`previousSibling` et `nextSibling` : accèder à un élément de même niveau](#previoussibling-et-nextsibling--accèder-à-un-élément-de-même-niveau)
     - [`firstChild` et `lastChild` : accèder aux enfants](#firstchild-et-lastchild--accèder-aux-enfants)
     - [`firstElementChild` et `lastElementChild` : accèder aux balises enfants](#firstelementchild-et-lastelementchild--accèder-aux-balises-enfants)
@@ -409,11 +410,20 @@ Dans cet exemple, `childToReplace` est remplacé par `newChildElement` au sein d
 
 #### `parentNode` : accèder au parent
 
-La propriété `parentNode` permet d'accéder à l'élément parent d'un nœud DOM donné. Elle renvoie l'élément parent sous forme d'objet. Voici un exemple d'utilisation :
+La propriété `parentNode` permet d'accéder à l'élément parent d'un nœud DOM donné. Elle renvoie l'élément parent sous forme d'objet, de nœud. Voici un exemple d'utilisation :
 
 ```javascript
 const childElement = document.getElementById('childId');
 const parentElement = childElement.parentNode;
+```
+
+#### `parentElement` : accèder à la balise parente
+
+La propriété `parentElement` permet d'accéder à l'élément parent d'un nœud DOM donné. Elle ne renvoie que l'élément parent, la balise HTML. Voici un exemple d'utilisation :
+
+```javascript
+const childElement = document.getElementById('childId');
+const parentElement = childElement.parentElement;
 ```
 
 [:arrow_up: Revenir au top](#table-des-matières)
