@@ -100,6 +100,7 @@
 
 Vous êtes à la fin de ces différents exercices et j'espère que cela vous a permis de comprendre certains concepts de JavaScript. Félicitations en tout cas d'être arrivés jusqu'au bout ! 🎉
 
-> Made by [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)
+
 
 

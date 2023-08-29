@@ -84,5 +84,6 @@ if (monElement.dataset.actif === "true") {
 
 En conclusion, les attributs HTML personnalisés `data-*` sont un moyen puissant d'étendre les éléments HTML en stockant des informations personnalisées. Ils facilitent la manipulation en JavaScript et permettent de créer des styles CSS ciblés. Utilisez-les judicieusement pour améliorer la modularité et l'efficacité de votre code.
 
-> Made by [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)
+
 

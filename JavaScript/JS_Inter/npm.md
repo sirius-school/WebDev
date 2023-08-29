@@ -127,4 +127,4 @@ Les fichiers JSON servent à stocker les données de votre application, permette
 
 [:rewind: Retour au sommaire du cours](../README.md#au-programme)
 
-> Cours original : Lucas Ielli
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

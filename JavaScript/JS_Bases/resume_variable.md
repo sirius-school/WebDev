@@ -36,4 +36,4 @@ const courseNull = null; // Variable de type null
 ```
 [:rewind: Retour au sommaire du cours](../../README.md)
 
-> Made by [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

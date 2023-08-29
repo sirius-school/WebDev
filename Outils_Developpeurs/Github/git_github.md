@@ -137,4 +137,4 @@ Git et Github sont des outils indispensables pour un développeur et pour travai
 
 [:rewind: Retour au sommaire du cours](../../README.md)
 
-> Cours original : [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

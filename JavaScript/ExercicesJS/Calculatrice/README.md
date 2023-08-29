@@ -15,4 +15,4 @@ N'oubliez pas de commit quand il faut, surtout de push votre travail à la fin e
 
 ![](../z_Resources/VikasLalwaniCalcDesign.png)
 
-> Created by Lucas Ielli
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

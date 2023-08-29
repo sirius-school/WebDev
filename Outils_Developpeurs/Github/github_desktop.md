@@ -169,4 +169,4 @@ Git et Github sont des outils indispensables pour un développeur et pour travai
 
 [:rewind: Retour au sommaire du cours](../../WebDev/)
 
-> Cours original : Lucas Ielli
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

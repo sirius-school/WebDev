@@ -159,6 +159,7 @@ Votre exercice est terminé ! Bravo 😁 Il ne reste qu'à m'envoyer votre proje
 
 J'espère que cette version vous a plu et que vous n'avez pas hésité à faire des console.log() ou cliquer sur les liens que j'ai mis à votre disposition 😊
 
-> Made by [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)
+
 
 

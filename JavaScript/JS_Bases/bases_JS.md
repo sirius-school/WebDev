@@ -526,6 +526,6 @@ Toute cette théorie n'est pas à retenir par coeur, mais vous devez savoir que 
 
 [:rewind: Retour au sommaire du cours](../../README.md)
 
-> Cours original : Julie Vanderbyse
+> Created by Julie Vanderbyse
 >
-> Modification : [Lucas Ielli](https://github.com/LucasIelli)
+> Edited by [Lucas Ielli](https://github.com/LucasIelli)

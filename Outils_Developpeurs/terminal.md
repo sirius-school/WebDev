@@ -223,4 +223,4 @@ J'espère que ces petits exercices vous ont permis de comprendre un peu comment 
 
 [:rewind: Retour au sommaire du cours](../README.md)
 
-> Cours original : [Lucas Ielli](https://github.com/lucasielli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

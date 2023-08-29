@@ -26,4 +26,4 @@ Vous allez devoir créer entièrement une application météorologique, pour ce 
 
 ![](../../Resources/Images/WeatherApp.png)
 
-> Created by Lucas Ielli
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

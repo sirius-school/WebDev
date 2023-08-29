@@ -32,4 +32,4 @@ Il est important de noter que la clé privée doit rester confidentielle et ne d
 
 [:rewind: Retour au sommaire du cours](../../README.md)
 
-> Cours original : [Lucas Ielli](https://github.com/LucasIelli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

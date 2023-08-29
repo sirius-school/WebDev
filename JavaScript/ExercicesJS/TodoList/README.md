@@ -46,4 +46,4 @@ Après la calculatrice, on augmente d'un cran le niveau, cet exercice fera appel
 
 ![](../../Resources/Images/ToDoListOldLucas.png)
 
-> Created by Lucas Ielli
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

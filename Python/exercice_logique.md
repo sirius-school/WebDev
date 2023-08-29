@@ -23,4 +23,5 @@ Début d'année Amazon a proposé à sa communauté de participer à [un jeu en 
 
 [:rewind: Retour au sommaire du cours](../README.md)
 
-> Cours original : [Lucas Ielli](https://github.com/lucasielli)
+> Created by [Lucas Ielli](https://github.com/LucasIelli)
+
