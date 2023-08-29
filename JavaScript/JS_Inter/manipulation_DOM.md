@@ -5,29 +5,39 @@
 - [querySelector \& querySelectorAll](#queryselector--queryselectorall)
   - [La méthode `querySelector`](#la-méthode-queryselector)
   - [La méthode `querySelectorAll`](#la-méthode-queryselectorall)
-  - [Utilisation pratique](#utilisation-pratique)
-  - [En résumé](#en-résumé)
 - [Sélection via un attribut HTML](#sélection-via-un-attribut-html)
-  - [Considérations importantes](#considérations-importantes)
 - [La propriété `classList`](#la-propriété-classlist)
   - [Accéder à classList](#accéder-à-classlist)
   - [Méthodes de classList](#méthodes-de-classlist)
-  - [Utilisation pratique](#utilisation-pratique-1)
+    - [`add()` : ajouter une classe](#add--ajouter-une-classe)
+    - [`remove()` : supprimer une classe](#remove--supprimer-une-classe)
+    - [`toggle()` : ajouter/supprimer une classe](#toggle--ajoutersupprimer-une-classe)
+    - [`contains()` : vérifier si il y a une classe](#contains--vérifier-si-il-y-a-une-classe)
+    - [`replace()` : remplacer une classe](#replace--remplacer-une-classe)
+    - [`item(i)` ou `classList[i]` : récupèrer une classe à un index](#itemi-ou-classlisti--récupèrer-une-classe-à-un-index)
+    - [`length` : récupèrer le nombre total de classes](#length--récupèrer-le-nombre-total-de-classes)
+    - [`value` : retourner une classe en chaîne de caractères](#value--retourner-une-classe-en-chaîne-de-caractères)
+  - [Utilisation pratique](#utilisation-pratique)
 - [La propriété `id`](#la-propriété-id)
   - [Accéder à la propriété `id`](#accéder-à-la-propriété-id)
   - [Modifier la propriété `id`](#modifier-la-propriété-id)
-  - [Considérations importantes](#considérations-importantes-1)
+  - [Considérations importantes](#considérations-importantes)
 - [Manipuler votre HTML](#manipuler-votre-html)
   - [Créer de nouveaux éléments](#créer-de-nouveaux-éléments)
   - [Supprimer des éléments](#supprimer-des-éléments)
-  - [Modifier le contenu d'éléments](#modifier-le-contenu-déléments)
+  - [Rappel modifier le contenu d'éléments](#rappel-modifier-le-contenu-déléments)
   - [Modifier les attributs d'éléments](#modifier-les-attributs-déléments)
   - [Cloner des éléments](#cloner-des-éléments)
   - [Manipuler les styles CSS](#manipuler-les-styles-css)
   - [Manipuler les parents et les enfants](#manipuler-les-parents-et-les-enfants)
-  - [Naviguer dans le DOM](#naviguer-dans-le-dom)
+    - [`appendChild()`](#appendchild)
+    - [`removeChild()`](#removechild)
+    - [`replaceChild()`](#replacechild)
+    - [`parentNode`](#parentnode)
+    - [`previousSibling` et `nextSibling`](#previoussibling-et-nextsibling)
+    - [`firstChild` et `lastChild`](#firstchild-et-lastchild)
+    - [`firstElementChild` et `lastElementChild`](#firstelementchild-et-lastelementchild)
   - [Autres méthodes](#autres-méthodes)
-
 
 ## querySelector & querySelectorAll
 
@@ -76,26 +86,6 @@ const paragraphes = document.querySelectorAll("article p");
 
 Ici, la variable `paragraphes` serait une liste de tous les éléments `<p>` à l'intérieur des éléments `<article>`.
 
-### Utilisation pratique
-
-Les méthodes `querySelector` et `querySelectorAll` sont extrêmement utiles pour manipuler le contenu d'une page web de manière dynamique. Vous pouvez les utiliser pour ajouter des événements aux éléments, modifier leur contenu, leurs styles, ou pour effectuer des opérations sur un groupe spécifique d'éléments.
-
-Par exemple, vous pouvez utiliser `querySelectorAll` pour sélectionner tous les éléments d'une liste et leur ajouter un gestionnaire d'événements de type `click` :
-
-```javascript
-const tousLesElementsListe = document.querySelectorAll("ul li"); 
-// Sélectionne tous les éléments "li" à l'intérieur des éléments "ul"
-
-tousLesElementsListe.forEach(element => {
-    element.addEventListener("click", () => {
-        // Faire quelque chose lorsque l'élément est cliqué
-    });
-});
-```
-### En résumé
-
-Les méthodes `querySelector` et `querySelectorAll` sont des outils puissants pour accéder aux éléments du DOM en utilisant des sélecteurs CSS familiers. Elles offrent une flexibilité et une simplicité accrues lors de la manipulation et de l'interaction avec le contenu HTML de vos pages web.
-
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## Sélection via un attribut HTML
@@ -119,14 +109,6 @@ const elements = document.querySelectorAll('[data-content="title"]');
 ```
 Ici, la variable `elements` séléctionnera tous les éléments avec l'attribut `data-content` égaux à `title`
 
-### Considérations importantes
-
-- L'utilisation de sélections basées sur des attributs peut simplifier le ciblage d'éléments spécifiques, mais veillez à les utiliser judicieusement pour éviter de complexifier le code.
-
-- Les attributs ne sont pas toujours la meilleure méthode pour identifier les éléments, en particulier si vous avez d'autres options comme les classes, les IDs, ou d'autres attributs.
-
-En conclusion, la sélection d'éléments via des attributs HTML en JavaScript est une approche puissante pour cibler des éléments spécifiques dans le DOM. Utilisez ces techniques de manière appropriée pour améliorer la manipulation et l'interaction avec les éléments de votre page web.
-
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## La propriété `classList`
@@ -144,27 +126,31 @@ const class = element.classList;
 
 ### Méthodes de classList
 
-1. **`add()`** : Ajoute une ou plusieurs classes à l'élément.
+#### `add()` : ajouter une classe
 
    ```javascript
    element.classList.add("maClasse");
    element.classList.add("classe1", "classe2");
    ```
 
-2. **`remove()`** : Supprime une ou plusieurs classes de l'élément.
+#### `remove()` : supprimer une classe
+
+Supprimer une classe ou plusieurs si vous spécifiez plusieurs arguments.
 
    ```javascript
    element.classList.remove("maClasse");
    element.classList.remove("classe1", "classe2");
    ```
 
-3. **`toggle()`** : Ajoute la classe si elle n'est pas présente, la supprime si elle est présente.
+#### `toggle()` : ajouter/supprimer une classe
+
+Ajouter une classe si elle n'est pas présente, la supprimer si elle est présente.
 
    ```javascript
    element.classList.toggle("maClasse");
    ```
 
-4. **`contains()`** : Vérifie si l'élément a une classe spécifique.
+#### `contains()` : vérifier si il y a une classe
 
    ```javascript
    if (element.classList.contains("maClasse")) {
@@ -172,32 +158,29 @@ const class = element.classList;
    }
    ```
 
-5. **`replace()`** : Remplace une classe par une autre.
+#### `replace()` : remplacer une classe
+
+Cette méthode utilise deux arguments : le premier est l'ancienne classe, le deuxième est la nouvelle.
 
    ```javascript
    element.classList.replace("ancienneClasse", "nouvelleClasse");
    ```
 
-6. **`item(i)`** ou **classList[i]** : Récupère la classe à un index spécifique dans la liste des classes.
+#### `item(i)` ou `classList[i]` : récupèrer une classe à un index
 
    ```javascript
    const classeAtIndex = element.classList.item(0); // Récupère la première classe
    const classeAtIndex = element.classList[0]; // Donne le même résultat qu'avec item()
    ```
 
-7. **`length`** : Récupère le nombre total de classes sur l'élément.
+#### `length` : récupèrer le nombre total de classes
 
    ```javascript
-   const nombreClasses = element.classList.length;
+   const monTitre = document.getElementById('monTitre');
+   const nombreClasses = monTitre.classList.length;
    ```
 
-8. **`toString()`** : Convertit la liste de classes en une chaîne de caractères.
-
-   ```javascript
-   const classesEnChaine = element.classList.toString();
-   ```
-
-9. **`value`** : Quasiment identique à `toString()`, retourne la liste de classes en tant que chaîne de caractères.
+#### `value` : retourner une classe en chaîne de caractères
 
    ```javascript
    const classesEnChaine = element.classList.value;
@@ -278,6 +261,9 @@ Ensuite, pour ajouter cet élément à un autre élément existant (par exemple,
 ```javascript
 document.body.appendChild(nouveauParagraphe);
 ```
+L'HTML sera composera donc comme suit : `<body><p>Ceci est un nouveau paragraphe.</p></body>`
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Supprimer des éléments
 
@@ -288,9 +274,11 @@ const elementASupprimer = document.getElementById("monElement");
 elementASupprimer.remove();
 ```
 
-### Modifier le contenu d'éléments
+[:arrow_up: Revenir au top](#table-des-matières)
 
-Pour modifier le contenu HTML d'un élément, vous pouvez utiliser la propriété `innerHTML` ou `textContent` :
+### Rappel modifier le contenu d'éléments
+
+Comme vous l'avez déjà vu dans la première partie voici un rappel pour modifier le contenu HTML d'un élément, grâce à `innerHTML` ou `textContent` :
 
 ```javascript
 const monDiv = document.getElementById("monDiv");
@@ -299,14 +287,23 @@ monDiv.innerHTML = "<p>Nouveau contenu</p>";
 monDiv.textContent = "Nouveau contenu";
 ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ### Modifier les attributs d'éléments
 
 Pour modifier les attributs d'un élément, comme `src` pour une image ou `href` pour un lien, utilisez la méthode `setAttribute()` :
 
 ```javascript
 const monImage = document.getElementById("monImage");
+const monLien = document.getElementById("monLien");
 monImage.setAttribute("src", "nouveau-chemin-image.jpg");
+monLien.setAttribute("href", "https://www.example.be");
+// Plus simplement
+monImage.src = "nouveau-chemin-image.jpg";
+monLien.href = "https://www.example.be";
 ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Cloner des éléments
 
@@ -314,8 +311,11 @@ La méthode `cloneNode()` permet de cloner un élément existant, soit en dupliq
 
 ```javascript
 const original = document.getElementById("original");
-const clone = original.cloneNode(true); // true pour cloner les enfants (récursivement)
+const clone = original.cloneNode(true); // true pour cloner les enfants
+const clone = original.cloneNode(false); // flase pour cloner uniquement l'élément
 ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Manipuler les styles CSS
 
@@ -325,24 +325,112 @@ La propriété `style` permet de manipuler les styles CSS d'un élément. Vous p
 const monElement = document.getElementById("monElement");
 monElement.style.color = "red";
 monElement.style.fontSize = "16px";
+monElement.style.backgroundColor = "green";
 ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Manipuler les parents et les enfants
 
-Les méthodes `appendChild()`, `removeChild()` et `replaceChild()` permettent de manipuler les relations parent-enfant entre les éléments :
+Dans cette partie, nous allons explorer plusieurs propriétés importantes en JavaScript qui sont utilisées pour naviguer et manipuler la structure d'un document HTML. Ces propriétés fournissent des moyens simples d'accéder aux éléments parents, frères et sœurs, ainsi qu'aux enfants d'un élément donné dans le DOM (Document Object Model).
+
+#### `appendChild()`
+
+La méthode `appendChild()` permet d'ajouter un nouvel enfant à un élément existant. Cet enfant peut être un nœud texte, un élément HTML, ou même un fragment de document. Lorsque cette méthode est appelée sur un élément parent, l'enfant spécifié est **ajouté à la fin** de la liste des enfants de cet élément. Voici comment utiliser `appendChild()` :
 
 ```javascript
-const parent = document.getElementById("parent");
-const nouvelEnfant = document.createElement("div");
-parent.appendChild(nouvelEnfant);
+const parentElement = document.getElementById('parentId');
+const newChildElement = document.createElement('div');
 
-const enfantASupprimer = document.getElementById("enfant");
-parent.removeChild(enfantASupprimer);
+parentElement.appendChild(newChildElement);
 ```
 
-### Naviguer dans le DOM
+Dans cet exemple, `newChildElement` est ajouté en tant qu'enfant à la fin de `parentElement`.
 
-Les propriétés `parentNode`, `previousSibling`, `nextSibling`, `firstChild`, `firstElementChild` et `lastChild` permettent de naviguer dans le DOM et accéder aux éléments voisins et enfants.
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `removeChild()`
+
+La méthode `removeChild()` permet de supprimer un enfant spécifique d'un élément parent. L'enfant à supprimer doit être passé en argument à la méthode. Voici comment utiliser `removeChild()` :
+
+```javascript
+const parentElement = document.getElementById('parentId');
+const childToRemove = document.getElementById('childId');
+
+parentElement.removeChild(childToRemove);
+```
+
+Dans cet exemple, `childToRemove` est retiré de la liste des enfants de `parentElement`.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `replaceChild()`
+
+La méthode `replaceChild()` permet de remplacer un enfant existant par un nouvel enfant. Elle prend **deux arguments** : le nouvel enfant à ajouter et l'enfant existant à remplacer. Voici comment utiliser `replaceChild()` :
+
+```javascript
+const parentElement = document.getElementById('parentId');
+const newChildElement = document.createElement('div');
+const childToReplace = document.getElementById('childId');
+
+parentElement.replaceChild(newChildElement, childToReplace);
+```
+[:arrow_up: Revenir au top](#table-des-matières)
+
+Dans cet exemple, `childToReplace` est remplacé par `newChildElement` au sein de la liste des enfants de `parentElement`.
+
+> Les méthodes `appendChild()`, `removeChild()` et `replaceChild()` sont essentielles pour manipuler les relations parent-enfant entre les éléments dans le DOM. Elles offrent des moyens puissants de modifier la structure du document. Assure-toi de manipuler ces méthodes avec précaution, car elles peuvent avoir un impact significatif sur la structure et le comportement de la page web.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `parentNode`
+
+La propriété `parentNode` permet d'accéder à l'élément parent d'un nœud DOM donné. Elle renvoie l'élément parent sous forme d'objet. Voici un exemple d'utilisation :
+
+```javascript
+const childElement = document.getElementById('childId');
+const parentElement = childElement.parentNode;
+```
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `previousSibling` et `nextSibling`
+
+Les propriétés `previousSibling` et `nextSibling` permettent d'accéder respectivement à l'élément précédent et à l'élément suivant dans le même niveau de l'arborescence DOM. Cependant, il convient de noter que les nœuds "frères et sœurs" inclusent également les nœuds texte vides et d'autres nœuds **non élémentaires**. Voici comment les utiliser :
+
+```javascript
+const someElement = document.getElementById('someId');
+const previousSibling = someElement.previousSibling;
+const nextSibling = someElement.nextSibling;
+```
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `firstChild` et `lastChild`
+
+Les propriétés `firstChild` et `lastChild` permettent d'accéder respectivement au premier et au dernier enfant d'un nœud DOM donné. Cependant, tout comme pour les propriétés précédentes, elles peuvent également pointer vers des nœuds **non élémentaires** tels que des nœuds texte. Voici comment les utiliser :
+
+```javascript
+const parentElement = document.getElementById('parentId');
+const firstChild = parentElement.firstChild;
+const lastChild = parentElement.lastChild;
+```
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
+#### `firstElementChild` et `lastElementChild`
+
+Pour éviter de pointer vers des nœuds texte et accéder uniquement aux éléments enfants, on peut utiliser les propriétés `firstElementChild` et `lastElementChild`. Ces propriétés renvoient respectivement le premier et le dernier élément enfant d'un nœud DOM, **en ignorant les nœuds non élémentaires**. Voici comment les utiliser :
+
+```javascript
+const parentElement = document.getElementById('parentId');
+const firstElementChild = parentElement.firstElementChild;
+const lastElementChild = parentElement.lastElementChild;
+```
+
+> En utilisant les propriétés `parentNode`, `previousSibling`, `nextSibling`, `firstChild`, `firstElementChild`, `lastChild` et `lastElementChild`, vous pouvez **naviguer** efficacement dans la structure d'un document HTML en JavaScript. Il est important de noter que ces propriétés peuvent renvoyer des valeurs `null` lorsque les éléments recherchés n'existent pas. Assurez-vous donc de vérifier les valeurs renvoyées avant d'effectuer des opérations sur elles.
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Autres méthodes
 
