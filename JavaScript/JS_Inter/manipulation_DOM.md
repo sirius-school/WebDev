@@ -68,6 +68,8 @@ const titleClass = document.querySelector("h1.title");
 `titleClass` sélectionne le premier élément avec la **classe** `title`
 `titleClass` sélectionne le premier élément `<h1>` avec la **classe** `title`
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ### La méthode `querySelectorAll`
 
 La méthode `querySelectorAll` est utilisée pour sélectionner tous les éléments correspondant à un sélecteur CSS donné. Elle renvoie une NodeList, un **tableau** d'éléments qui correspondent au sélecteur. Voici comment vous pouvez l'utiliser :
@@ -124,6 +126,8 @@ const element = document.getElementById("monElement");
 const class = element.classList;
 ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ### Méthodes de classList
 
 #### `add()` : ajouter une classe
@@ -132,6 +136,8 @@ const class = element.classList;
    element.classList.add("maClasse");
    element.classList.add("classe1", "classe2");
    ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 #### `remove()` : supprimer une classe
 
@@ -142,6 +148,8 @@ Supprimer une classe ou plusieurs si vous spécifiez plusieurs arguments.
    element.classList.remove("classe1", "classe2");
    ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 #### `toggle()` : ajouter/supprimer une classe
 
 Ajouter une classe si elle n'est pas présente, la supprimer si elle est présente.
@@ -149,6 +157,8 @@ Ajouter une classe si elle n'est pas présente, la supprimer si elle est présen
    ```javascript
    element.classList.toggle("maClasse");
    ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 #### `contains()` : vérifier si il y a une classe
 
@@ -158,6 +168,8 @@ Ajouter une classe si elle n'est pas présente, la supprimer si elle est présen
    }
    ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 #### `replace()` : remplacer une classe
 
 Cette méthode utilise deux arguments : le premier est l'ancienne classe, le deuxième est la nouvelle.
@@ -166,12 +178,16 @@ Cette méthode utilise deux arguments : le premier est l'ancienne classe, le deu
    element.classList.replace("ancienneClasse", "nouvelleClasse");
    ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 #### `item(i)` ou `classList[i]` : récupèrer une classe à un index
 
    ```javascript
    const classeAtIndex = element.classList.item(0); // Récupère la première classe
    const classeAtIndex = element.classList[0]; // Donne le même résultat qu'avec item()
    ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 #### `length` : récupèrer le nombre total de classes
 
@@ -180,11 +196,15 @@ Cette méthode utilise deux arguments : le premier est l'ancienne classe, le deu
    const nombreClasses = monTitre.classList.length;
    ```
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 #### `value` : retourner une classe en chaîne de caractères
 
    ```javascript
    const classesEnChaine = element.classList.value;
    ```
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Utilisation pratique
 
@@ -211,6 +231,8 @@ const id = element.id;
 
 Dans cet exemple, la variable `id` contiendra la valeur de l'attribut `id` de l'élément avec l'ID `monElement`.
 
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ### Modifier la propriété `id`
 
 Vous pouvez également modifier la propriété `id` d'un élément en assignant une nouvelle valeur à cette propriété :
@@ -230,6 +252,8 @@ La propriété `id` peut également être utilisée pour créer des liens intern
 ```
 
 En cliquant sur le lien, la page fera défiler jusqu'à l'élément avec l'ID `monElement`.
+
+[:arrow_up: Revenir au top](#table-des-matières)
 
 ### Considérations importantes
 
