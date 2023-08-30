@@ -2,10 +2,13 @@
 # Calculatrice étape par étape
 <!-- omit in toc -->
 ## Table des matières
+- [Étape habituelle : Créez un repository](#étape-habituelle--créez-un-repository)
 - [Étape 1 : Mise en place du fichier HTML](#étape-1--mise-en-place-du-fichier-html)
 - [Étape 2 : Ajout des boutons de la calculatrice](#étape-2--ajout-des-boutons-de-la-calculatrice)
 - [Étape 3 : Stylisation avec CSS](#étape-3--stylisation-avec-css)
 - [Étape 4 : Ajout de l'interactivité avec JavaScript](#étape-4--ajout-de-linteractivité-avec-javascript)
+
+## Étape habituelle : Créez un repository
 
 ## Étape 1 : Mise en place du fichier HTML
 1. Créez un fichier HTML nommé `index.html`
@@ -29,7 +32,7 @@
 1. Créez un fichier JavaScript nommé `script.js` et vérifiez si vous l'avez bien lié à votre HTML
 2. Créez une variable qui reprendra **tout** les boutons de votre page et ce sous forme de `tableau`
 3. Créez une variable qui contiendra votre écran sur lequel vous devez afficher le résultat
-4. Pour chaque boutons de votre page, vous allez devoir utilisez une réaction événements de type `click` avec un paramètre `event`
+4. `Pour chaque` boutons de votre page, vous allez devoir utilisez une réaction événements de type `click` avec un paramètre `event`
 5. Ouvrez une condition `switch...case`, cette condition est assez simple :
    1. La condition à regarder est l'attribut `value` de notre cible (target 😉) `event`
    2. Dans le cas où cette condition est égale à `=` vous voulez afficher le résultat grâce à la méthode [`eval()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/eval), cette méthode n'est pas très sécurisée mais pour cette calculatrice ce sera simple et efficace

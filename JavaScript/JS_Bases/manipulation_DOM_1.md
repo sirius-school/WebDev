@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Window & document
+# Manipulation du DOM première partie
 <!-- omit in toc -->
 ## Table des matières
 - [L'objet Window \& Document](#lobjet-window--document)
