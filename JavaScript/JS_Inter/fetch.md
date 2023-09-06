@@ -12,7 +12,6 @@
   - [Le corps de la requête](#le-corps-de-la-requête)
 - [Construire une requête POST avec fetch()](#construire-une-requête-post-avec-fetch)
 - [Manipuler le DOM](#manipuler-le-dom)
-- [Petit exercice](#petit-exercice)
   
 ## Introduction
 
@@ -20,7 +19,7 @@ La méthode fetch() permet de contacter un serveur afin d'y récupérer/modifier
 
 Vous serez régulièrement amené à utiliser ce type de méthode (il existe différentes librairies qui possèdent leur propres méthodes), il est donc important de bien comprendre son fonctionnement.
 
-Lorsque le navigateur lit et interprète votre code, il le fait de ligne en ligne mais pas que. Il peut passer d'une opération à la suivante avant la fin de l'exécution de la première. Il s'agit de programmation ``"asynchrone"`` que nous verrons prochainement. C'est ce qui arrive dans le cas d'une requête envoyée vers un serveur, le navigateur n'attend pas la réponse à cette requête avant d'exécuter la suite de votre code.
+Lorsque le navigateur lit et interprète votre code, il le fait de ligne en ligne mais pas que. Il peut passer d'une opération à la suivante avant la fin de l'exécution de la première. Il s'agit de programmation `"asynchrone"`, c'est ce qui arrive dans le cas d'une requête envoyée vers un serveur, le navigateur n'attend pas la réponse à cette requête avant d'exécuter la suite de votre code.
 
 Si vous aviez prévu d'utiliser les données renvoyées par le serveur il faut donc spécifier au navigateur qu'il attend qu'un bout de code (la requête) soit exécuté avant d'utiliser ces données. Si vous ne l'indiquez pas, il est probable que la variable prévue pour stocker les nouvelles données reste vide aux yeux de votre navigateur.
 
@@ -29,13 +28,13 @@ Si vous aviez prévu d'utiliser les données renvoyées par le serveur il faut d
 Arrivés à ce stade de la formation vous n'êtes pas sans savoir que le language JavaScript est synchrone. C'est à dire que votre navigateur lit ligne par ligne votre code. Les fonctions asynchrones permettent de sortir de cette boucle pour forcer votre navigateur à attendre la résolution d'une fonction avant une autre.
 
 - Async :
-Déclaré une fonction avec le mot-clé ``async`` devant signifie que votre fonction sera asynchrone. Elle utilise une valeur de retour appellée ``Promise``(promesse), elle sera résolue avec la valeur renvoyée par la fonction asycnhrone ou sera rompue s'il y a une erreur.
+Déclaré une fonction avec le mot-clé `async` devant signifie que votre fonction sera asynchrone. Elle utilise une valeur de retour appellée `Promise`(promesse), elle sera résolue avec la valeur renvoyée par la fonction asycnhrone ou sera rompue s'il y a une erreur.
 - Await :
 Ce deuxième mot-clé est **indissociable** de async ! Await (attendre) attendra la résolution de la ``Promise`` de votre fonction asynchrone.
 
 ## fetch Kezaco?
 
-Heureusement la méthode ``fetch()`` est exactement construite afin de palier au problème précedemment cité :
+Heureusement la méthode `fetch()` est exactement construite afin de palier au problème précedemment cité :
 
 ```js
 fetch("http://l-url-de-la-requete.com/")
@@ -206,11 +205,6 @@ Analysons ce bout de code :
 6. Ensuite pour l'élément en cours je vais créer du texte contenant la valeur de l'élément courant avec la méthode ``createTextNode()`` qui attend une valeur en paramètre, dans ce cas je pointe sur mon objet ``data`` et je récupère la valeur de la clé ``author``.
 7. Ensuite j'utilise la méthode ``appendChild()`` pour greffer mon nouveau contenu texte à mon nouvel élément ``HTML``, pour ce faire je pointe sur ma variable ``newHtmlElement``, je lui attribue la méthode ``appendChild()`` qui va greffer un élément enfant à l'élément parent, l'élément enfant à greffer est dans ce cas-ci la variable ``newContent`` contenant la valeur de l'auteur.
 8. Pour finir je crée une variable récupérant l'élément avant lequel je dois insérer mon contenu. Je pointe vers le body de mon document, je lui attribue la méthode ``insertBefore()`` qui reçoit comme paramètre la variable ``newHtmlElement`` et la variable point de repère `currentElement`, ``nextElementSibling`` spécifie l'élément enfant du parent.
-
-
-## Petit exercice
-
-Vous allez définir une méthode ``fetch()`` pour le verbe ``GET`` et une méthode ``fetch()`` pour le verbe ``POST``. Vous allez donc créer votre premier formulaire **HTML**, récupérer les valeurs de ce formulaire, les attribuer au corps de votre requête, et pour finir envoyer le corps de votre requête dans la base de données à l'aide de la méthode `POST` et des ``headers`` requis.
 
 > Created by Julie Vanderbyse
 > 

@@ -38,39 +38,39 @@ Il y a certains fichiers qu'il ne faut jamais publier sur Github, pour des raiso
 ## Ajouter un projet, cloner un projet
 
 Si tu as bien lié ton compte github.com à Github Desktop, lorsque tu cliques sur le menu déroulant en haut à gauche du programme :<br>
-![Alt text](./src/Images/scrollMenu.png)<br>
+![Alt text](../src/Images/scrollMenu.png)<br>
 Tu auras la possibilité d'ajouter un repositery au programme Github Desktop :<br>
-![Alt text](./src/Images/addRepo.png)<br>
+![Alt text](../src/Images/addRepo.png)<br>
 En cliquant sur le bouton *Add* ou *Ajouter* tu auras 3 possibilités :<br>
-![Alt text](./src/Images/addRepoPoss.png)
+![Alt text](../src/Images/addRepoPoss.png)
 1. Clone repositery
    - Cette option te permet de cloner un projet déjà tracké sur ta machine donc en locale. C'est un projet existant sur Github.com.
 
 2. Create new repositery
    - Cette option te permet de créer un repositery totalement vierge. Cette modal apparaitra :<br>
-![Alt text](./src/Images/modalCreatNewRepo.png)<br>
+![Alt text](../src/Images/modalCreatNewRepo.png)<br>
    - Si tu souhaites le publier directement sur Github.com et commencé le tracking, il faut cliquer sur **Publish repositery** :<br>
-![Alt text](./src/Images/publishRepo.png)<br>
+![Alt text](../src/Images/publishRepo.png)<br>
 
 3. Add existing repositery
     - Cette option permet d'ajouter un dossier qui n'est pas encore tracké et donc pas disponible sur Github.com. Vous devez choisir le dossier de votre projet dans le modal suivant :<br>
-![Alt text](./src/Images/modalExistingRepo.png)
+![Alt text](../src/Images/modalExistingRepo.png)
 
 4. Une autre façon d'ajouter un repositery :<br>
    - Un projet qui est déjà sur Github.com mais pas sur Github Desktop ni sur ta machine. Sur le site [https://github.com/](Github.com), clique sur ta photo de profil et accède à tes repositories :<br>
-![Alt text](./src/Images/siteGithubRepo.png)
+![Alt text](../src/Images/siteGithubRepo.png)
    - Lorsque tu es sur le repositery que tu souhaites cloner sur ta machine clique sur le bouton vert **code** :
-![Alt text](./src/Images/openInGithubDesktop.png)
+![Alt text](../src/Images/openInGithubDesktop.png)
    - Il ne reste plus qu'à cliquer sur ***"Open with Github Desktop"***
 
 ## Naviguer avec Github Desktop
 
 Grâce à cette interface tu peux aussi :
 - Cliquer pour accèder au menu déroulant :<br>
-![Alt text](./src/Images/scrollMenu.png)<br>
+![Alt text](../src/Images/scrollMenu.png)<br>
 Cela affichera une liste de tes projets.
 - Dans la liste si tu cliques droit sur l'un de tes projets plusieurs options s'offrent à toi :<br>
-![Alt text](./src/Images/githubDesktopRigthClick.png)
+![Alt text](../src/Images/githubDesktopRigthClick.png)
 - Voici celles qui nous intéresse :<br>
   - **View on GitHub** : permet de voir le projet sur github.com.
   - **Show in Explorer** : permet d'ouvrir le dossier à l'emplacement du fichier de votre machine.
@@ -82,31 +82,31 @@ Cela affichera une liste de tes projets.
 
 1. Ouvrez GitHub Desktop. Si vous avez déjà cloné un dépôt, il apparaîtra dans la liste des dépôts disponibles. Sinon, vous devrez cloner un dépôt en utilisant l'URL du dépôt distant.
 
-![Alt text](./src/Images/repoList.png)
+![Alt text](../src/Images/repoList.png)
 
 2. Une fois que vous avez sélectionné le dépôt sur lequel vous souhaitez travailler, assurez-vous d'être sur l'onglet "Current repository" (dépôt actuel) dans GitHub Desktop.
 
-![Alt text](./src/Images/scrollMenu.png)
+![Alt text](../src/Images/scrollMenu.png)
 
 3. En haut de la fenêtre de l'application, vous verrez un bouton avec le nom de la branche actuelle. Cliquez sur ce bouton pour afficher une liste déroulante des branches disponibles.
 
-![Alt text](./src/Images/branchMenu.png)
+![Alt text](../src/Images/branchMenu.png)
 
 4. Dans la liste déroulante, cliquez sur l'option "New branch" (Nouvelle branche). Une fenêtre contextuelle s'ouvrira vous demandant de donner un nom à votre nouvelle branche.
 
-![Alt text](./src/Images/newBranchModal.png)
+![Alt text](../src/Images/newBranchModal.png)
 
 5. Entrez un nom qui décrit la fonctionnalité que vous souhaitez créer pour votre nouvelle branche. Il est courant d'utiliser des noms qui décrivent la fonctionnalité ou le correctif que vous allez développer.
 
 6. Vous pouvez également choisir de créer la nouvelle branche à partir de la branche actuelle ou d'une autre branche disponible. Par défaut, GitHub Desktop sélectionnera automatiquement la branche actuelle.
 
-![Alt text](./src/Images/chooseCloneBranch.png)
+![Alt text](../src/Images/chooseCloneBranch.png)
 
 7. Une fois que vous avez donné un nom à votre nouvelle branche et sélectionné la branche de départ, cliquez sur le bouton "Create branch" (Créer une branche).
 
 8. GitHub Desktop créera maintenant la nouvelle branche localement sur votre ordinateur. La nouvelle branche apparaîtra dans la liste déroulante des branches en haut de la fenêtre.
 
-![Alt text](./src/Images/optionsBranchMenu.png)
+![Alt text](../src/Images/optionsBranchMenu.png)
 
 9.  Pour publier votre nouvelle branche sur GitHub, cliquez sur le bouton "Publish branch" (Publier la branche) à côté de la nouvelle branche dans la liste déroulante. Cela enverra la branche sur le dépôt distant correspondant sur GitHub.
 
@@ -122,11 +122,11 @@ Vous avez créé avec succès une nouvelle branche sur GitHub Desktop. Vous pouv
 
 4. Dans la liste déroulante des branches, sélectionnez la branche que vous souhaitez fusionner avec la branche "main". La branche sélectionnée sera votre branche actuelle. Cliquez sur le bouton de la branche actuelle pour afficher la liste déroulante des branches.
 
-![Alt text](./src/Images/optionsBranchMenu.png)
+![Alt text](../src/Images/optionsBranchMenu.png)
 
 5. Dans la liste déroulante, vous verrez l'option "Choose a branch to merge into" (Choisir une branche à fusionner avec). Sélectionnez "main" dans cette liste.
 
-![Alt text](./src/Images/chooseBranchToMerge.png)
+![Alt text](../src/Images/chooseBranchToMerge.png)
 
 6. Après avoir sélectionné la branche "main", cliquez sur le bouton "Merge branch" (Fusionner la branche). Cela déclenchera le processus de fusion entre votre branche actuelle et la branche "main".
 
@@ -148,11 +148,11 @@ Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (r
 
 4. Une liste d'options apparait dont l'option 'delete' cliquez sur cette option.
 
-![Alt text](./src/Images/branchOptions.png)
+![Alt text](../src/Images/branchOptions.png)
 
 5. Une fenêtre contextuelle apparaîtra pour confirmer la suppression de la branche. Vérifiez une fois de plus que vous souhaitez bien supprimer la branche, car **cette action est irréversible**.
 
-![Alt text](./src/Images/modalDeleteBranch.png)
+![Alt text](../src/Images/modalDeleteBranch.png)
 
 6. Cochez 'Yes, delete this branch on the remote' (Oui, supprimer cette branche sur le dépôt distant) si vous souhaitez supprimer la branche aussi bien en local, sur votre machine et sur Github.com.
 

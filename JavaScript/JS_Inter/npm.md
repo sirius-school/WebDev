@@ -1,6 +1,5 @@
 <!-- omit in toc -->
 # NPM
-
 <!-- omit in toc -->
 ## Table des matières
 - [Introduction](#introduction)
@@ -12,18 +11,18 @@
 
 ## Introduction
 
-NPM est l'acronyme de `Node Package Manager`, il est le plus grand registre de logiciels au monde ! Rien que ça ! Les dévelopeurs du monde entier partagent des logiciels souvent en `open source`. Fun fact : parmi tous les packages que vous pouvez retrouver la plupart viennent du MIT ^^ Il est totalement gratuit et inclut un `CLI` (Command Line Client, exemple `C:\>npm install <package>`) qui peut être utilisé pour télécharger et installer pas mal de logiciels. Son installation requiert Node.JS dans votre machine d'ou le nom `Node Package Manager` ce qui signifie gestionnaire de paquets/dépendances Node. Donc oui nous devrons écrire des commandes dans notre terminal ! PS : il existe d'autres CLI comme votre `terminal` (oui oui) ou `yarn` ou `bash`.
+NPM est l'acronyme de `Node Package Manager`, il est le plus grand registre de logiciels au monde ! Rien que ça ! Les dévelopeurs du monde entier partagent des logiciels souvent en `open source`. Il est totalement gratuit et inclut un `CLI` (Command Line Client, exemple `C:\>npm install <package>`) qui peut être utilisé pour télécharger et installer pas mal de logiciels. Son installation requiert Node.JS dans votre machine d'ou le nom `Node Package Manager` ce qui signifie gestionnaire de paquets/dépendances Node. Donc oui nous devrons encore écrire des commandes dans notre terminal ! PS : il existe d'autres CLI comme votre `terminal` (oui oui) ou `yarn` ou `bash`.
 
 ## Installation
 
-1. Tout d'abord rendez-vous sur le site de [NodeJS](https://nodejs.org/fr/) et télécharger la version `LTS`. La dernière version disponible est fonctionnelle mais pour notre utilisation il est plus que recommandé d'utiliser une version stable.
-2. Une fois votre package NodeJS téléchargé, démarré son installation.
+1. Tout d'abord rendez-vous sur le site de [NodeJS](https://nodejs.org/fr/) et téléchargez la version `LTS`. La dernière version disponible est fonctionnelle mais pour notre utilisation il est plus que recommandé d'utiliser une version stable.
+2. Une fois votre package NodeJS téléchargé, démarrez son installation.
 3. Choisissez ou vous souhaitez l'installer.
-4. Cliquez ``Next`` 3 fois.
-5. Cliquez ``Install``, votre machine fera le reste.
-6. Dernier clique sur ``Finish``
-7. Redémarrer votre ordinateur, ce n'est pas une nécessité mais c'est préfèrable.
-8. Dans VSCode vous avez la possibilité d'utiliser votre terminal, ouvrez-le via l'onglet ``Terminal`` > `Nouveau Terminal` ou `Ctrl` + `Shift` + `ù`.
+4. Cliquez `Next` 3 fois.
+5. Cliquez `Install`, votre machine fera le reste.
+6. Dernier clique sur `Finish`
+7. Redémarrez votre ordinateur, ce n'est pas une nécessité mais c'est préfèrable.
+8. Dans VSCode vous avez la possibilité d'utiliser votre terminal, ouvrez-le via l'onglet `Terminal` > `Nouveau Terminal` ou `Ctrl + Shift + ù`.
 9. Une fois dans votre terminal nous allons vérifier votre installation avec ces deux commandes `npm -v` et `node -v`, cette commande sert à connaitre la version qui a été installée.
 10. Plus qu'à installer les paquets dont vous avez besoin pour vos projets !
 
