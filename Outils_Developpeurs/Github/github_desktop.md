@@ -13,6 +13,10 @@
   - [Créer une nouvelle branche](#créer-une-nouvelle-branche)
   - [Fusionner des branches (merge)](#fusionner-des-branches-merge)
   - [Supprimer une branche](#supprimer-une-branche)
+- [Discard changes](#discard-changes)
+- [Commit](#commit)
+- [Push](#push)
+- [Fetch \& Pull](#fetch--pull)
 - [Conclusion](#conclusion)
 
 ## Rappel : introduction
@@ -75,6 +79,7 @@ Cela affichera une liste de tes projets.
   - **View on GitHub** : permet de voir le projet sur github.com.
   - **Show in Explorer** : permet d'ouvrir le dossier à l'emplacement du fichier de votre machine.
   - **Open in Visual Studio Code** : permet d'ouvrir le dossier du projet directement dans VSCode.
+  - **Remove** : permet de supprimer le dossier du projet de Github Desktop, vous pouvez aussi cocher l'option pour le supprimer de votre machine.
 
 ## Les branches
 
@@ -154,9 +159,41 @@ Assurez-vous que la fusion a été correctement effectuée dans votre dépôt (r
 
 ![Alt text](../src/Images/modalDeleteBranch.png)
 
-6. Cochez 'Yes, delete this branch on the remote' (Oui, supprimer cette branche sur le dépôt distant) si vous souhaitez supprimer la branche aussi bien en local, sur votre machine et sur Github.com.
+1. Cochez 'Yes, delete this branch on the remote' (Oui, supprimer cette branche sur le dépôt distant) si vous souhaitez supprimer la branche aussi bien en local, sur votre machine et sur Github.com.
 
 Notez que si d'autres collaborateurs travaillent sur la même branche ou si vous avez déjà fusionné des commits sur d'autres branches, il est recommandé de ne pas supprimer la branche immédiatement, car cela peut entraîner la perte des commits et de l'historique de la branche. Dans ce cas, il est préférable de conserver la branche ou de la supprimer ultérieurement une fois qu'elle n'est plus nécessaire.
+
+## Discard changes
+
+Avec *Github Desktop* vous avez la possibilité de supprimer les changements effectués aussi bien sur le programme que dans votre machine. En cliquant droit sur l'un des éléments modifiés dans la liste de gauche.
+
+![Alt text](../src/Images/discardChanges.png)
+
+## Commit
+
+En bas à gauche du programme, vous avez un champ qui vous permet d'ajouter un message à votre commit. Il est super important de noter les changements que vous avez effectués dans votre code. Un bon message vous permettra de vous y retrouver plus facilement si vous devez revenir en arrière. Même si il est possible d'ajouter une description c'est purement facultatif.
+
+![Alt text](../src/Images/commit.png)
+
+Il ne reste plus qu'à cliquer sur le bouton "Commit to *branch*" et le tour est jouer, votre commit est enregistré.
+
+## Push
+
+Deux façons de Push s'offrent à vous. Lorque vous effectuez un commit, Github Desktop est assez malin pour vous proposer de Push directement :
+
+![Alt text](../src/Images/pushBlue.png)
+
+La deuxième façon est de le faire sur le bouton juste à coté du système de branche :
+
+![Alt text](../src/Images/pushButton.png)
+
+## Fetch & Pull
+
+Le "fetch" se fait quasiment automatiquement lorsque vous sélectionner un repository sur Github Desktop, il va donc comparé la version en ligne et la version sur votre machine. Si la version en ligne est plus récente, le programme vous proposera de "Pull".
+
+![Alt text](../src/Images/pullButton.png)
+
+![Alt text](../src/Images/pullBlue.png)
 
 ## Conclusion
 
@@ -167,6 +204,6 @@ Git et Github sont des outils indispensables pour un développeur et pour travai
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-[:rewind: Retour au sommaire du cours](../../WebDev/)
+[:rewind: Retour au sommaire du cours](../../README.md)
 
 > Created by [Lucas Ielli](https://github.com/LucasIelli)
