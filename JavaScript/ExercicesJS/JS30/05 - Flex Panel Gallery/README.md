@@ -2,4 +2,4 @@
 
 Le résultat attendu de cet exercice :
 
-<video src="./ResultFlexPanel.mp4"></video>
+[Vidéo YouTube du résultat](https://youtu.be/-B2d9Usvqn0)
