@@ -2,4 +2,6 @@
 
 Le résultat attendu de cet exercice :
 
-<video src="./ResultFlexPanel.mkv"></video>
+<video>
+    <source src="./ResultFlexPanel.mkv" type="video/mp4">
+</video>
