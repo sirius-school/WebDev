@@ -32,7 +32,29 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
     - Affiches quelques pochettes d'album que tu aimes, essayes de reproduire le style sur le screenshot.
     - Places un texte d'accroche
   - **comments.html**: la page avec le formulaire. Celui-ci ne doit pas être fonctionnel, juste stylisé comme sur le screenshot.
-- Il te faut une feuille de style **"style.css"** lié à chacune de tes pages.
+- Il te faut **une feuille** de style **"style.css"** lié à chacune de tes pages qui contient le style global de tout le site. Tu peux ensuite séparer tes styles dans différentes feuilles de styles pour chacune des pages. Pour ce faire il suffit de créer plusieurs balise `<link>` dans tes pages HTML. Voici un exemple de structure pour le projet:
+
+```text
+images
+|___ landing-page-girl.png
+styles
+|___ bubulles.css
+|___ comments.css
+|___ discover.css
+|___ style.css
+pages
+|___ comments.html
+|___ discover.html
+index.html
+```
+
+```html
+<!-- discover.html -->
+<head>
+  <link href="./styles/style.css">
+  <link href="./styles/discover.css">
+</head>
+```
 
 ## Screenshot
 
