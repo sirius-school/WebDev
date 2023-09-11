@@ -20,7 +20,7 @@ Ton designer t'as envoyé le design en screenshot. À toi de le reproduire en HT
 ## Consignes
 
 - Sois le plus fidèle possible au modèle
-- Chaque page doit contenir le même header et footer. Soit tu le fais sur une page et tu recopies le code sur les autres, soit tu utilises [le "hack" en JQuerry](#en-jquery) expliqué plus bas.
+- Chaque page doit contenir le même header et footer. Soit tu le fais sur une page et tu recopies le code sur les autres, soit tu utilises [le "hack" en JavaScript](#en-javascript) expliqué plus bas.
   - **Le header**: doit contenir le logo et le titre à gauche. Le menu est sur la droite.
   - **Le footer**: un menu à gauche vers d'autres pages (`href="#"`) et à droite les liens sociaux.
 - Il te faut 3 pages:
@@ -41,6 +41,7 @@ styles
 |___ bubulles.css
 |___ comments.css
 |___ discover.css
+|___ index.css
 |___ style.css
 pages
 |___ comments.html
@@ -86,8 +87,8 @@ Tu peux retrouver les images et logos nécessaires à la réalisation de cet exe
 - Le fond du formulaire: #202027
 - Le fond des inputs: #2F3038
 - Le fond du footer: #202027
-- La couleur d'accent: #BC3A80
-- La couleur du bouton du formulaire: #1867A7
+- La couleur d'accent (rose): #BC3A80
+- La couleur du bouton du formulaire (bleu): #1867A7
 
 ## La Google font
 
@@ -103,9 +104,217 @@ Pour reproduire la maquette il te faudra la police d'écriture `Poppins` pour ce
 
 ## Petit hack pour répéter son header/footer sur plusieurs pages
 
+Voici quelques solutions pour répéter notre header et footer sur chacune de nos pages sans devoir recopier et recoller du code à chaque fois. Ceci est un "hack" donc ce n'est pas la bonne solution pour développer un site web. Mais on va reproduire la logique qu'utilise un framework pour créer des sites.
+
+[En JavaScript](#en-javascript) | [En JQuery](#en-jquery)
+
+### En JavaScript
+
+Alors là mes amis, on a une solution intéressante en JS, mais y a beaucoup de lignes. Du coup, je vais vous guider pas à pas sur la création et l'utilisation de cette méthode. Il y a des choses que vous n'avez pas encore vue comme les fonctions asynchrones ou les RegEx. Mais pas de panique, je vais vous en toucher un mot au fur et à mesure.
+
+Soit tu recopies le code ci-dessous et tu lis les commentaires, soit tu parcours le pas à pas qui suit.
+
+#### Le code complet
+
+```js
+// Préparons nos variables pour récupérer le nom de notre page
+// Il y a plusieurs choses à comprendre ici
+// regex: permet de supprimer l'extension de la page dans l'url
+// path: récupère l'url de la page en cours
+// match: récupère dans 'path' toute les valeurs qui correspondent à notre regex. Du coup on a la valeur sélectionnée en première position, puis la valeur sans l'extension en deuxième position. tout cela stocké dans un tableau
+// page: contient la deuxième valeur de match (tableau) qui est le nom de notre page sans son extension
+let regex = new RegExp(/\/([^/]+)\.[^/.]+$/);
+let path = window.location.pathname;
+let match = path.match(regex);
+let page = match ? match[1] : null;
+
+// fonction asynchrone qui va servir a ajouter une page HTML comme "texte" à l'intérieur d'une div
+async function fetchHtmlAsText(url) {
+  return await (await fetch(url)).text();
+}
+
+// fonction asynchrone qui va charger nos "header" et "footer". 
+// on sélectionne d'abord par leurs ID "header" et "footer"
+// et pour chacun on utilise notre fonction 'fetchHtmlAsText' pour charger la page header/footer
+// peut-être que vous devrez changer les liens vers les fichiers html
+// on a aussi une condition pour ne pas charger le footer sur la page index
+async function loadComponents() {
+  const headerDiv = document.getElementById("header");
+  headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
+  if (page !== "index" && page !== null){
+    const footerDiv = document.getElementById("footer");
+    footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
+  }
+}
+
+// Ici on commence le code pour faire en sorte que chaque lien dans ma nav ai la classe 'active' si c'est la page sur laquelle on est
+// on commence par sélectionner tous nos liens dans header
+function setActiveNavLink() {
+  const navLinks = document.querySelectorAll("header a");
+
+  // pour chaque liens on va récupérer l'attribut 'href'
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    // On vérifie si le href correspond à la page
+    if (page && href.includes(page)) {
+      // On ajoute la classe active si c'est le cas
+      link.classList.toggle("active");
+    }
+  });
+}
+
+// Ici on crée une fonction qui va ajouter le résultat de toutes nos fonctions quand elle aura le résultat des autres fonctions
+async function initializePage() {
+  await loadComponents();
+  setActiveNavLink();
+}
+
+// Et enfin on fait appel à cette dernière fonction pour lancer toute la machine
+initializePage();
+
+```
+
+#### Le pas à pas
+
+Ce pas à pas n'est pas un exercice, je ne vous demande pas de trouver les réponses, je vous explique plutôt ce que le code fait. Vous pouvez copier/coller chaque bout de code à la suite.
+
+Commençons par créer un nouveau fichier `script.js` qu'on ajoutera à toutes nos pages (pas header/footer).
+
+##### Variables
+
+On va avoir besoin de récupérer le nom de notre page actuelle pour pouvoir plus tard empêcher le footer d’apparaître sur la page 'index.html' ainsi que pouvoir changer le style de nos liens si on est sur la même page. On va utiliser la propriété [pathname](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) de l'interface [Location](https://developer.mozilla.org/fr/docs/Web/API/Location).
+
+```js
+let path = window.location.pathname;
+```
+
+Ceci nous retourne une valeur texte qui contient la page sur laquelle on est actuellement. Seulement il y a un slash et une extension de fichier en trop qui gène un peu. On va devoir y remédier. Pour ce faire on va faire appel à une Regular Expression. Alors les RegEx c'est un peu compliqué mais ça va permettre de comparer les règles établies dans la RegEx et de supprimer une partie d'un string. Donc on va pas rentrer dans le détail de la création de cette RegEx, c'est compliqué et moi-même j'ai recours à l'aide d'internet pour en créer une. Donc la voici:
+
+```js
+let regex = new RegExp(/\/([^/]+)\.[^/.]+$/);
+```
+
+Ensuite on va chercher dans notre variable `path` après ce qui correspond à notre RegEx et on va stocker ça dans un tableau grâce à la méthode [match()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match). On aura un tableau avec 2 valeurs, celui qui correspond à la RegEx et la valeur corrigée par la RegEx. On va donc créer une dernière variable qui va récupérer la deuxième valeur de notre tableau pour enfin avoir le nom de la page.
+
+```js
+let match = path.match(regex);
+let page = match ? match[1] : null;
+```
+
+##### La fonction pour charger du contenu
+
+Alors maintenant il va falloir créer une fonction qui va récupérer une url de page et intégrer cette page dans un élément. Ceci doit se faire de manière asynchrone, c'est à dire qu'on doit attendre d'appeler la fonction et avoir le retour du navigateur pour pouvoir continuer. Votre code, en temps normal, s'exécute d'une traite, donc si on lui demande d'ajouter une page à un endroit, il ne saura pas car cet endroit en question n'a même pas encore été créé. Donc on va utiliser [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) et [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await). Encore une fois, ceci est un concept assez poussé, on va donc passer outre l'explication poussée pour le moment, vous le verrez plus tard en JavaScript.
+
+```js
+async function fetchHtmlAsText(url) {
+  return await (await fetch(url)).text();
+}
+```
+
+##### La fonction pour charger le contenu dans le header et footer
+
+Alors maintenant qu'on a notre fonction qui va ajouter du contenu, il faut qu'on prépare une fonction qui va sélectionner notre header et footer et va y charger les pages grâce à la fonction précédente. De nouveau, on va avoir recours à une fonction asynchrone car de nouveau on doit attendre le chargement complet de la page pour que nos éléments soient créés et aussi on doit attendre que la précédente fonction ai fait son travail.
+
+Pour commencer on va créer la fonction et y créer nos variables pour sélectionner notre header et footer.
+
+```js
+async function loadComponents() {
+  const headerDiv = document.getElementById("header");
+  const footerDiv = document.getElementById("footer");
+  }
+```
+
+Ensuite on va ajouter à nos éléments sélectionnés le contenu avec `innerHTML` et notre fonction `fetchHtmlAsText`.
+
+```js
+async function loadComponents() {
+  const headerDiv = document.getElementById("header");
+  const footerDiv = document.getElementById("footer");
+  headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
+  footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
+  }
+```
+
+C'est quasi fini, il ne reste plus qu'à mettre une petite condition pour la page `index.html` pour ne pas avoir d'erreur car techniquement la balise `footer` n'existe pas sur cette page. Il faut utiliser la condition "si `page` est différent de `index`" mais aussi "si `page` est différent de `null`" car parfois au lancement de LiveServer, `page` est `null`. Donc comme ça, on évite les erreurs.
+
+```js
+async function loadComponents() {
+  const headerDiv = document.getElementById("header");
+  headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
+  if (page !== "index" && page !== null){
+    const footerDiv = document.getElementById("footer");
+    footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
+  }
+}
+```
+
+Maintenant on va lancer toutes ces fonctions et voir si ça fonctionne. Pour ce faire on va de nouveau préparer une fonction asynchrone, vu qu'elle doit attendre toutes les autres. Et on oublie pas d'appelez cette fonction à la fin de notre `script.js`
+
+```js
+async function initializePage() {
+  await loadComponents();
+}
+
+initializePage();
+```
+
+###### Changer le style des liens
+
+Maintenant que nous avons notre header, ça serait sympa de faire en sorte que les liens dedans aient un style différent si on est sur la page qui lui correspond. Cette fois-ci on va faire une fonction normale car elle s'exécutera à la suite de `loadComponents()` et donc le contenu sera déjà présent.
+
+Commençons par créer la fonction et à sélectionner tous nos liens dans notre header avec un petit `querySelectorAll`
+
+```js
+function setActiveNavLink() {
+  const navLinks = document.querySelectorAll("header a");
+}
+```
+
+Ensuite il va falloir récupérer l'attribut `href` de chaque liens.
+
+```js
+function setActiveNavLink() {
+  const navLinks = document.querySelectorAll("header a");
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+  }
+}
+```
+
+Et maintenant on vérifie si le `href` contient le nom de la `page` grâce à la méthode [includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) et si c'est le cas on ajoute la classe `active` avec la méthode [toggle()](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle)
+
+```js
+function setActiveNavLink() {
+  const navLinks = document.querySelectorAll("header a");
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (page && href.includes(page)) {
+      link.classList.toggle("active");
+    }
+  });
+}
+```
+
+Et pour finir, on va mettre à jour notre fonction d'initialisation de page en ajoutant cette nouvelle fonction.
+
+```js
+async function initializePage() {
+  await loadComponents();
+  setActiveNavLink();
+}
+```
+
+N'oubliez pas que pour que tout ça fonctionne il vous faut:
+
+- une page `header.html` dans un dossier `components`
+- une page `footer.html` dans un dossier `components`
+- vos pages (index, comments, discover) doivent avoir une balise `header` et `footer` avec un id du même nom
+- les liens doivent être au moins dans la balise `header`
+- créer une classe `active` dans le css
+
 ### En Jquery
 
-Voici une solution en Jquery, simple à mettre en place. Ceci c'est un peu plus avancé, c'est juste pour la frime!
+Voici une solution en Jquery, simple à mettre en place. Jquery c'est une bibliothèque JavaScript qui permet de faire pleins de choses en JS plus "facilement". Mais il faut aussi apprendre à l'écrire. Nous ici on va juste se contenter de recopier le code et de le comprendre.
 
 Ajouter cette balise scripts à votre `<head>` pour inclure Jquerry à **chacune de vos pages** (index/discover/comments).
 
@@ -117,10 +326,14 @@ Créez une page `script.js`et ajoutez ce bout de code.
 
 ```js
 $(function(){
-  $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
+  $("#header").load("../components/header.html"); 
+  $("#footer").load("../components/footer.html"); 
 });
 ```
+
+> :bulb: Comme nous utilisons LiveServer pour tester nos pages, on peut mettre dans nos chemins "../" pour toujours revenir à la racine de notre site pour chercher après nos composants. Car si on ne le fait pas, les chemins seront différents si on est sur "index.html" qui est censé être à la racine et les autres pages qui sont dans un dossier "pages"
+
+:exclamation: Attention, regarder bien le chemin vers le header/footer et ajuster vos fichiers en fonction.
 
 :exclamation:**NPO**: ajouter la ligne qui permet d'inclure votre page script à **chacune de vos pages**.
 
@@ -128,16 +341,16 @@ $(function(){
 <script src="script.js"></script>
 ```
 
-Ensuite il faut ajouter une `div` avec les ID définit plus haut à **chacune de vos pages** (index/discover/comments) pour définir l'endroit où le contenu de vos pages header et footer apparaîtront.
+Ensuite on va ajouter nos ID définit plus haut à **chacune de nos balises header et footer** sur chacune de nos pages(index/discover/comments) pour définir l'endroit où le contenu de vos pages header et footer apparaîtront.
 
 ```html
-<div id="header"></div>
-<div id="footer"></div>
+<header id="header"></header>
+<footer id="footer"></footer>
 ```
 
-Vous pouvez maintenant créer une page `header.html` et `footer.html` et elles seront incluses à l'endroit où vous avez placé votre `div`.
+Vous pouvez maintenant créer une page `header.html` et `footer.html`, les placées dans un dossier "components" et elles seront ajoutées dans les balises header et footer.
 
-#### Changer le style du menu
+#### Changer le style du menu (optionnel)
 
 Si vous souhaitez changer le style du lien dans le menu en fonction de la page sur laquelle vous êtes, il va falloir de nouveau "hacker" le système un tout petit peu.
 
@@ -170,7 +383,7 @@ Il reste à créer une classe CSS `isActive` avec les propriétés voulue et le 
 
 :exclamation: N'oubliez pas de lier votre nouvelle page `nav.js` dans votre `header.html`!
 
-##### Variante bonus
+##### Variante bonus (optionnel)
 
 Si vous voulez une propriété différente pour chacun de vos liens, vous pouvez employez ce code Jquery.
 
@@ -190,86 +403,5 @@ Ensuite il faudra un sélecteur CSS pour chacun des noms de fichier que vous ave
 ```
 
 La différence ici c'est qu'il va ajouter une classe avec le même nom que le fichier. Du coup vous pouvez séparer vos styles pour chacun des liens du menu.
-
-### Iframes (LEGACY) :warning:	
-
-:exclamation:**update**: ceci n'est vraiment pas une bonne méthode, c'était pour ne pas utiliser de Jquerry ou de framework. Préférez vraiment utiliser la solution plus haut. Je laisse le bout de code à titre informatif.
-
-Alors, ceci est une méthode un peu laborieuse pour arriver à créer une page avec votre header/footer tout seul et pour ensuite le répéter sur toutes vos pages. Cela vous permettra de ne pas avoir à modifier toutes vos pages si vous avez besoin d'éffectuer un changement dans votre header/footer.
-
-Nous allons utiliser une `iframe`. C'est une sorte de fenêtre sur votre page qui affiche une autre page. 
-
-1. Créez votre page `index.html`
-2. Créez votre page `header.html`/`footer.html`
-3. Créez votre feuille de style `style.css`
-4. Créez votre feuille de style `header.css`/`footer.css`(optionnel)
-5. Placez le code suivant dans votre page `index.html` là où vous voulez que votre header/footer apparaisse: `<iframe src="header.html" seamless></iframe>`
-6. Placez le code suivant dans votre `style.css`: `iframe[seamless]{border: 0; width: 100%;}`
-7. Tadaamm! Vous avez votre header qui s'affiche.
-
-#### Petite précision
-
-Cette méthode est plus un hack qu'une bonne pratique. On n'a pas encore vu les outils nécessaire quant à la réalisation de composant réutilisable. Du coup, il faut un petit peu trafiquer le code pour arriver à nos fins.
-
-##### Le style de header/footer
-
-Même si votre header/footer s'affiche sur votre page index sur laquelle vous avez lié votre feuille de style, elle est tout de même considérer comme une autre page. N'oubliez donc pas  de lier votre feuille de style dans header/footer aussi. Pour ce faire, vous pouvez utiliser la fonction `@import`de CSS pour importer votre feuille de style dans la feuille de style de header/footer.
-
-```css
-@import "style.css";
-```
-
-##### Le background-color de body
-
-Il est également possible que votre header/footer s'affiche en prenant en compte le background-color définit dans votre feuille de style principale et du coup vous aurez un gros bloc de cette couleur qui se place par dessus certains éléments sur votre page. Pour ce faire précisez dans la feuille de style de header/footer que le background-color doit être transparent. `body{background-color: transparent;}`
-
-##### Les liens
-
-Si vous avez des liens dans votre header/footer, ceux-ci vont s'ouvrir dans votre iframe par défaut. Pour changer cela il faut ajouter un attribut `target:_top` à vos liens.
-
-#### Exemple d'utilisation
-
-`index.html`
-
-```html
-<head>
-  <title>Soundwave</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <iframe src="header.html" seamless></iframe>
-  <main>
-    <img src="./assets/Girl.png" alt="girl" class="girl">
-  </main>
-</body>
-```
-
-`header.html`
-
-```html
-<link rel="stylesheet" href="./css/header.css">
-<header>
-  <div class="title">
-    <a href="index.html" target="_top">
-      <img src="./assets/Logo.png" alt="logo">
-      <span>Soundwave</span>
-    </a>
-  </div>
-  <nav>
-    <a class="nav" href="discover.html" target="_top">Discover</a>
-    <a class="nav" href="comments.html" target="_top">Comments</a>
-  </nav>
-</header>
-```
-
-`header.css`
-
-```css
-@import "style.css";
-
-body{
-  background-color: transparent;
-}
-```
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)
