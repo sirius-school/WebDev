@@ -134,15 +134,15 @@ async function fetchHtmlAsText(url) {
 }
 
 // fonction asynchrone qui va charger nos "header" et "footer". 
-// on sélectionne d'abord par leurs ID "header" et "footer"
-// et pour chacun on utilise notre fonction 'fetchHtmlAsText' pour charger la page header/footer
+// on sélectionne nos balises "header" et "footer"
+// et pour chacune on utilise notre fonction 'fetchHtmlAsText' pour charger la page header/footer
 // peut-être que vous devrez changer les liens vers les fichiers html
 // on a aussi une condition pour ne pas charger le footer sur la page index
 async function loadComponents() {
-  const headerDiv = document.getElementById("header");
+  const headerDiv = document.querySelector("header");
   headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
   if (page !== "index" && page !== null){
-    const footerDiv = document.getElementById("footer");
+    const footerDiv = document.querySelector("footer");
     footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
   }
 }
@@ -219,8 +219,8 @@ Pour commencer on va créer la fonction et y créer nos variables pour sélectio
 
 ```js
 async function loadComponents() {
-  const headerDiv = document.getElementById("header");
-  const footerDiv = document.getElementById("footer");
+  const headerDiv = document.querySelector("header");
+  const footerDiv = document.querySelector("footer");
   }
 ```
 
@@ -228,8 +228,8 @@ Ensuite on va ajouter à nos éléments sélectionnés le contenu avec `innerHTM
 
 ```js
 async function loadComponents() {
-  const headerDiv = document.getElementById("header");
-  const footerDiv = document.getElementById("footer");
+  const headerDiv = document.querySelector("header");
+  const footerDiv = document.querySelector("footer");
   headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
   footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
   }
@@ -239,10 +239,10 @@ C'est quasi fini, il ne reste plus qu'à mettre une petite condition pour la pag
 
 ```js
 async function loadComponents() {
-  const headerDiv = document.getElementById("header");
+  const headerDiv = document.querySelector("header");
   headerDiv.innerHTML = await fetchHtmlAsText("../components/header.html");
   if (page !== "index" && page !== null){
-    const footerDiv = document.getElementById("footer");
+    const footerDiv = document.querySelector("footer");
     footerDiv.innerHTML = await fetchHtmlAsText("../components/footer.html");
   }
 }
@@ -308,7 +308,7 @@ N'oubliez pas que pour que tout ça fonctionne il vous faut:
 
 - une page `header.html` dans un dossier `components`
 - une page `footer.html` dans un dossier `components`
-- vos pages (index, comments, discover) doivent avoir une balise `header` et `footer` avec un id du même nom
+- vos pages (index, comments, discover) doivent avoir une balise `header` et `footer`
 - les liens doivent être au moins dans la balise `header`
 - créer une classe `active` dans le css
 
