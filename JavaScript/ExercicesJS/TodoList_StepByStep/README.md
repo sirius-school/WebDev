@@ -9,7 +9,7 @@
 - [Étape 4: Ajouter une tâche avec JavaScript](#étape-4-ajouter-une-tâche-avec-javascript)
 - [Étape 5: Supprimer une tâche avec JavaScript](#étape-5-supprimer-une-tâche-avec-javascript)
 - [Étape 6: Styliser les tâches complétées](#étape-6-styliser-les-tâches-complétées)
-- [Étape 6: Publier votre projet](#étape-6-publier-votre-projet)
+- [Étape 7: Publier votre projet](#étape-7-publier-votre-projet)
 
 ## Introduction
 Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS et JavaScript. Pour finir l'exercice il faudra être vigilant et suivre chaque étape à la lettre pour éviter une erreur dans votre console. N'hésitez pas à cliquer sur les liens des différentes ressources pour bien comprendre ce qu'éxécutera votre ligne de code. Évidemment votre console est là pour vous aider et comprendre lorsque vous avez une erreur alors *consologer* (oui j'ai inventé un nouveau verbe) un **max**
@@ -143,7 +143,7 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
     2.  Dans les deux appels de cette variable il faut sélectionner le premier enfant de votre `li` qui n'est autre que votre balise `p` car c'est cette balise que l'on veut "désactivée" et non l'entièreté du `li`
     3.  Utilisez `firstElementChild` dans l'appel de vos variables. Dans votre première condition et dans la deuxième condition aussi
 
-## Étape 6: Publier votre projet
+## Étape 7: Publier votre projet
 1. Sur [Github.com](https://github.com) vous avez la possibilité de publier votre projet il sera donc disponible sur internet.
    1. Rendez-vous sur votre repository (github.com/Utilisateur/NomDuRepository)
    2. Dans les onglets d'options de votre repo cliquez sur "Paramètres" ou "Settings" (je vous conseille de ne pas trop traduire la page Github, vous pourriez avoir des erreurs)
