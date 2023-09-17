@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Responsive Design
 
-Voyons ensemble comment rendre nos pages accessibles sur tous les appareils.
+Voyons ensemble comment rendre nos pages accessibles sur toutes les tailles d'écran.
 
 <!-- omit in toc -->
 ## Table des matières
@@ -26,35 +26,43 @@ Voyons ensemble comment rendre nos pages accessibles sur tous les appareils.
 
 ![rwd-screens](img/01/responsive-screens.gif)
 
-Le Responsive Design c'est réfléchir son design et son CSS pour que  toutes vos pages s'affichent correctement sur tous les appareils possibles (smartphone, tablet, ordinateur,...).
+Le Responsive Design, c'est l'art de perfectionner l'ergonomie de votre interface pour garantir une expérience optimale sur une variété d'appareils, qu'il s'agisse de smartphones, de tablettes, d'ordinateurs, et bien plus encore.
 
-Le Responsive Design n'utilise que HTML et CSS. Pas de javascript ou de logiciel spécifique. On peut par contre utiliser des librairies spécifiques comme par exemple Tailwind, Bootstrap, Foundation, Skeleton,...
+L'approche du Responsive Design repose principalement sur l'utilisation de langages fondamentaux tels que HTML et CSS, sans recourir à des scripts complexes ou à des logiciels dédiés. Cependant, il est possible d'exploiter des bibliothèques spécifiques telles que Tailwind, Bootstrap, Foundation, ou Skeleton, pour faciliter le processus de mise en page et d'adaptation.
 
-Une page web doit afficher toujours le même contenu correctement sur les différents appareils et ne pas en supprimer parce que sur une résolution plus petite ce contenu ne pourrais pas s'afficher. On verra que certains contenus peuvent éventuellement être caché, comme des illustrations, pour créer un peu d'espace pour le reste du contenu.
+L'objectif majeur du Responsive Design est de maintenir l'intégrité du contenu sur tous les dispositifs, en évitant de le supprimer arbitrairement pour s'adapter à des résolutions d'écran plus petites. Plutôt que de supprimer du contenu, on privilégie la possibilité de masquer certains éléments non essentiels, tels que des illustrations, afin de libérer de l'espace pour les informations essentielles.
 
-On va donc utiliser le CSS pour redimensionner, déplacer, cacher, élargir ou rapetisser nos éléments.
+Pour accomplir cela, le Responsive Design tire parti du pouvoir du CSS, permettant de redimensionner, déplacer, masquer, agrandir ou réduire les éléments de manière harmonieuse et fluide.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## Viewport
 
-Le viewport est la partie visible à l'utilisateur d'une page web. Il varie avec l'appareil, il sera plus petit sur un smartphone que sur un écran d'ordinateur.
+Le viewport, dans le contexte du Responsive Design, représente la portion visible d'une page web lorsqu'elle est affichée à l'utilisateur. Sa dimension varie en fonction de l'appareil utilisé, étant généralement plus restreinte sur un smartphone que sur un écran d'ordinateur.
 
-Avant les tablettes et smartphones, les pages web étaient conçue seulement pour les écrans d'ordinateur, et c'était commun d'avoir des pages avec une taille fixe. Du coup, lorsque les tablettes et téléphones mobile sont apparu, on ne faisait que rétrécir la taille de la page pour qu'elle s'affiche. Ca fonctionnait mais ce n'était pas toujours très lisible.
+Auparavant, avant l'avènement des tablettes et des smartphones, les concepteurs de sites web se limitaient souvent à créer des pages web avec une taille fixe, principalement adaptée aux écrans d'ordinateur. Lorsque les tablettes et les téléphones mobiles ont fait leur entrée, la solution initiale consistait à réduire simplement la taille de la page pour qu'elle s'affiche sur ces nouveaux appareils. Bien que cette méthode fonctionnait dans une certaine mesure, elle ne garantissait pas toujours une lisibilité optimale.
+
+Le Responsive Design, quant à lui, vise à résoudre ce problème en adoptant une approche plus sophistiquée pour adapter la mise en page et les éléments de la page en fonction de la taille du viewport. Cette approche permet une expérience utilisateur plus fluide et agréable, en optimisant la lisibilité et la convivialité sur une gamme variée d'appareils, des ordinateurs de bureau aux smartphones.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ### Comment configurer le viewport
 
-Depuis HTML5, on peut placer une balise `<meta>` qui va permettre de contrôler le viewport. Cette balise vous la voyez depuis un moment dans vos exercices:
-
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-`width=device-width` permet de fixer la largeur de la page en fonction de la largeur de l'écran (qui varie selon l'appareil)
+Cette balise est utilisée dans le code HTML pour contrôler la manière dont la page web est affichée sur les différents appareils, en particulier lorsqu'il s'agit de créer une expérience de navigation adaptative (Responsive Design) pour les dispositifs mobiles. Voici ce que chaque partie de cette balise signifie :
 
-`initial-scale=1.0 ` permet de fixer le niveau de zoom initial au lancement de la page par le navigateur.
+- `name="viewport"` : Cette partie de la balise indique au navigateur que nous définissons des paramètres de vue (viewport) pour la page web. En d'autres termes, elle spécifie que nous voulons contrôler la manière dont la page est affichée à l'utilisateur en fonction de la taille de l'écran de l'appareil.
+
+- `content="width=device-width, initial-scale=1.0"` : Cette partie de la balise définit les paramètres de vue (viewport) proprement dits. Voici ce que font ces paramètres :
+
+  - `width=device-width` : Cette instruction indique au navigateur de régler la largeur de la page web pour qu'elle corresponde à la largeur réelle de l'écran de l'appareil. Cela signifie que la page s'ajuste automatiquement à la largeur de l'écran de l'appareil, quelle que soit sa taille, ce qui est essentiel pour garantir une mise en page adaptée aux dispositifs mobiles et de bureau.
+
+  - `initial-scale=1.0` : Ce paramètre spécifie le niveau de zoom initial auquel la page web est affichée lorsqu'elle est chargée dans le navigateur. En définissant initial-scale sur 1.0, cela signifie que la page est affichée sans zoom initial, ce qui permet au contenu d'apparaître à sa taille d'origine. Cette option est cruciale pour assurer que le contenu est clair et lisible dès le chargement de la page, quel que soit l'appareil utilisé.
+
+En combinant ces deux paramètres, la balise <meta> crée une base solide pour le Responsive Design en garantissant que la page web s'adapte correctement à la taille de l'écran de l'appareil et en offrant une expérience utilisateur cohérente sans zoom excessif lors du chargement initial de la page. Cela permet aux utilisateurs de naviguer facilement sur votre site web, qu'ils utilisent un smartphone, une tablette ou un ordinateur de bureau.
 
 [Exemple de scale](https://www.w3schools.com/css/css_rwd_viewport.asp)
 
@@ -87,7 +95,15 @@ Une image responsive est une image qui se redimensionne correctement sur n'impor
 </picture>
 ```
 
-> Dans l'exemple au dessus on spécifie une balise `<picture>` qui va contenir plusieurs source avec un attribut `media` pour définir notre media query. On utilise en dernier une balise `<img>` en tant que fallback, c'est à dire en dernier recours si les autres images ne sont plus disponibles. 
+`<picture></picture>` est particulièrement utile dans le contexte du Responsive Design et de la gestion des images pour les raisons suivantes :
+
+1. **Images adaptatives** : La balise <picture> permet de fournir des images adaptatives, ce qui signifie que différentes versions de l'image peuvent être proposées en fonction de la taille de l'écran de l'utilisateur. Cela garantit que les images sont optimisées pour chaque appareil, ce qui est essentiel pour garantir une expérience utilisateur de qualité.
+2. **Optimisation de la performance **: En fournissant des images adaptées à la taille de l'écran, la balise <picture> permet de réduire la taille des fichiers image téléchargés, ce qui améliore la performance du site en termes de vitesse de chargement. Cela est particulièrement important pour les utilisateurs sur des connexions Internet plus lentes ou des appareils mobiles.
+3. **Qualité d'image optimisée** : La balise <picture> permet également de sélectionner la meilleure qualité d'image en fonction de la taille de l'écran. Ainsi, les utilisateurs sur des écrans plus grands bénéficient d'images de haute qualité, tandis que ceux sur des écrans plus petits voient des images de qualité adaptée.
+4. **Accessibilité** : L'utilisation de <picture> permet de mettre en place des descriptions alternatives (attribut alt) pour chaque version de l'image, améliorant ainsi l'accessibilité pour les utilisateurs ayant des besoins spécifiques.
+5. **Compatibilité** : La balise <picture> est bien prise en charge par les navigateurs modernes, ce qui signifie qu'elle peut être utilisée en toute confiance dans la création de sites web.
+
+Cependant, il est important de noter que son utilisation peut varier en fonction des besoins du projet. Dans certains cas, les développeurs peuvent préférer d'autres méthodes d'optimisation d'images, telles que l'utilisation de formats d'image modernes comme WebP ou l'utilisation de techniques de chargement paresseux pour améliorer encore la performance. Le choix dépendra des spécificités du projet et des objectifs de conception du site web.
 
 [En savoir plus](https://www.w3schools.com/tags/tag_picture.asp)
 
