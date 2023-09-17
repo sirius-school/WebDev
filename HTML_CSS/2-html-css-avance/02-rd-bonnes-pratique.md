@@ -3,18 +3,19 @@
 
 <!-- omit in toc -->
 ## Table des matières
-  - [1. Pensez petit... et grand](#1-pensez-petit-et-grand)
-  - [2. Pensez au contexte](#2-pensez-au-contexte)
-  - [3. Réduire intelligemment le contenu](#3-réduire-intelligemment-le-contenu)
-  - [4. Priorisez le contenu différemment](#4-priorisez-le-contenu-différemment)
-  - [5. Navigation évolutive](#5-navigation-évolutive)
-  - [6. La qualité des images VS vitesse de téléchargement](#6-la-qualité-des-images-vs-vitesse-de-téléchargement)
-  - [7. Utiliser des icônes](#7-utiliser-des-icônes)
-  - [8. Faites attention à la taille de vos polices](#8-faites-attention-à-la-taille-de-vos-polices)
-  - [9. Pensez aux méthodes de saisie](#9-pensez-aux-méthodes-de-saisie)
-  - [10. Testez votre design sur des appareils actuels](#10-testez-votre-design-sur-des-appareils-actuels)
-  - [Bonus](#bonus)
-  - [Source](#source)
+
+- [1. Pensez petit... et grand](#1-pensez-petit-et-grand)
+- [2. Pensez au contexte](#2-pensez-au-contexte)
+- [3. Réduire intelligemment le contenu](#3-réduire-intelligemment-le-contenu)
+- [4. Priorisez le contenu différemment](#4-priorisez-le-contenu-différemment)
+- [5. Navigation évolutive](#5-navigation-évolutive)
+- [6. La qualité des images VS vitesse de téléchargement](#6-la-qualité-des-images-vs-vitesse-de-téléchargement)
+- [7. Utiliser des icônes](#7-utiliser-des-icônes)
+- [8. Faites attention à la taille de vos polices](#8-faites-attention-à-la-taille-de-vos-polices)
+- [9. Pensez aux méthodes de saisie](#9-pensez-aux-méthodes-de-saisie)
+- [10. Testez votre design sur des appareils actuels](#10-testez-votre-design-sur-des-appareils-actuels)
+- [Bonus](#bonus)
+- [Source](#source)
 
 ## 1. Pensez petit... et grand
 
