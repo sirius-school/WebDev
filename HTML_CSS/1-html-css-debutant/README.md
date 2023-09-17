@@ -3,7 +3,7 @@
 Bienvenue dans le cours sur l'HTML et le CSS de niveau débutant, on est là pour 6 semaines! On va apprendre les bases de l'HTML et du CSS pour réaliser tes premières pages web !
 
 :calendar: **Durée:** 30 jours
-:bar_chart: **Niveau:** Débutant
+:bar_chart: **Niveau:** Initiation
 
 ## Table des matières
 
@@ -24,7 +24,6 @@ Bienvenue dans le cours sur l'HTML et le CSS de niveau débutant, on est là pou
 15. [Théorie - Les formulaires, visuellement](15-theorie-form-visu.md)
 16. [Exercice - Maquette Flexbox - Feel The Music](16-exercice-css-maquette-feelthemusic.md)
 17. [Exercice - Maquette Flexbox - Head Hunter](16-exercice-css-maquette-head-hunter.md)
-18. teasing... maquette... discord...avancée... work in progress... :robot:
 
 - [Exercices supplémentaires](bonus-exos-supp.md)
 - [La boîte à outils de l'intégrateur junior!](bonus-outils.md)
