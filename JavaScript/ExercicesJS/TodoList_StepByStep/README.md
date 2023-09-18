@@ -125,7 +125,7 @@ Cet exercice TodoList a pour but de vous familiariser un peu plus avec HTML, CSS
    1. Ajoutez une classe `done` sur votre bouton "Done"
    2. Ajoutez une classe `delete` sur votre bouton "Delete"
 7. Ajoutez une condition `if...else` dans votre fonction `deleteOrCompleteTask()`
-   1. La première condition doit être l'[`event.target.classList`](https://developer.mozilla.org/fr/docs/Web/API/Element/classList), "consologez" le pour voir ce que vous obtenez. Cet élément doit être égale (pas strictement égale) à `"done"`
+   1. La première condition doit être l'[`event.target.classList[0]`](https://developer.mozilla.org/fr/docs/Web/API/Element/classList), "consologez" le pour voir ce que vous obtenez, classList génère un tableau il faut donc sélectionner le bon indice. Cet élément doit être égale (pas strictement égale) à `"done"`
       1. Si cette condition est respectée, vous devez retirer la classe `done` grâce à la méthode [`remove()`](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove)
       2. Et vous devez ajouter la classe `undo` grâce à la méthode [`add()`](https://developer.mozilla.org/fr/docs/Web/API/DOMTokenList/add)
       3. Il y a deux autres méthode que je vous laisse essayer car elle sont un peu plus complexe à comprendre, [`toggle()`](https://developer.mozilla.org/fr/docs/Web/API/DOMTokenList/toggle) et [`replace()`](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace)
