@@ -7,7 +7,7 @@
 - [Exercice 2 : Utilisation de la boucle `while`](#exercice-2--utilisation-de-la-boucle-while)
 - [Exercice 3 : Utilisation de la boucle `for...in`](#exercice-3--utilisation-de-la-boucle-forin)
 - [Exercice 4 : Utilisation de la boucle `for...of`](#exercice-4--utilisation-de-la-boucle-forof)
-  - [OPTIONNEL Exercice 5 : Utilisation de la boucle `do...while`](#optionnel-exercice-5--utilisation-de-la-boucle-dowhile)
+- [OPTIONNEL Exercice 5 : Utilisation de la boucle `do...while`](#optionnel-exercice-5--utilisation-de-la-boucle-dowhile)
 
 
 ## Introduction
@@ -95,7 +95,7 @@ const somme = calculerSommeTableau(nombres);
 console.log(somme); // Résultat attendu : 15 (car 1 + 2 + 3 + 4 + 5 = 15)
 ```
 
-### OPTIONNEL Exercice 5 : Utilisation de la boucle `do...while`
+## OPTIONNEL Exercice 5 : Utilisation de la boucle `do...while`
 
 **Objectif :** Créer une fonction qui demande à l'utilisateur de deviner un nombre jusqu'à ce qu'il devine correctement.
 
