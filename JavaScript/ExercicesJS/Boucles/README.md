@@ -109,3 +109,5 @@ Exemple d'utilisation (simulation) :
 ```javascript
 devinerNombre(); // Le programme génère un nombre aléatoire, puis demande à l'utilisateur de deviner jusqu'à ce qu'il réussisse.
 ```
+
+> Created by [Lucas Ielli](https://github.com/LucasIelli)

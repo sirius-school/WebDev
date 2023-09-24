@@ -14,7 +14,7 @@ Dans cette partie du cours, nous allons explorer d'autres méthodes importantes 
 
 ## `isArray`
 
-La méthode `isArray` est utilisée pour vérifier si une variable est de type tableau (Array) ou non. Elle retourne `true` si la variable est un tableau, et `false` sinon.
+La méthode `isArray` est utilisée pour vérifier si une variable est de type tableau (Array) ou non. Elle retourne `true` si la variable est un tableau, et `false` si ce n'est pas le cas. Cela peut-être fort utile dans une condition `if()...else`, il est parfois important de bien vérifier le type de données que vous récuperez avant de les manipuler.
 
 Exemple d'utilisation :
 ```javascript
@@ -25,6 +25,15 @@ const isItArray = Array.isArray(myArray); // Retourne true
 ## `fill`
 
 La méthode `fill` permet de remplir tous les éléments d'un tableau avec une valeur donnée. Vous pouvez spécifier les indices de début et de fin pour délimiter la plage de remplissage.
+
+Exemple théorique : 
+```javascript
+array.fill(valeur, début, fin);
+```
+- array : Le tableau que vous souhaitez remplir avec la valeur spécifiée.
+- valeur : La valeur à insérer dans chaque élément du tableau.
+- début (facultatif) : L'indice de départ à partir duquel la modification doit commencer. Par défaut, c'est 0 (le début du tableau).
+- fin (facultatif) : L'indice de fin jusqu'auquel la modification doit aller. Par défaut, c'est la longueur du tableau.
 
 Exemple d'utilisation :
 ```javascript
@@ -46,7 +55,7 @@ const found = numbers.find(num => num > 20); // Trouve le premier nombre supéri
 
 ## `join`
 
-La méthode `join` est utilisée pour concaténer tous les éléments d'un tableau en une chaîne de caractères. Vous pouvez spécifier un séparateur qui sera inséré entre chaque élément.
+La méthode `join` est utilisée pour concaténer tous les éléments d'un tableau en une **chaîne de caractères**. Vous pouvez spécifier un séparateur qui sera inséré entre chaque élément.
 
 ```javascript
 const words = ["Hello", "beautiful", "world", "!"];
