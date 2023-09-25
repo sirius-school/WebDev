@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Exercices Animations
+# Exercices Media Query
 
 Voici quelques exercices pour un peu manipuler les media queries. Tu peux juste lire l'énoncé et regarder le gif pour essayer de reproduire l'effet. Je fournis également un pas à pas en guise de guide, mais il n'est pas forcément complet histoire que tu cherches un peu par toi même. Surtout prend le temps de tester différentes propriétés pour trouver la bonne à modifier!
 
@@ -155,4 +155,4 @@ Il faut que le formulaire soit agencé correctement sur une page dont la largeur
 <!-- omit in toc -->
 ## Conclusion
 
-Après tous ces exercices tu devrais avoir une bonne idée de comment utiliser les Media Queries. Ce n'est jamais très compliqué, c'est juste une réflexion à faire sur quelle propriétés changer pour que tout s'affiche correctement. Raison de plus pour garder le code le plus simple possible. Evite de mettre des classes à tout va et des propriétés non-nécessaire!
+Après tous ces exercices tu devrais avoir une bonne idée de comment utiliser les Media Queries. Ce n'est jamais très compliqué, c'est juste une réflexion à faire sur quelles propriétés changer pour que tout s'affiche correctement. Raison de plus pour garder le code le plus simple possible. Evite de mettre des classes à tout va et des propriétés non-nécessaire!
