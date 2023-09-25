@@ -32,7 +32,8 @@ Impossible?: 😡
 - [😄 Media Query de Base](#-media-query-de-base)
 - [😊 Affichage de Blocs](#-affichage-de-blocs)
 - [😅 Menu de Navigation Réactif](#-menu-de-navigation-réactif)
-- [Images Réactives](#images-réactives)
+- [😊 Images Réactives](#-images-réactives)
+- [😰 Disposition en Grille Réactive](#-disposition-en-grille-réactive)
 
 ## 😄 Media Query de Base
 
@@ -76,6 +77,37 @@ Conçois un menu de navigation horizontal simple avec des liens. Utilise des med
 6. Dans notre MQ on veut changer la direction de notre `ul` et la largeur de nos `li`
 7. On peut également cibler certains de nos éléments pour changer leurs styles (voir gif)
 
-## Images Réactives 
+## 😊 Images Réactives 
 
-*prochainement...*
+Insère une image dans ta page HTML et utilise la balise `<picture></picture>` pour avoir une image réactive. Regarde le .gif qui suit et [:book: relis la théorie](./01-theorie-responsive-design.md#images-responsive).
+
+![img-responsive](img/02/04-img-responsive.gif)
+
+1. Insère la balise `<picture></picture>`
+2. Ajoute ces images en tant que **source**. Ici on utilise un service de [placeholder](https://placehold.co/) pour nos images, c'est à dire que la taille de l'image est 
+   - `https://placehold.co/600x400/png`
+   - `https://placehold.co/800x600/png`
+   - `https://placehold.co/1000x800/png`
+3. Pour chacune des balises des images, placer la media query correspondante
+   - max-width: 768px
+   - max-width: 1000px
+   - max-width: 1200px
+4. Ajoute l'image de *sécurité* suivante: `https://placehold.co/1000x1000` qui devra s'afficher quand aucune des MQ n'est respectée (donc ici quand le viewport fait + de 1200px de large)
+
+## 😰 Disposition en Grille Réactive
+
+Crée une grille de cartes avec des images et des titres. Utilise une media query pour que les cartes prennent 100% de la largeur quand on passe sur une vue mobile large (**max-width:475px**).
+
+Tu peux créer le style que tu veux et t'amuser avec les propriétés. Ou bien inspire toi de l'exemple
+
+![grid-responsive](img/02/05-grid-responsive.gif)
+
+1. Englobe tes futures cards dans une balise `<main></main>`.
+2. Crée l'HTML nécessaire pour créer une card. Il te faudra une `div.card`, une image aléatoire, une `div.details` qui comprend un `h2` et un `p`
+   - :bulb: Pour l'image aléatoire tu peux utiliser [Placehold](https://placehold.co/) qu'on a utiliser dans l'exercice précédent ou alors [Picsum](https://picsum.photos/) pour avoir une photo plutôt qu'un placeholder.
+   - Tu peux utiliser cette source pour tes images en changeant le numéro à la fin du paramètre `?random=*` pour générer une image aléatoire à chaque fois: `https://picsum.photos/350/250?random=1`
+3. En CSS, il va falloir que `main` soit en `flex` avec certain paramètres pour que les cards s'affichent l'une à la suite de l'autre et passent à la ligne quand il n'y a plus de place.
+4. La classe `.card` doit avoir une `width` spécifique (dans l'exemple: 350px). Tu peux styliser le reste de ta card comme bon te semble.
+5. Ajoute la media query pour les **écran** de **475px max**. Change les propriétés de `.card`, `.details` et d'`img` pour faire en sorte que les cards s'affichent correctement en 100% de width.
+
+> :bulb: Conseil: ne te focalise pas sur le style que j'ai employé spécialement. Essaye par toi même de trouver ton propre style, inspire toi d'autre sites. Bref, c'est le moment de t'amuser avec les tailles et les couleurs!
