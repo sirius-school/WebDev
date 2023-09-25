@@ -1,23 +1,31 @@
 <!-- omit in toc -->
-# CSS Advanced
+# Plus de CSS, toujours plus
 
-Voyons ensemble encore quelques techniques supplémentaires qui nous seront utiles en CSS.
+Voyons ensemble pleins de nouvelles choses en CSS un peu en vrac. A vous de choisir ce que vous trouver utile ou pas
 
 <!-- omit in toc -->
 ## Table des matières
 
-- [Variables ou custom properties](#variables-ou-custom-properties)
-- [Import](#import)
-  - [Une feuille de style ou plusieurs?](#une-feuille-de-style-ou-plusieurs)
-- [RGB, Hexadecimal ou HSL?](#rgb-hexadecimal-ou-hsl)
-  - [La problématique](#la-problématique)
-  - [La solution](#la-solution)
-    - [Hue](#hue)
-    - [Saturation](#saturation)
-    - [Lightness](#lightness)
-  - [Conclusion](#conclusion)
+- [Techniques](#techniques)
+  - [Variables ou custom properties](#variables-ou-custom-properties)
+  - [RGB, Hexadecimal ou HSL?](#rgb-hexadecimal-ou-hsl)
+  - [Nesting](#nesting)
+  - [Placeholder](#placeholder)
+  - [Spécificité CSS](#spécificité-css)
+  - [Nouvelle syntaxe MQ](#nouvelle-syntaxe-mq)
+- [Propriétés](#propriétés)
+  - [!important](#important)
+  - [Aspect-ratio](#aspect-ratio)
+  - [Formes](#formes)
+  - [Inherit](#inherit)
+  - [clamp](#clamp)
+  - [text-indent](#text-indent)
 
-## Variables ou custom properties
+## Techniques
+
+Voici quelques nouvelles technique disponible en CSS. Ce ne sont pas des propriétés mais plus d'autres façons d'utiliser CSS pour faire ce qu'on veut.
+
+### Variables ou custom properties
 
 Depuis CSS3 il est possible de créer des variables. Il s'agit d'informations que pouvez réutilisez dans toutes votre feuille de style. Vous pouvez stocker des couleurs, des polices ou n'importe quelle autre propriété CSS.
 
@@ -26,7 +34,7 @@ Un des avantages des variables est la lisibilité. En effet il sera plus facile 
 Un autre avantage, évident, c'est la facilité d'éffectuer des modifications sur l'ensemble de sa feuille de style. Il ne faut en effet modifier qu'une fois la valeur de sa variable et le changement se ferra partout où vous avez indiqué cette variable.
 
 <!-- omit in toc -->
-### Utilisation simple
+#### Utilisation simple
 
 On déclare une variable dans `::root` en indiquant deux tirets devant son nom. Ensuite il faut utiliser la valeur `var(nom-de-variable)`.
 
@@ -43,7 +51,8 @@ element {
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-## Import
+<!-- omit in toc -->
+### Import
 
 Vous commencez sans doute à avoir une feuille de style à rallonge et vous ne vous y retrouvez plus? Et bien la solution réside dans les `import`. En effet la règle `@import`permet d'inclure une feuille de style dans une autre. Ainsi vous pouvez diviser votre travail en plusieurs feuilles en fonction des différentes sections que vous devez styliser.
 
@@ -52,7 +61,7 @@ Il est également possible d'utiliser les mediaqueries pour utiliser une feuille
 **Exemple**: main.css, header.css, footer.css, nav.css, card.css, print.css...
 
 <!-- omit in toc -->
-### Utilisation
+#### Utilisation
 
 Il suffit de placer **au dessus de toute autre règle/sélecteur** votre `@import`, lui indiquer la feuille qu'il doit importer et préciser éventuellement les règles qu'il doit respecter pour utiliser cette feuille de style.
 
@@ -65,7 +74,8 @@ Il suffit de placer **au dessus de toute autre règle/sélecteur** votre `@impor
 
 Tout le code contenu dans votre feuille importé sera ajouté. 
 
-### Une feuille de style ou plusieurs?
+<!-- omit in toc -->
+#### Une feuille de style ou plusieurs?
 
 Il est donc intéressant de créer une feuille de style principale `style.css` et de la lier à toutes vos pages. Ensuite dedans vous importer toutes vos pages de "composant". Ainsi vous ne devez pas vous occuper d'une page à rallonge pleines de lignes de CSS, mais vous divisez votre travail dans plusieurs pages.
 
@@ -82,11 +92,12 @@ Il est donc intéressant de créer une feuille de style principale `style.css` e
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-## RGB, Hexadecimal ou HSL?
+### RGB, Hexadecimal ou HSL?
 
 Jusqu'à maintenant on a principalement utilisé des codes hexadécimaux pour définir nos couleurs dans nos feuilles de styles. Mais cela n'est pas très pratique... Voyons une solution: l'utilisation des couleurs HSL.
 
-### La problématique
+<!-- omit in toc -->
+#### La problématique
 
 Le soucis avec les couleurs définie en **RGB** ou **hexadecimal** c'est qu'on a pas une idée claire de ce que représente le code en couleur. Alors oui on peut s'aider du **color picker** de VSCode, mais nous pourrions aussi déterminer nos couleurs différemment.
 
@@ -95,7 +106,8 @@ Le soucis avec les couleurs définie en **RGB** ou **hexadecimal** c'est qu'on a
 .hex{color: #FF0000}
 ```
 
-### La solution
+<!-- omit in toc -->
+#### La solution
 
 Utiliser les couleurs en **HSL**.
 
@@ -109,25 +121,29 @@ Utiliser les couleurs en **HSL**.
 
 La première valeur prend un chiffre de 0 à 360 et les deux autres prennent un %. Voyons comment retrouver nos couleurs.
 
-#### Hue
+<!-- omit in toc -->
+##### Hue
 
 La teinte est en faite la couleur que vous souhaitez. Prenez la roue de couleur ci-dessous. On démarre à 0 en haut et donc dans les tons de rouge. Ensuite on tourne dans le sens des aiguilles d'une montre. Par exemple si on prend la valeur 90 on se retrouve dans les verts. À 180 on est dans du cyan, à 270 on est dans les bleus-mauve et si on revient à 360 on retourne en rouge. Une fois que l'on a compris cela, c'est déjà plus simple.
 
 ![hue](img/03/hue-wheel.png)
 
-#### Saturation
+<!-- omit in toc -->
+##### Saturation
 
 La saturation c'est à quel point la couleur est grise. Si la valeur approche de 0% on est dans les gris et si on approche des 100% on a la couleur pure.
 
 ![saturation](img/03/saturation.png)
 
-#### Lightness
+<!-- omit in toc -->
+##### Lightness
 
 La luminosité détermine si la couleur est plus proche du noir (0%) ou du blanc (100%)
 
 ![lightness](img/03/lightness.png)
 
-### Conclusion
+<!-- omit in toc -->
+#### Conclusion
 
 Il est donc très facile d'apporter des modifications à une couleur, il suffit de trouver la bonne teinte, ensuite si elle ne convient pas totalement on peut facilement changer sa saturation ou luminosité. 
 
@@ -159,5 +175,32 @@ Et pour allez encore plus loins on pourrait utiliser les variables CSS.
 > :bulb: Voici [un site web](https://itpastorn.github.io/webbteknik/future-stuff/svg/color-wheel.html) pour retrouver une couleur sur la roue chromatique
 
 [:arrow_up: Revenir au top](#table-des-matières)
+
+### Nesting
+
+### Placeholder
+
+### Spécificité CSS
+
+### Nouvelle syntaxe MQ
+
+## Propriétés
+
+
+### !important
+
+### Aspect-ratio
+
+### Formes
+
+### Inherit
+
+### clamp
+
+### text-indent
+
+https://sharkcoder.com/visual/shapes
+
+
 
 [:rewind: Retour au sommaire du cours](./README.md#table-des-matières)
