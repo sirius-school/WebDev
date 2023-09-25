@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Exercices Animations
 
-Voici quelques exercices pour un peu manipuler les media queries. Vous pouvez juste lire l'énoncé et regardé le gif (quand il y en a un) pour essayer de reproduire l'effet. Je fournis également un pas à pas en guise de guide, mais il n'est pas forcément complet.
+Voici quelques exercices pour un peu manipuler les media queries. Tu peux juste lire l'énoncé et regarder le gif pour essayer de reproduire l'effet. Je fournis également un pas à pas en guise de guide, mais il n'est pas forcément complet histoire que tu cherches un peu par toi même. Surtout prend le temps de tester différentes propriétés pour trouver la bonne à modifier!
 
 <!-- omit in toc -->
 ## :memo: Objectifs
@@ -34,6 +34,7 @@ Impossible?: 😡
 - [😅 Menu de Navigation Réactif](#-menu-de-navigation-réactif)
 - [😊 Images Réactives](#-images-réactives)
 - [😰 Disposition en Grille Réactive](#-disposition-en-grille-réactive)
+- [😡 Formulaire responsive](#-formulaire-responsive)
 
 ## 😄 Media Query de Base
 
@@ -111,3 +112,47 @@ Tu peux créer le style que tu veux et t'amuser avec les propriétés. Ou bien i
 5. Ajoute la media query pour les **écran** de **475px max**. Change les propriétés de `.card`, `.details` et d'`img` pour faire en sorte que les cards s'affichent correctement en 100% de width.
 
 > :bulb: Conseil: ne te focalise pas sur le style que j'ai employé spécialement. Essaye par toi même de trouver ton propre style, inspire toi d'autre sites. Bref, c'est le moment de t'amuser avec les tailles et les couleurs!
+
+## 😡 Formulaire responsive
+
+Alors pour cet exercice ce n'est pas le responsive qui est compliqué, c'est juste qu'il n'y a pas de pas à pas détaillé cette fois-ci. Il va falloir t'amuser à concevoir le style entièrement pour l'HTML fournit. Tu vas devoir faire appel à toutes tes connaissances en CSS pour y arriver, mais il n'y a rien de nouveau comme propriétés!
+
+Il faut que le formulaire soit agencé correctement sur une page dont la largeur est importante, puis qu'il s'adapte sur mobile (**max-width:480px**).
+
+![form](img/02/06-form.gif)
+
+```html
+<div class="container">
+   <h2>Formulaire de Contact</h2>
+   <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+   </div>
+   <div class="form-group">
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+   </div>
+   <div class="form-group">
+      <label for="dateNaissance">Date de Naissance :</label>
+      <input type="date" id="dateNaissance" name="dateNaissance" required>
+   </div>
+   <div class="form-group">
+      <label for="sujet">Sujet :</label>
+      <input type="text" id="sujet" name="sujet" required>
+   </div>
+   <div class="form-group">
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+   </div>
+   <div class="form-group">
+      <label for="fichier">Fichier :</label>
+      <input type="file" id="fichier" name="fichier">
+   </div>
+   <button type="submit">Envoyer</button>
+</div>
+```
+
+<!-- omit in toc -->
+## Conclusion
+
+Après tous ces exercices tu devrais avoir une bonne idée de comment utiliser les Media Queries. Ce n'est jamais très compliqué, c'est juste une réflexion à faire sur quelle propriétés changer pour que tout s'affiche correctement. Raison de plus pour garder le code le plus simple possible. Evite de mettre des classes à tout va et des propriétés non-nécessaire!
