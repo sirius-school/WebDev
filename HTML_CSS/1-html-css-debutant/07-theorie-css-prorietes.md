@@ -16,6 +16,7 @@ Les propriétés CSS vont servir à changer nos éléments sélectionnées et à
   - [text-align](#text-align)
   - [text-transform](#text-transform)
   - [text-decoration](#text-decoration)
+  - [text-indent](#text-indent)
 - [Bordure et arrière-plan](#bordure-et-arrière-plan)
   - [border](#border)
   - [border-radius](#border-radius)
@@ -177,6 +178,20 @@ p{
 Ajoute différentes "décoration" au texte comme le soulignement. Les valeurs possible sont: **none**, **overline**, **underline**, **line-through**
 
 [:arrow_up: Revenir au top](#table-des-matières)
+
+### text-indent
+
+```css
+p {
+  text-indent: 5em;
+  background: red;
+}
+```
+
+Ajoute une indentation à la première ligne d'un paragraphe. La valeur à donné est une valeur de taille en **pixel**, **em**, **rem**,...
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
 
 ## Bordure et arrière-plan
 
