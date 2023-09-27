@@ -30,10 +30,7 @@ Un des avantages des variables est la lisibilité. En effet il sera plus facile 
 
 Un autre avantage, évident, c'est la facilité d'éffectuer des modifications sur l'ensemble de sa feuille de style. Il ne faut en effet modifier qu'une fois la valeur de sa variable et le changement se ferra partout où vous avez indiqué cette variable.
 
-<!-- omit in toc -->
-#### Utilisation simple
-
-On déclare une variable dans `::root` en indiquant deux tirets devant son nom. Ensuite il faut utiliser la valeur `var(nom-de-variable)`.
+On déclare une variable dans `:root` en indiquant deux tirets devant son nom. Ensuite il faut utiliser la valeur `var(nom-de-variable)`.
 
 ```css
 :root {
