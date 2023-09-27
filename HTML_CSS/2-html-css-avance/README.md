@@ -11,11 +11,11 @@ Nous allons allez plus loin et voir certains concepts clés utilisés lors de la
 
 1. [Théorie - Responsive Design](01-theorie-responsive-design.md)
 2. [Théorie - Responsive Design - 10 bonnes pratiques](02-rd-bonnes-pratique.md)
-3. [Théorie - CSS - Avancé](03-theorie-css-avance.md)
+3. [Théorie - CSS - Plus de CSS, toujours plus](03-theorie-css-more.md)
 4. [Théorie - CSS - Animations](04-theorie-css-animations.md)
 5. [Exercices - CSS - Animations](05-exercices-css-animations.md)
 6. [Théorie - CSS - Font Awesome](06-theorie-font_awesome.md)
-7. [Théorie - CSS - Méthodologie de nommage BEM](07-theorie-bem.md)
+7. *Sujet mystère...* :ghost:
 8. [Exercice intermédiaire - Maquette City Night Life](08-exercice-maquette-city_night_life.md)
 9. [Théorie - CSS - Tailwind](09-theorie-tailwind.md)
 10. [Exercices - CSS - Tailwind](10-exercices-tailwind.md)
@@ -23,7 +23,10 @@ Nous allons allez plus loin et voir certains concepts clés utilisés lors de la
 
 ## Bonus
 
+Ici, tu trouveras des cours sur des sujets bonus. Si on a le temps de les voir, on les verras, sinon tu peux faire le curieux et jeter un oeil par toi même!
+
 - [SASS](bonus-sass.md)
+- [BEM](bonus-theorie-bem.md)
 - [CSS Grid](bonus-grid.md)
 - [Bootstrap (obsolete)](bonus-bootstrap.md)
 
@@ -31,4 +34,4 @@ Nous allons allez plus loin et voir certains concepts clés utilisés lors de la
 
 Consulte la documentation, Google, la théorie, tes collègues ou ton super formateur trop gentil si tu as la moindre question! Tu es là pour apprendre, si quelque chose t'échappe, tu risquerais de prendre du retard et de ne plus rien comprendre. ALORS SURTOUT T'HÉSITE PAS!!! OK???
 
-![google-that-shit](https://i.giphy.com/media/mWz4CusF1T1oez1lxR/giphy.webp)
+![google-that-shit](https://media.tenor.com/XE64TGgCPxAAAAAC/google-exists-google.gif)
