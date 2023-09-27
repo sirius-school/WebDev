@@ -34,9 +34,8 @@ Voici quelques conseils:
 ## Groupes
 
 Groupe 1 | Groupe 2 | Groupe 3 | Groupe 4
---- | --- | --- | --- 
-Hussein | Bruno | Parfait | Ghislain
- \- | Mehran | Besar | Aristide
+--- | --- | --- | ---
+*TBA* | *TBA* | *TBA* | *TBA*
 
 ## Informations maquette
 
