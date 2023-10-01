@@ -1,41 +1,53 @@
 <!-- omit in toc -->
-
 # Animation CSS (introduction)
 
 Les animations CSS permettent d'animer n'importe quel élément sur votre page web. Elles suppriment aussi le besoin d'utiliser du JavaScript ou du JQuerry. Elles sont facile à utiliser une fois qu'on a pris le pas.
 
-Regarde [cette animation](https://codepen.io/miocene/pen/mjLPVp), ça donne envie, n'est-ce pas? Et bien on va voir un petit peux les techniques employés dans ce genre d'animation. On ira pas aussi loin mais si ça te plaît, tu peux toi même t'entrainer à faire ce genre d'animation.
+Regarde [cette animation](https://codepen.io/miocene/pen/mjLPVp) ou encore cette [re-création de l'intro Netflix](https://codepen.io/claudio_bonfati/pen/mdryxPv), ça donne envie, n'est-ce pas? Et bien on va voir un petit peux les techniques employés dans ce genre d'animation. On ira pas aussi loin mais si ça te plaît, tu peux toi même t'entrainer à faire ce genre d'animation.
 
 <!-- omit in toc -->
-
 ## Table des matières
 
-- [Animation CSS (introduction)](#animation-css-introduction)
-  - [Table des matières](#table-des-matières)
-  - [Qu'est-ce qui est animable?](#quest-ce-qui-est-animable)
-  - [Transform](#transform)
-    - [Translate](#translate)
-    - [Scale](#scale)
-    - [Rotate](#rotate)
-    - [Skew](#skew)
-    - [Multiple valeurs](#multiple-valeurs)
-  - [Transition](#transition)
-  - [Keyframes](#keyframes)
-    - [From & To](#from--to)
-    - [Pourcentages](#pourcentages)
-  - [Amusez-vous](#amusez-vous)
+- [Animations](#animations)
+- [Transform](#transform)
+  - [Translate](#translate)
+  - [Scale](#scale)
+  - [Rotate](#rotate)
+  - [Skew](#skew)
+  - [Multiple valeurs](#multiple-valeurs)
+- [Perspective 3D](#perspective-3d)
+  - [La propriété perspective](#la-propriété-perspective)
+  - [Les transformations 3D](#les-transformations-3d)
+  - [L'effet de perspective](#leffet-de-perspective)
+- [Transition](#transition)
+- [Keyframes](#keyframes)
+  - [From \& To](#from--to)
+  - [Pourcentages](#pourcentages)
+- [Amusez-vous](#amusez-vous)
 
-## Qu'est-ce qui est animable?
+## Animations
 
 Beaucoup des propriétés vues jusqu'à maintenant sont animables. Que ce soit `color`, `font-size`, `border` ou encore `flex`.
 
-Vous pouvez retrouver une liste complète sur [:book: la doc MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+Voici quelques exemples d'animations courantes:
+
+- [Fade in/out](https://codepen.io/naafi/pen/qBbYEXe)
+- [Déplacement](https://codepen.io/Md-Tofajjal-Hossen/pen/rNVVXbE)
+- [Rotation](https://codepen.io/snazsh/pen/yQWQwo)
+- [Changement de couleur](https://codepen.io/Uchiha-Itachi-/pen/MWmabwe)
+- [Perspective 3D](https://codepen.io/natewiley/pen/QWGdZJ)
+- [Changement de taille](https://codepen.io/takaneichinose/pen/wRXryM)
+- [Zoom](https://codepen.io/ainalem/pen/oNxXRgW)
+- [Animation infinie](https://codepen.io/yuanchuan/pen/wZJqNK)
+- [Effets de rebond](https://codepen.io/maud-leleux/pen/RwGVvvQ)
+
+Il y en a tellement, comme on dit en anglais "Sky is the limit". Mais avant de se lancer dans des animations complexes, il faut comprendre comment ça fonctionne.
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## Transform
 
-Avant de voir comment faire une animation voyons la propriétés animable `transform`. Celle-ci permet de faire des modifications à vos éléments et peut prendre plusieurs valeurs.
+Avant de voir comment faire une animation voyons une nouvelle  propriétés animable: `transform`. Celle-ci permet de faire des modifications à vos éléments et peut prendre plusieurs valeurs.
 
 ### Translate
 
@@ -107,11 +119,58 @@ Il est tout à fait possible d'écrire plusieurs valeurs à la propriété trans
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
+## Perspective 3D
+
+La perspective en CSS est une propriété qui vous permet d'ajouter de la profondeur et de la perspective à un élément HTML, créant ainsi l'illusion d'une vue en trois dimensions. Cette propriété est couramment utilisée en conjonction avec des transformations 3D pour créer des effets de perspective tels que des rotations et des inclinaisons d'objets dans un espace tridimensionnel simulé. Voici comment fonctionne la perspective en CSS :
+
+### La propriété perspective
+
+Pour ajouter de la perspective à un élément et à son contenu, vous devez utiliser la propriété perspective. Cette propriété définit la distance à laquelle l'observateur (l'utilisateur) se trouve de l'élément en trois dimensions.
+
+```css
+.container {
+  perspective: 1000px;
+}
+```
+
+> Dans cet exemple, la valeur 1000px indique que l'observateur est situé à 1000 pixels de l'élément .container. Plus la valeur est petite, plus l'effet de perspective sera prononcé.
+
+### Les transformations 3D
+
+Une fois que vous avez défini la perspective sur un conteneur, vous pouvez appliquer des transformations 3D aux éléments enfants de ce conteneur. Les transformations 3D incluent des propriétés telles que rotateX(), rotateY(), rotateZ(), translateZ(), etc vues plus haut.
+
+```css
+.box {
+  transform: rotateY(45deg) translateZ(100px);
+  background-color: red;
+  width: 300px;
+  aspect-ratio: 1;
+}
+```
+
+> Dans cet exemple, l'élément avec la classe .box subit une rotation autour de l'axe Y de 45 degrés et est déplacé vers l'avant de 100 pixels en utilisant translateZ(). La perspective définie sur le conteneur parent influencera la façon dont cette transformation est rendue visuellement.
+
+### L'effet de perspective
+
+Lorsque vous appliquez des transformations 3D aux éléments à l'intérieur du conteneur avec perspective, l'effet de perspective donnera l'illusion que les éléments se déplacent dans un espace en trois dimensions par rapport à l'observateur. Les éléments proches de l'observateur sembleront plus grands, tandis que les éléments éloignés sembleront plus petits, ce qui crée une sensation de profondeur.
+
+```html
+<div class="container">
+  <div class="box"></div>
+</div>
+```
+
+> Dans cet exemple, la .box à l'intérieur du .container semblera se déplacer dans un espace 3D lorsque des transformations 3D sont appliquées.
+
+La perspective en CSS est particulièrement utile pour créer des animations et des transitions 3D réalistes, ainsi que pour donner un effet de profondeur à des scènes complexes. Elle peut être combinée avec d'autres propriétés CSS telles que `transform-origin`, `perspective-origin`, et `backface-visibility` pour un meilleur contrôle sur les effets 3D et leur apparence.
+
+[:arrow_up: Revenir au top](#table-des-matières)
+
 ## Transition
 
-Voyons maintenant comment on peut passer d'un état à un autre. Oui, ça s'appel une transition.
+Voyons maintenant comment on peut controller le passage d'un état à un autre. Ça s'appel une transition.
 
-Pour ce faire définissons 2 états
+Pour ce faire définissons 2 états:
 
 ```css
 .element {
@@ -131,7 +190,7 @@ Pour ce faire définissons 2 états
 }
 ```
 
-Tel quel notre "animation" se ferra correctement sur le survol de l'élément par le curseur. Mais ce n'est pas très "lisse".
+Tel quel notre "animation" se ferra correctement sur le survol de l'élément par le curseur. Mais ce n'est pas très "lisse", c'est trop "abrupte".
 
 On peut donc appliquer une propriété `transition` à notre élément de base. On indique une valeur en temps (sec).
 
@@ -201,14 +260,16 @@ Pour appliquer cette animation à un élément il suffit d'utiliser la propriét
 
 > :exclamation: il est important de mettre le même nom que celui appliqué à la keyframe et il est également nécessaire de mettre une durée.
 
-On retrouve également quelques propriétés déjà vue dans les transition:
+On retrouve également des propriétés tels que:
 
 - **animation-timing-function**: détermine l'accélération de l'animation (ease-in, ease-out, **linear**,...)
 - **animation-delay**: détermine le délai avant de commencer l'animation (en seconde)
 - **animation-direction**: détermine le sens de l'animation (**normal**, reverse, alternate, alternate-reverse)
 - **animation-iteration-count**: permet de définir le nombre de fois que l'animation doit se répéter (chiffre ou infinite)
+- **animation-fill-mode**: Spécifie ce qui doit se passer avant et après l'animation.
+- **animation-play-state**: Permet de mettre en pause ou de reprendre une animation.
 
-[En voici d'autres](https://css-tricks.com/almanac/properties/a/animation/#sub-properties)
+[Voici des exemples d'animations et plus d'information](https://css-tricks.com/almanac/properties/a/animation/#sub-properties)
 
 ### Pourcentages
 
@@ -244,7 +305,7 @@ Voici [Animista](https://animista.net/) un site qui te permet d'expérimenter to
 
 Consulte aussi [cette page interactive](https://rupl.github.io/unfold/) pour voir la puissance du CSS.
 
-Et voici [5 frameworks](https://dev.to/aashishpanthi/top-5-javascript-animation-libraries-2021-17n7) pour réaliser des animations. C'est intéressant de savoir qu'ils existent mais il va falloir lire la documentation si tu veux les utiliser.
+Et voici [5 frameworks](https://dev.to/aashishpanthi/top-5-javascript-animation-libraries-2021-17n7) pour réaliser des animations. C'est intéressant de savoir qu'ils existent mais il va falloir lire la documentation si tu veux les utiliser. Je te conseille de jeter un oeil à [KUTE.js](https://thednp.github.io/kute.js/index.html)
 
 Et voici 3 petits jeux réalisés en HTML et CSS **uniquement**:
 
