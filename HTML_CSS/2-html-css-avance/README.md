@@ -15,19 +15,19 @@ Nous allons allez plus loin et voir certains concepts clés utilisés lors de la
 4. [Théorie - CSS - Animations](04-theorie-css-animations.md)
 5. [Exercices - CSS - Animations](05-exercices-css-animations.md)
 6. [Théorie - CSS - Font Awesome](06-theorie-font_awesome.md)
-7. *Sujet mystère...* :ghost:
+7. [Théorie - Méthode de nommage BEM](07-theorie-bem.md)
 8. [Exercice intermédiaire - Maquette City Night Life](08-exercice-maquette-city_night_life.md)
 9. [Théorie - CSS - Tailwind](09-theorie-tailwind.md)
 10. [Exercices - CSS - Tailwind](10-exercices-tailwind.md)
 11. [Exercice Final - Maquette Creative](11-exercice-maquette-creative.md)
+12. [Théorie - CSS - Grid](12-theorie-css-grid.md)
+13. [Exercices - CSS - Grid](13-exercices-css-grid.md)
 
 ## Bonus
 
 Ici, tu trouveras des cours sur des sujets bonus. Si on a le temps de les voir, on les verras, sinon tu peux faire le curieux et jeter un oeil par toi même!
 
 - [SASS](bonus-sass.md)
-- [BEM](bonus-theorie-bem.md)
-- [CSS Grid](bonus-grid.md)
 - [Bootstrap (obsolete)](bonus-bootstrap.md)
 
 ## La règle d'OR
