@@ -5,15 +5,14 @@ Pour le moment on a vu que les éléments ont une propriété `display:block;`  
 
 Le modèle de mise en page Flexbox (Flexible Box) en CSS est conçu pour simplifier la création de mises en page complexes et adaptatives. Il s'agit d'un système **unidimensionnel** qui permet de gérer l'alignement, la distribution et l'ordre des éléments dans un conteneur.
 
-
 ![flexible](https://media.giphy.com/media/xTiTnBzmxbZlMPdhlu/giphy.gif)
-
 
 :arrow_up: Toi quand on te dit que Flexbox rend tes éléments flexible mais que tu maîtrises pas encore bien.
 
 <!-- omit in toc -->
 ## Table des matières
 
+- [Outils de développement](#outils-de-développement)
 - [Comment ça fonctionne](#comment-ça-fonctionne)
   - [Les propriétés du parent](#les-propriétés-du-parent)
     - [Flex-direction](#flex-direction)
@@ -32,6 +31,12 @@ Le modèle de mise en page Flexbox (Flexible Box) en CSS est conçu pour simplif
     - [Flex](#flex)
     - [Align-self](#align-self)
 - [Quelques liens utiles](#quelques-liens-utiles)
+
+## Outils de développement
+
+Avant de commencer à créer nos éléments Flex, il est important de savoir comment les visualiser.
+
+Pour vérifier que notre Flexbox fonctionne bien, on peut utiliser les outils de développement de notre navigateur. Pour ce faire, il suffit de faire un clic droit sur notre page et de sélectionner **inspecter**. Ensuite on clique sur l'onglet **Layout**. Là on peut afficher notre Flexbox et voir différentes options d'affichages. Tu peux aussi cliquer sur la petite bulle "flex" à côté d'un élément HTML dans ton code.
 
 ## Comment ça fonctionne
 
@@ -135,9 +140,7 @@ Contrôle l'alignement horizontal des éléments flexibles dans le conteneur. Le
 }
 ```
 
-<img src="./img/13/justify-content.svg" width="65%">
-
-<!-- ![justify-content](img/13/justify-content.svg) -->
+![justify-content](img/13/justify-content.svg)
 
 #### Align-items
 
@@ -150,9 +153,7 @@ Contrôle l'alignement vertical des éléments flexibles dans le conteneur. Les 
 }
 ```
 
-<img src="./img/13/align-items.svg" width="65%">
-
-<!-- ![align-items](img/13/align-items.svg) -->
+![align-items](img/13/align-items.svg)
 
 #### Align-content
 
@@ -162,13 +163,11 @@ Contrôle l'alignement vertical de l'espace supplémentaire dans le conteneur lo
 .flex-container{
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between; /* flex-start, flex-end, strech, space-between, space-around  */
+  align-content: space-between; /* flex-start, flex-end, stretch, space-between, space-around  */
 }
 ```
 
-<img src="./img/13/align-content.svg" width="65%">
-
-<!-- ![align-content](img/13/align-content.svg) -->
+![align-content](img/13/align-content.svg)
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
@@ -257,9 +256,9 @@ La propriété `flex-basis` détermine la taille initiale d'un élément flexibl
 }
 ```
 
-##### Avantages de flex-basis par rapport à width 
+##### Avantages de flex-basis par rapport à width
 
-1. **Flexibilité dans les mises en page responsives** : `flex-basis` est plus adaptatif car il peut être exprimé en pourcentage. Cela signifie que l'élément peut s'adapter à différents écrans et tailles de conteneurs.
+1. **Flexibilité dans les mises en page responsive** : `flex-basis` est plus adaptatif car il peut être exprimé en pourcentage. Cela signifie que l'élément peut s'adapter à différents écrans et tailles de conteneurs.
 
 2. **Distribution équitable de l'espace** : Lorsque tu utilises `flex-basis` avec les propriétés `flex-grow` et `flex-shrink`, les éléments peuvent se répartir équitablement l'espace disponible tout en respectant leur taille initiale.
 
