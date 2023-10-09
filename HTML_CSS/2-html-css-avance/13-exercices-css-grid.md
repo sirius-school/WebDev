@@ -30,7 +30,7 @@ Impossible?: 😡
 ## Table des matières
 
 - [😊 \> 😰 CSS Grid Garden](#---css-grid-garden)
-- [*prochainement*](#prochainement)
+- [😄 Créer une grille basique](#-créer-une-grille-basique)
 
 ## 😊 > 😰 CSS Grid Garden
 
@@ -38,6 +38,19 @@ Tout comme pour Flexbox, voici un jeu pour vous apprendre à utiliser grid. Essa
 
 [CSSGridGarden](https://cssgridgarden.com/#fr)
 
-## *prochainement*
+## 😄 Créer une grille basique
 
-Oui, oui ça arrive! 
+**Objectif :** Créer une grille de 3x3 (trois colonnes et trois rangées) où chaque cellule a une taille égale.
+
+![01-grid](img/13/01-grid.png)
+
+**Instructions :**
+
+- Utilise display: grid pour définir un conteneur grid.
+- Définis trois colonnes et trois rangées de taille égale.
+- Place un élément avec du texte dans chaque cellule de la grille.
+- Utilise la propriété `grid-gap` pour ajouter un espace entre chaque cellule.
+- Utilise la propriété `background-color` pour ajouter une couleur de fond différent à chaque cellule.
+- Utilise la propriété text-align pour aligner le texte de chaque cellule au centre.
+
+> :bulb: Aide toi de la fonction `repeat()` pour définir les colonnes et les rangées.
