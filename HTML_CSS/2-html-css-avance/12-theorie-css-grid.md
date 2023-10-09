@@ -36,6 +36,7 @@ Attention ça va devenir plus complexe, mais le but n'est pas de maîtriser Grid
     - [grid-column](#grid-column)
     - [grid-row](#grid-row)
     - [grid-area](#grid-area-1)
+    - [Utilisation du slash](#utilisation-du-slash)
 - [Flexbox vs Grid](#flexbox-vs-grid)
 - [Quelques liens utiles](#quelques-liens-utiles)
 
@@ -383,6 +384,34 @@ grid-area: row-start / column-start / row-end / column-end;
 ```
 
 Cet élément commence à la première rangée, deuxième colonne et s'étend jusqu'à la troisième rangée, quatrième colonne.
+
+#### Utilisation du slash
+
+L'utilisation du slash / dans les valeurs de la grille CSS est une convention syntaxique qui permet de séparer et de délimiter différentes parties de la déclaration, en particulier lorsqu'on travaille avec des lignes et des colonnes. Voici quelques scénarios où tu peux rencontrer ce slash dans le contexte des grilles CSS :
+
+**Définir le début et la fin d'un placement :** Lorsque tu définis où un élément grid commence et se termine, tu utilises le slash pour séparer les valeurs de début et de fin.
+
+```css
+.item {
+    grid-column: 2 / 4;  // Commence à la 2ème colonne et se termine à la 4ème.
+}
+```
+
+**Raccourcis avec grid-area :** La propriété grid-area permet de définir rapidement le placement d'un élément en termes de ligne de départ, colonne de départ, ligne de fin et colonne de fin. Le slash est utilisé pour séparer ces quatre valeurs.
+
+```css
+.item {
+    grid-area: 1 / 2 / 3 / 4;  // Ligne de départ, colonne de départ, ligne de fin, colonne de fin.
+}
+```
+
+**Définir les tailles des lignes et des colonnes avec grid-template :** Lorsque tu utilises la propriété grid-template pour définir à la fois les rangées et les colonnes, tu utilises le slash pour séparer les deux ensembles de valeurs.
+
+```css
+.container {
+    grid-template: 1fr 2fr / 200px 1fr 1fr;  // Rangées / Colonnes
+}
+```
 
 <!-- omit in toc -->
 ## On s'arrête là pour le moment
