@@ -5,7 +5,9 @@
 - [Introduction](#introduction)
 - [Command Line Interface](#command-line-interface)
 - [Installation de NPM](#installation-de-npm)
+- [Le site **npm**](#le-site-npm)
 - [Utilisation](#utilisation)
+- [Le versionning](#le-versionning)
 - [Le fichier JSON](#le-fichier-json)
   - [Introduction](#introduction-1)
   - [En résumé](#en-résumé)
@@ -13,7 +15,7 @@
 
 ## Introduction
 
-**NPM** est l'acronyme de "Node Package Manager". Il s'agit du plus grand registre de logiciels au monde ! Les développeurs du monde entier partagent des logiciels souvent en open source. **NPM** est totalement gratuit et inclut un **CLI (Command Line Interface**, par exemple "C:\>npm install <package>") qui peut être utilisé pour télécharger et installer de nombreux logiciels. Son installation nécessite **Node.JS** sur votre machine, d'où le nom "Node Package Manager", ce qui signifie gestionnaire de paquets/dépendances Node. Donc, oui, nous devrons encore écrire des commandes dans notre terminal ! PS : Il existe d'autres **CLIs** comme votre terminal (oui oui) ou "yarn" ou "bash".
+**NPM** est l'acronyme de "Node Package Manager". Il s'agit du plus grand registre de logiciels au monde ! Les développeurs du monde entier partagent des logiciels souvent en open source. **NPM** est totalement gratuit et inclut un **CLI (Command Line Interface**, par exemple `C:\>npm install <package>`) qui peut être utilisé pour télécharger et installer de nombreux logiciels. Son installation nécessite **Node.JS** sur votre machine, d'où le nom "Node Package Manager", ce qui signifie gestionnaire de paquets/dépendances Node. Donc, oui, nous devrons encore écrire des commandes dans notre terminal ! PS : il existe d'autres **CLIs** comme "yarn" ou "bash".
 
 ## Command Line Interface
 
@@ -44,21 +46,49 @@ En résumé, un CLI est comme une conversation en texte avec un ordinateur pour 
 9. Une fois dans votre terminal, nous allons vérifier votre installation avec ces deux commandes : "**npm -v**" et "**node -v**". Ces commandes permettent de connaître la version qui a été installée.
 10. Vous n'avez plus qu'à installer les paquets dont vous avez besoin pour vos projets !
 
-Le site [**npm**](https://www.npmjs.com/)
+## Le site [**npm**](https://www.npmjs.com/)
+
+Quand vous serez développeur, s'inscrire sur le site sera indispensable pour partager les packages que vous avez vous même créé ou que votre entreprise vous demandera d'installer. Nous allons parcourir le site ensemble pour vous montrer comment rechercher un package et l'installer sur votre machine.
 
 [:arrow_up: Revenir au sommaire](#table-des-matières)
 
 ## Utilisation
 
-Vous avez créé votre répertoire et vous avez déjà commit votre structure de fichiers. Vous souhaitez maintenant utiliser des packages npm, voici comment faire :
+Vous avez créé votre répository et vous avez déjà commit votre structure de fichiers. Vous souhaitez maintenant utiliser des packages npm, voici comment faire :
 
-1. Rendez-vous dans votre terminal, à la racine de votre fichier "C:\Users\VotreNom\Dossier\Dossier\VotreProjet".
-2. Nous allons initialiser npm localement dans votre projet. Pour ce faire, entrez la commande "**npm init**".
+1. Rendez-vous dans votre terminal, à la racine de votre fichier `C:\Users\VotreNom\Dossier\Dossier\VotreProjet`.
+2. Nous allons initialiser npm localement dans votre projet. Pour ce faire, entrez la commande `npm init`.
 3. Cette commande lancera un script et vous demandera plusieurs informations pour ensuite écrire les données dans votre fichier "package.json".
-4. Nous pouvons enfin installer des packages venant de la plateforme. Le premier sera [**SASS**](https://www.npmjs.com/package/sass), c'est un compilateur CSS qui vous facilitera la tâche. La commande "**npm i sass**" correspond à "**npm install sass**", les deux fonctionnent 😁.
-5. Dans vos dépendances (**dependencies**) vient de s'ajouter "**sass**: **version**" et dans vos fichiers, un nouveau dossier est apparu, "**node_modules**". Il est impératif qu'il soit dans votre fichier ".gitignore".
+   1. Il vous demandera le nom du package, pour plus de facilité ce sera le nom de votre repositery. Faites `Enter`
+   2. La version (j'en reparlerais plus tard), évidemment il est logique de commencer par la version 1.0.0. Faites `Enter`
+   3. Une description pour le projet, à vrai dire ce n'est pas le plus utile. Faites `Enter`.
+   4. Le point d'entrée, si vous n'avez pas créé de fichier script il vous proposera index.js d'ou l'importance de créer votre srtucture de projet avant d'initialisé npm. Faites `Enter`.
+   5. Test command, dans le cadre de l'initiation Sirius nous n'utiliserons pas cette fonctionnalité. Faites `Enter`.
+   6. Le repository Git, si vous avez bien créé votre repository il vous proposera le lien de ce dernier. Si ce n'est pas le cas, aucune valeur par défaut ne sera ajoutée, d'où l'importance une fois de plus de créer un repository dès le départ du projet. Faites `Enter`.
+   7. Keywords, dans le cadre de l'initiation Sirius nous n'utiliserons pas cette fonctionnalité. Faites `Enter`.
+   8. Author, purement facultatif, vous avez la possibilité d'ajouter votre nom et prénom en tant qu'auteur du projet. Faites `Enter`.
+   9. License, dans le cadre de l'initiation Sirius nous n'utiliserons pas cette fonctionnalité. Faites `Enter`.
+   10. La fin de ce script vous demande si les informations sont bien correctes si c'est bien le cas, tapez `yes` ou `y` suivi de `Enter`.
+4. Nous pouvons enfin installer des packages venant de la plateforme. Le premier sera [**SASS**](https://www.npmjs.com/package/sass), c'est un compilateur CSS. La commande `npm i sass` correspond à `npm install sass`, les deux fonctionnent 😁 L'importance n'est pas portée sur le package que nous installons mais bien sur NPM.
+5. Dans vos dépendances (**dependencies**) vient de s'ajouter "**sass**: **version**" et dans vos fichiers, un nouveau dossier est apparu, "**node_modules**". Il est ***IMPERATIF*** qu'il soit dans votre fichier ".gitignore".
 
 [:arrow_up: Revenir au sommaire](#table-des-matières)
+
+## Le versionning
+
+Le versionning dans la construction d'un projet est crucial pour plusieurs raisons. Il permet de suivre et de gérer l'évolution du projet au fil du temps, ce qui est essentiel pour la collaboration, la maintenance et la garantie de la stabilité.
+
+1. **Historique et Suivi** : En attribuant des numéros de version à votre projet, vous créez un historique de son évolution. Cela vous permet de suivre les modifications apportées au fil du temps, de savoir qui a fait quoi et quand. Cela facilite la rétro-ingénierie en cas de problèmes ou de régressions.
+
+2. **Collaboration** : Lorsque plusieurs personnes travaillent sur un projet, le versionning devient essentiel. Chacun peut travailler sur une version spécifique du projet sans perturber le travail des autres. Les branches et les tags de version aident à organiser le travail.
+
+3. **Maintenance et Réparations** : En cas de bogues ou de problèmes de sécurité, le versionning permet de revenir à une version précédente du projet pour identifier quand le problème est survenu. Cela simplifie la correction des erreurs.
+
+4. **Garantie de la Stabilité** : Les versions stables du projet sont marquées par des numéros de version spécifiques. Cela permet aux utilisateurs de savoir quelles versions sont fiables pour une utilisation en production, et quelles versions sont en cours de développement.
+
+5. **Documentation** : Les numéros de version servent également de points de repère dans la documentation du projet. Les utilisateurs peuvent se référer à la documentation correspondant à leur version spécifique.
+
+En résumé, le versionning d'un projet est essentiel pour maintenir un historique clair, faciliter la collaboration, gérer les bogues et garantir la stabilité. Il offre une structure et une organisation vitales pour la construction d'un projet à long terme.
 
 ## Le fichier JSON
 
@@ -108,9 +138,7 @@ Dans l'exemple ci-dessous, la clé "**powers**" possède un tableau de valeurs. 
   {
     "name": "Molecule Man",
     "age": 29,
-    "secretIdentity": "Dan J
-
-ukes",
+    "secretIdentity": "Dan Jukes",
     "powers": [
       "Radiation resistance",
       "Turning tiny",
@@ -131,7 +159,7 @@ ukes",
 ```
 <!-- Answer : import data from "./package.json" assert { type: "json" };
 
-if (data.test.named === "Madame Uppercut") console.log(data.test.powers[1]); -->
+if (data.test.name === "Madame Uppercut") console.log(data.test.powers[1]); -->
 
 [:arrow_up: Revenir au sommaire](#table-des-matières)
 
