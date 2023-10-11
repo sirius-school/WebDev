@@ -1,0 +1,14 @@
+{
+  "name": "smallproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "sass --watch --update ./styles/style.scss:./styles/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.2"
+  }
+}
