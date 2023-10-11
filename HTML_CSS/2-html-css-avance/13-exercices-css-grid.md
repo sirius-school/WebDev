@@ -29,10 +29,12 @@ Impossible?: 😡
 <!-- omit in toc -->
 ## Table des matières
 
-- [😊 \> 😰 CSS Grid Garden](#---css-grid-garden)
+- [😄 \> 😰 CSS Grid Garden](#---css-grid-garden)
 - [😄 Créer une grille basique](#-créer-une-grille-basique)
 
-## 😊 > 😰 CSS Grid Garden
+## 😄 > 😰 CSS Grid Garden
+
+![CSS Grid Garden](img/13/css-grid-garden.png)
 
 Tout comme pour Flexbox, voici un jeu pour vous apprendre à utiliser grid. Essaye d'aller le plus loin possible.
 
@@ -51,6 +53,6 @@ Tout comme pour Flexbox, voici un jeu pour vous apprendre à utiliser grid. Essa
 - Place un élément avec du texte dans chaque cellule de la grille.
 - Utilise la propriété `grid-gap` pour ajouter un espace entre chaque cellule.
 - Utilise la propriété `background-color` pour ajouter une couleur de fond différent à chaque cellule.
-- Utilise la propriété text-align pour aligner le texte de chaque cellule au centre.
+- Utilise **flexbox** pour centrer le texte dans chaque cellule.
 
 > :bulb: Aide toi de la fonction `repeat()` pour définir les colonnes et les rangées.
