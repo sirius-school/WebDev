@@ -34,11 +34,9 @@ Impossible?: 😡
 
 ## 😄 > 😰 CSS Grid Garden
 
-![CSS Grid Garden](img/13/css-grid-garden.png)
+[![CSS Grid Garden](img/13/css-grid-garden.jpeg 'CSS Grid Garden')](https://cssgridgarden.com/#fr)
 
 Tout comme pour Flexbox, voici un jeu pour vous apprendre à utiliser grid. Essaye d'aller le plus loin possible.
-
-[CSSGridGarden](https://cssgridgarden.com/#fr)
 
 ## 😄 Créer une grille basique
 
