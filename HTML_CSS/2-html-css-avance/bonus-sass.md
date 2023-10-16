@@ -3,12 +3,13 @@
 
 ![sass-logo](img/bonus/sass.png)
 
-Sass est un pré-processeur CSS, c'est à dire un petit programme qui va générer du CSS grâce à sa propre syntaxe. Il permet d'utiliser des fonctionnalités qui ne sont pas présentes dans le CSS de base, comme par exemple le nesting, les mixins, les variables, l'inheritance et encore pleins d'autres choses.
+Sass est un pré-processeur CSS, c'est à dire un petit programme qui va générer du CSS grâce à sa propre syntaxe. Il permet d'utiliser des fonctionnalités qui ne sont pas (encore) présentes dans CSS, comme par exemple le nesting, les mixins, les variables, l'inheritance et encore pleins d'autres choses.
 
 Voyons ensemble les avantages d'utiliser SASS.
 
 - [Principe](#principe)
   - [Installation](#installation)
+    - [Debug éventuel](#debug-éventuel)
   - [Utilisation](#utilisation)
   - [Différence entre SCSS et SASS](#différence-entre-scss-et-sass)
 - [Nesting](#nesting)
@@ -25,7 +26,7 @@ Voyons ensemble les avantages d'utiliser SASS.
 
 On va écrire nos propriétés CSS dans un fichier `.scss`, dedans on peut utiliser tout ce qu'on a déjà vu en CSS. En plus on va pouvoir écrire de manière plus efficace nos styles grâce au nesting. On va également pouvoir plus facilement séparer notre travail en plusieurs feuilles de styles grâce aux imports (déjà dispo. dans CSS3). Créer des variables (également dispo en CSS3) pour éviter les redondances.
 
-Ensuite on va faire surveiller ce fichier par un plugin VScode, sont but c'est qu'a chaque fois que l'on sauvegarde notre fichier `.scss` il va le lire et le compiler en un fichier `.css` lisible par votre navigateur. Attention, il ne faut pas faire de modification dans ce fichier `.css` car ceux-ci seront remplacés la prochaine fois que vous sauvegarderez votre fichier `.scss`.
+Ensuite on va faire surveiller ce fichier par un plugin VScode ou une commande dans le terminal, pour qu'a chaque fois que l'on sauvegarde notre fichier `.scss` il va le lire et le compiler en un fichier `.css` lisible par votre navigateur. **Attention, il ne faut pas faire de modification dans ce fichier `.css` car ceux-ci seront remplacés la prochaine fois que vous sauvegarderez votre fichier `.scss`.**
 
 ### Installation
 
@@ -33,17 +34,41 @@ Lancez votre terminal et écrivez cette commande.
 
 `npm install -g sass`
 
-Ensuite on va utiliser un plugin pour VScode pour pouvoir surveiller notre fichier `.scss` mais on verra aussi comment le faire sans plugin.
+Ensuite on va utiliser un plugin pour VScode pour pouvoir surveiller notre fichier `.scss` mais on verra aussi comment le faire dans le terminal.
 
 [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) (optionnel)
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+#### Debug éventuel
+
+<!-- omit in toc -->
+##### Si la commande SASS n'est pas reconnue**
+
+1. Exécuter la commande suivante : 
+
+```bash
+npm config get prefix
+```
+
+1. Chercher "Modifier les variables d'environnement système" dans la recherche du Menu Démarrer
+2. Cliquer sur "Variables d'environnement"
+3. Ajouter à 'PATH' le résultat obtenu par la commande plus haut
+
+<!-- omit in toc -->
+##### Si la commande SASS n'est pas autorisée à s'exécuter
+
+1. Exécuter la commande suivante :
+
+```bash
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+```
+
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ### Utilisation
 
 Dans votre projet il suffit de créer un fichier `main.scss` dans un dossier `sass`.
 
-Une fois dans le fihcier Sass, vous pouvez cliquer sur le bouton `Watch Sass`en bas de votre Vscode ![watch-sass](img/bonus/watchsass.png)
+Une fois dans le fichier Sass, vous pouvez cliquer sur le bouton `Watch Sass`en bas de votre Vscode ![watch-sass](img/bonus/watchsass.png)
 
 Une fenêtre `Output` devrait apparaître
 ![output](img/bonus/output-sass.png)
@@ -74,7 +99,7 @@ Peu importe la méthode utilisée, le fait de surveiller votre fichier `.scss` p
 
 ![error-sass](img/bonus/error-sass.png)
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ### Différence entre SCSS et SASS
 
@@ -118,7 +143,7 @@ a
 
 Je vous conseille d'utiliser `.scss` si vous avez encore quelques difficultés avec la syntaxe CSS. D'apparence, `.sass` semble plus facile mais est plus vite sujet aux erreurs aussi quand on a pas l'habitude.
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Nesting
 
@@ -177,7 +202,7 @@ Il est également possible d'utiliser le nesting intelligement avec vos sélecte
 }
 ```
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Variables
 
@@ -197,7 +222,7 @@ body{
 
 Une fois le fichier `.scss`généré, votre fichier `.css`aura les bonnes valeurs. C'est extrêmement puissant quand on travaille avec une palette de couleurs et que l'on a besoin d'y des ajustements.
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Sass Maps
 
@@ -222,7 +247,7 @@ a{
 
 Il faut donc déclarer une variable qui sera notre map, ensuite on place des parenthèses `( )`et à l'intérieur on déclare nos clés qu'on sépare avec des virgules. Ensuite pour récupérer ces propriétés, il suffit de placer un `map-get` de préciser dans quel map il doit allez et ensuite on place l'argument, c'est à dire notre clé que l'on veut utiliser.
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Functions
 
@@ -255,7 +280,7 @@ Dans cet exemple on demande simplement à notre fonction "**color**" de retourne
 
 [:book:Documentation](https://sass-lang.com/documentation/at-rules/function)
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Mixin
 
@@ -294,7 +319,7 @@ Dans cet exemple on a créer d'abord une mixin qui permet de remettre à zéro l
 
 [:book:Documentation](https://sass-lang.com/documentation/at-rules/mixin)
 
-[:arrow_up:Revenir au top](#Syntactically-Awesome-Style-Sheet)
+[:arrow_up:Revenir au top](#syntactically-awesome-style-sheet)
 
 ## Import/Use
 
