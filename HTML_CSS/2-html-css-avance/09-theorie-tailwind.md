@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Tailwind CSS
 
-Tailwind est un framework CSS axé sur un côté "utility-first". Pour simplifier, il propose des classes déjà toute faite pour paramétrer vos éléments HTML directement sans écrire la moindre ligne de CSS.
+Tailwind est un framework CSS axé sur un côté "utility-first". Il est un peu différent des frameworks CSS traditionnels comme Bootstrap ou Foundation. Plutôt que de te fournir une série de classes prédéfinies pour des composants (comme des boutons, des modales, etc.), Tailwind te permet de construire rapidement des designs personnalisés en utilisant des classes utilitaires.Pour simplifier, il propose des classes déjà toute faite pour paramétrer tes éléments HTML directement sans écrire la moindre ligne de CSS plutôt que de proposer des éléments déjà tout fait.
 
 ![tailwind](img/09/tailwind.gif)
 
@@ -10,7 +10,7 @@ Tailwind est un framework CSS axé sur un côté "utility-first". Pour simplifie
 
 - [Principe](#principe)
 - [Avantages et inconvénients](#avantages-et-inconvénients)
-- [Installation via Tailwind Play CDN](#installation-via-tailwind-play-cdn)
+- [Utilisation via Tailwind Play CDN](#utilisation-via-tailwind-play-cdn)
 - [Installation via Tailwind CLI (recommandé)](#installation-via-tailwind-cli-recommandé)
   - [Petite pause histoire](#petite-pause-histoire)
     - [Qu'est-ce que Node.js](#quest-ce-que-nodejs)
@@ -22,23 +22,23 @@ Tailwind est un framework CSS axé sur un côté "utility-first". Pour simplifie
 
 ## Principe
 
-Tailwind est finalement qu'une simple feuille de style css comme vous en avez déjà réalisés. Sauf qu'ici toutes les classes sont déjà pré-remplie par des propriétés et valeurs définies qui vont vous permettre d'appliquer rapidement des propriétés tels que `flex`, `color`, `width`,...
+Tailwind est finalement qu'une simple feuille de style css comme tu en as déjà réalisés. Sauf qu'ici toutes les classes sont déjà pré-remplie par des propriétés et valeurs définies qui vont te permettre d'appliquer rapidement des propriétés tels que `flex`, `color`, `width`,...
 
 ![utility-not](img/09/utility-not.png)
 
 ![utility-not](img/09/utility.png)
 
-Tailwind possède un "style" propre avec des valeurs communes. Il est tout à fait possible de le configurer pour qu'il génère la feuille de style avec vos propres codes couleurs ou vos propres fonts.
+Tailwind possède un "style" propre avec des valeurs communes. Il est tout à fait possible de le configurer pour qu'il génère notre feuille de style avec nos propres codes couleurs ou nos propres fonts.
 
-La feuille de style fournie à la base est également remplie de code inutile et rallonge le temps de chargement de votre style. Il est donc possible de purger la feuille de tout bout de code non utilisés dans votre projet.
+Le style fournit à la base est remplie de code inutile à ton projet. Du coup, Tailwind va surveiller tes fichiers et n'utiliser que les classes et les propriétés que tu as décidés d'utiliser!
 
-Bref, Tailwind, c'est le bien!
+Bref, Tailwind, c'est bien!
 
 ## Avantages et inconvénients
 
 :white_check_mark: L'**avantage** d'utiliser un framework CSS est la possibilité de rapidement mettre en page son site sans devoir écrire des règles et sélecteurs CSS. Il suffit de connaître le nom des classes utilisées par Tailwind pour les appliquer à nos éléments HTML.
 
-:x: Les **inconvénients** principaux sont que du coup on a des classes à rallonges et des répétitions. Ces dernières peuvent être évitées par l'utilisation d'un framework JS (React, Vue,...) mais ce n'est pas le but de ce cours.
+:x: Les **inconvénients** principaux sont que du coup on a des classes à rallonges et des répétitions. Ces dernières peuvent être évitées par l'utilisation d'un framework JS (Astro, React, Vue,...) mais ce n'est pas le but de ce cours.
 
 ```html
 <div class="container sm:m-auto lg:w-8/12 w-screen pb-20 bg-gray-600 sm:rounded-3xl  bg-gradient-to-t to-blue-dark from-blue-light ">
@@ -55,7 +55,7 @@ Bref, Tailwind, c'est le bien!
 
 [:arrow_up: Revenir au top](#table-des-matières)
 
-## Installation via Tailwind Play CDN
+## Utilisation via Tailwind Play CDN
 
 On va allez au plus simple et insérer directement le script Tailwind via CDN officiel.
 
@@ -130,10 +130,11 @@ module.exports = {
   },
   plugins: [],
 }
-
 ```
 
-5. Créons maintenant un fichier `src/css/input.css` et ajoutons-y les directives suivantes:
+Cette modification à pour but de dire à Tailwind où sont les fichiers qu'il doit surveiller pour savoir quels sont les classes dont il a besoin.
+
+5. Créons maintenant un fichier `src/css/input.css` et ajoutons-y les directives suivantes pour fournir à notre CSS les valeurs par défaut de Tailwind:
 
 ```css
 @tailwind base;

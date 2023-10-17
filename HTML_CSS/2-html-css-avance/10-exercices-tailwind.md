@@ -14,7 +14,7 @@ Je vais te guider pas à pas.
 - [Concept de base](#concept-de-base)
   - [Utility-First](#utility-first)
   - [Responsive Design](#responsive-design)
-  - [Hover, Focus, & Other States](#hover-focus--other-states)
+  - [Hover, Focus, \& Other States](#hover-focus--other-states)
 - [Première page](#première-page)
   - [Le début](#le-début)
   - [Allons plus loins](#allons-plus-loins)
@@ -23,7 +23,7 @@ Je vais te guider pas à pas.
 
 ## Mise en place
 
-Utilise la méthode de l'[Installation via Tailwind Play CDN](./09-theorie-tailwind.md#installation-via-tailwind-play-cdn) ou [Installation via Tailwind CLI (recommandé)](./09-theorie-tailwind.md#installation-via-tailwind-cli-recommandé) selon tes préférences
+Utilise la méthode de l'[Utilisation via Tailwind Play CDN](./09-theorie-tailwind.md#utilisation-via-tailwind-play-cdn) ou [Installation via Tailwind CLI (recommandé)](./09-theorie-tailwind.md#installation-via-tailwind-cli-recommandé) selon tes préférences
 
 ## Concept de base
 
