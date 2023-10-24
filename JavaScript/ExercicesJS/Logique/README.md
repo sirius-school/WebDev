@@ -11,4 +11,6 @@ Dans cet exercice vous allez apprendre grâce à [Amazon Future Engineer](https:
 ![](../../Ressources/Images/AmazonFEBlockly.png)
 - Vous devez choisir "l'épisode 1 : la cascade" et simplement démarrez l'exercice.<br>
 ![](../../Ressources/Images/AmazonFECascade.png)
+- Quand vous avez réussi votre exercice le site devrait vous proposer de passer à l'exercice suivant, si ce n'est pas le cas, revenez à l'onglet "Saisons" et sélectionnez l'exercice auquel vous étiez arrivés.
 
+Bonne chance ! 😉

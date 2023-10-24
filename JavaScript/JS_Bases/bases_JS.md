@@ -451,6 +451,7 @@ let object = {
 // Attention ne réutilisez pas les noms de variables ci-dessus !
 ```
 
+[Petit résumé de toute cette théorie](./rappel_variables.md)
 [:arrow_up: Revenir au top](#table-des-matières)
 
 ## Les opérateurs (operands)
