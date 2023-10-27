@@ -41,9 +41,9 @@ Ensuite on va utiliser un plugin pour VScode pour pouvoir surveiller notre fichi
 #### Debug éventuel
 
 <!-- omit in toc -->
-##### Si la commande SASS n'est pas reconnue**
+##### Si la commande SASS n'est pas reconnue
 
-1. Exécuter la commande suivante : 
+1. Exécuter la commande suivante :
 
 ```bash
 npm config get prefix

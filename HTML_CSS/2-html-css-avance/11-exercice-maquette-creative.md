@@ -20,7 +20,7 @@ Tu vas devoir travailler avec un collègue pour reproduire cette maquette de la 
 
 ## Consigne
 
-Par groupe de 2-3 vous allez devoir vous répartir la charge de travail pour réaliser la maquette finale. C'est une maquette bien plus complexe que celles déjà réalisés auparavant. C'est pourquoi il va falloir bien vous coordonner.
+Par groupe de 2 vous allez devoir vous répartir la charge de travail pour réaliser la maquette finale. C'est une maquette bien plus complexe que celles déjà réalisés auparavant. C'est pourquoi il va falloir bien vous coordonner.
 
 Voici quelques conseils:
 
@@ -35,7 +35,13 @@ Voici quelques conseils:
 
 Groupe 1 | Groupe 2 | Groupe 3 | Groupe 4
 --- | --- | --- | ---
-*TBA* | *TBA* | *TBA* | *TBA*
+Alhassane | Dorine    | Héloise | Irina
+Cédric    | Angélique | Mohamed | Polat
+
+Groupe 5 | Groupe 6 | Groupe 7 | Groupe 8
+--- | --- | --- | ---
+Joseph    | Luc    | Saidou   | Sarah
+Adrien    | Marc   | Giresse  | Sarah
 
 ## Informations maquette
 
@@ -81,6 +87,10 @@ Vous pouvez retrouver tous les screenshots sur [Google Drive](https://drive.goog
 
 Vous y trouverez également une sélection d'images qui peuvent servir d'illustration d'article. Mais n'hésitez pas utiliser les vôtres. Si vous en êtes en panne d'inspiration, je vous conseille le site [Pexels](https://www.pexels.com/fr-fr/) qui regorge d'images libre de droit pour utiliser dans vos maquettes !
 
-## Utiliser Tailwind
+## Utiliser Tailwind et/ou Sass
 
-Si vous voulez utiliser Tailwind, c'est tout à fait possible. Comme on a pas vu comment l'installer et le configurer, il faudra faire avec la feuille de style de Tailwind et ajouter vos couleurs dans une feuilles de styles bien à vous.
+Si vous voulez utiliser Tailwind et/ou Sass, c'est tout à fait possible. A vous de décider au début du projet et de mettre en place votre environnement de travail sur vos machines respectives!
+
+## Utiliser Github Desktop
+
+Si vous vous sentez à l'aise avec Github Desktop, n'hésitez pas à créer des branches pour ne pas empiéter sur le travail de votre collègue. Pour ce faire il faut que le chef de projet crée le repository et puis invite son collègue sur le repo en allant dans "Settings => Collaborate & Teams => Add people"

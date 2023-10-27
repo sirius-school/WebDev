@@ -31,7 +31,9 @@ Impossible?: 😡
 
 - [😄 \> 😰 CSS Grid Garden](#---css-grid-garden)
 - [😄 Créer une grille basique](#-créer-une-grille-basique)
-- [� Ghosty, le gentil petit fantôme](#-ghosty-le-gentil-petit-fantôme)
+- [😊 Créer une grille basique et y placer des éléments](#-créer-une-grille-basique-et-y-placer-des-éléments)
+- [Pixel art "facile"](#pixel-art-facile)
+- [😰 Ghosty, le gentil petit fantôme](#-ghosty-le-gentil-petit-fantôme)
 
 ## 😄 > 😰 CSS Grid Garden
 
@@ -55,6 +57,24 @@ Tout comme pour Flexbox, voici un jeu pour vous apprendre à utiliser grid. Essa
 - Utilise **flexbox** pour centrer le texte dans chaque cellule.
 
 > :bulb: Aide toi de la fonction `repeat()` pour définir les colonnes et les rangées ainsi que de l'unité de mesure `fr`.
+
+## 😊 Créer une grille basique et y placer des éléments
+
+**Objectif :** Avoir plusieurs éléments dans un conteneur grid et les placer à des positions spécifiques.
+
+![01-grid](img/13/02-)
+
+**Instructions :**
+
+- Utilise display: grid pour définir un conteneur grid.
+- Définis quatre colonnes et cinq rangées de taille égale.
+- 
+
+> :bulb: Aide toi de la fonction `repeat()` pour définir les colonnes et les rangées ainsi que de l'unité de mesure `fr`.
+
+## Pixel art "facile"
+
+On va créer un pixel art. Pour cela, on va utiliser une grille de 10x10. Chaque cellule de la grille aura une taille de 50px par 50px. Ensuite on va reproduire l'image ci-dessous 
 
 ## 😰 Ghosty, le gentil petit fantôme
 
