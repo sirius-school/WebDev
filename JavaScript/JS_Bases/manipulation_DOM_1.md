@@ -10,10 +10,11 @@
   - [textContent](#textcontent)
   - [innerHTML](#innerhtml)
   - [EventListener](#eventlistener)
-  - [Math.Random() et Math.Floor()](#mathrandom-et-mathfloor)
+  - [Math.Random(), Math.Floor() et Math.round()](#mathrandom-mathfloor-et-mathround)
     - [Math.floor()](#mathfloor)
+    - [Math.round()](#mathround)
     - [Math.random()](#mathrandom)
-    - [Utilisation de Math.floor et de Math.Random](#utilisation-de-mathfloor-et-de-mathrandom)
+    - [Utilisation de Math.floor, Math.round et de Math.Random](#utilisation-de-mathfloor-mathround-et-de-mathrandom)
   - [ParseInt \& ParseFloat](#parseint--parsefloat)
     - [parseInt()](#parseint)
     - [parseFloat()](#parsefloat)
@@ -127,44 +128,65 @@ Dans d'autres termes, l'``EventListener`` va observer/écouter/attendre les év�
 Ce que l'on appelle **"gestionnaire d'évenement"** ou **"handleEvent"** est simplement le bloc de code appellé lors de la détection de cet évenement. Dans l'exemple ci-dessus il s'agit d'un simple console.log. On peut donc traduire le handleEvent par "que faire si l'utilisateur click sur le bouton".
 Par exemple il peut s'agir de l'ouverture d'une boite de dialogues ou bien des évènements peuvent se déclencher au chargement de la page, au click, au double click, au survol de la souris, lors du chargement de nouvelles données, à la redimension d'une page, ou à sa fermeture, lorsque l'utilisateur appuie sur une touche de son clavier.
 
-### Math.Random() et Math.Floor()
+### Math.Random(), Math.Floor() et Math.round()
 
 L'objet Math permet de recevoir plusieurs méthodes. Pour un aperçu des méthodes possibles voici un lien vers la [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math)
 
-Celles qui nous intéressent sont les méthodes ``floor()`` et ``random()``.
+Celles qui nous intéressent sont les méthodes ``floor()``, ``round()`` et ``random()``.
 
 #### Math.floor()
 
-Renvoit un entier qui est plus petit ou égal au nombre passé en paramètre de la méthode ``floor()``. Par exemple:
+La méthode ``Math.floor()`` est utilisée pour arrondir un nombre à l'entier inférieur le plus proche. En d'autres termes, elle supprime la partie décimale d'un nombre. Voici quelques exemples pour illustrer son fonctionnement :
+
 ```js
-let floorNumber = Math.floor(14.32);
-//valeur de floorNumber: 14
+let floorNumber1 = Math.floor(14.32);
+// Dans ce cas, la valeur de floorNumber1 sera : 14
+
+let floorNumber2 = Math.floor(14.91);
+// Ici, la valeur de floorNumber2 sera également : 14
 ```
+
+Lorsque tu utilises ``Math.floor()``, tu obtiens l'entier qui est inférieur ou égal au nombre donné.
+
+#### Math.round()
+
+La méthode ``Math.round()`` est utile pour arrondir un nombre au nombre entier le plus proche. Elle effectue un arrondi classique, où les décimales inférieures à 0,5 sont arrondies vers le bas, et celles supérieures ou égales à 0,5 sont arrondies vers le haut. Voici des exemples :
+
+```js
+let roundNumber1 = Math.round(14.32);
+// Dans ce cas, la valeur de roundNumber1 sera : 14
+
+let roundNumber2 = Math.round(14.91);
+// Ici, la valeur de roundNumber2 sera : 15
+```
+
+Avec ``Math.round()``, tu obtiens l'entier le plus proche du nombre donné, en arrondissant correctement en fonction des décimales.
 
 #### Math.random()
 
-Renvoit un nombre "flottant", c'est à dire qu'il est très probable d'obtenir un chiffre avec une décimale, compris entre 0 et le chiffre donné en paramètre de la méthode ``random()``. Par exemple :
+La méthode ``Math.random()`` génère un nombre décimal aléatoire compris entre 0 (inclus) et 1 (exclu). Si tu souhaites obtenir un nombre aléatoire dans une plage différente, tu multiplies le résultat par la plage souhaitée. Voici un exemple :
 
 ```js
 let randomNumber = Math.random() * 18;
 console.log(randomNumber);
 ```
-Output console, exemple : ``7.74``
 
-#### Utilisation de Math.floor et de Math.Random
+Lorsque tu exécutes ce code, tu obtiens un nombre aléatoire compris entre 0 (inclus) et 18 (exclu), avec des décimales. Par exemple : ``7.7440849612``.
+
+#### Utilisation de Math.floor, Math.round et de Math.Random
 
 Comme nous l'avons vu précédemment un simple ``Math.random()`` peut poser problème si on désire obtenir un chiffre aléatoire qui soit un entier.
-Pour obtenir un chiffre aléatoire entier il suffit de passer le ``Math.random()`` en paramètre d'un ``Math.floor()``. Par exemple :
+Pour obtenir un chiffre aléatoire entier il suffit de passer le ``Math.random()`` en paramètre d'un ``Math.round()``. Par exemple :
 
 ```js
 function getRandomInt(param) {
-  return Math.floor(Math.random() * param);
+  return Math.round(Math.random() * param);
 }
 ```
 Petit exemple que vous utiliserez :
 
 ```js
-let randomNumber = Math.floor(Math.random() * 256);
+let randomNumber = Math.round(Math.random() * 255);
 ```
 Output console, exemple : ``189``
 
