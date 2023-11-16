@@ -62,7 +62,7 @@ Et tu n'en as pas encore assez de Flexbox? Et bien tiens, voici encore un p'tit 
 
 ### 😄 Exercice 1
 
-Reproduis la mise en page suivante.
+Reproduis la mise en page suivante. Il faut 4 `<div>` par rangé, il y a donc 2 rangés.
 
 ![ex1](img/14/flexbox-ex1.png)
 
@@ -122,7 +122,7 @@ section{
 
 ### 😊 Exercice 2
 
-Reproduis la mise en page suivante.
+Reproduis la mise en page suivante. Attention au sens des `<div>`, ce n'est plus de gauche à droite mais de haut en bas. On a donc 3 colonnes.
 
 ![ex2](img/14/flexbox-ex2.png)
 
@@ -150,13 +150,16 @@ Utilise l'HTML et CSS suivant.
   <title>Flexbox #03</title>
 </head>
 <body>
-  <ul>
-    <li><a href="#">lien 1</a></li>
-    <li><a href="#">lien 2</a></li>
-    <li><a href="#">lien 3</a></li>
-    <li><a href="#">lien 4</a></li>
-    <li><a href="#">lien 5</a></li>
-  </ul>
+  <header>LOGO DU MON SITE</header>
+    <nav>
+      <ul>
+        <li><a href="#">lien 1</a></li>
+        <li><a href="#">lien 2</a></li>
+        <li><a href="#">lien 3</a></li>
+        <li><a href="#">lien 4</a></li>
+        <li><a href="#">lien 5</a></li>
+      </ul>
+    </nav>
 </body>
 </html>
 ```
